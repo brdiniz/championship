@@ -1,0 +1,78 @@
+pt_br:
+  web-app-theme:
+    all: Lista de
+    list: Listar
+    new: Novo
+    save: Salvar
+    cancel: Cancelar
+    show: Visualizar
+    edit: Editar
+    delete: Remover
+    confirm: Tem certeza?
+  checkbox:
+    "true": Sim
+    "false": Não
+  flash:
+    actions:
+      create:
+        notice: "Criação de {{resource_name}} realizada com sucesso!"
+      update:
+        notice: "Alteração de {{resource_name}} realizada com sucesso!"
+      destroy:
+        notice: "Exclusão de {{resource_name}} realizada com sucesso!"
+  date:
+     formats:
+       default: "%d/%m/%Y"
+       short: "%b %d"
+       long: "%B %d, %Y"
+
+     day_names: [Domingo, Segunda, Terça, Quarta, Quinta, Sexta, Sábado]
+     abbr_day_names: [Dom, Seg, Ter, Qua, Qui, Sex, Sab]
+
+     month_names: [~, Janeiro, Fevereiro, Março, Abril, Maio, Junho, Julho, Agosto, Setembro, Outubro, Novembro, Dezembro]
+     abbr_month_names: [~, Jan, Fev, Mar, Abr, Mai, Jun, Jul, Ago, Set, Out, Nov, Dez]
+     order: [ :day, :month, :year ]
+  number:
+    format:
+      separator: ","
+      delimiter: "."
+  errors: "Erro!"
+  activerecord:
+    labels:
+      name: Nome
+      tipe: Tipo
+      code: "Código"
+    models:
+      player: Jogador
+      players: Jogadores
+      championship: Campeonato
+      championships: Campeonatos
+    attributes:
+      player:
+        name: Nome
+        number: Número
+    errors:
+      template:
+        body: "Os seguintes erros impediram esta operação:"
+        header: "Ocorreram erros nesta operação!"
+      messages:
+        blank: "é um campo obrigatório"
+        taken: "já existe"
+        too_long: "é muito longo (não mais do que {{count}} caracteres)"
+        too_short: "é muito curto (não menos do que {{count}} caracteres)"
+        invalid: "não é válido"
+        record_invalid: "o valor não faz parte dos valores possíveis"
+        inclusion: "não está incluso na lista"
+        exclusion: "não está disponível"
+        confirmation: "não bate com a confirmação"
+        accepted: "precisa ser aceito"
+        empty: "não pode ser vazio"
+        wrong_length: "não é do tamanho correto (precisa ter {{count}} caracteres)"
+        not_a_number: "não é um número"
+        greater_than: "precisa ser maior do que {{count}}"
+        greater_than_or_equal_to: "precisa ser maior ou igual a {{count}}"
+        equal_to: "precisa ser igual a {{count}}"
+        less_than: "precisa ser menor do que {{count}}"
+        less_than_or_equal_to: "precisa ser menor ou igual a {{count}}"
+        odd: "precisa ser ímpar"
+        even: "precisa ser par"

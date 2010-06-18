@@ -1,0 +1,1202 @@
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (1.7ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (24.6ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateEquipes (20100618011002)
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCREATE TABLE "equipes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100618011002')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("equipes")[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-06-17 22:18:27) [GET]
+
+ActionController::RoutingError (No route matches "/equipes" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-06-17 22:18:44) [GET]
+
+NameError (uninitialized constant InheritedResources):
+  app/controllers/equipes_controller.rb:1
+
+Rendered rescues/_trace (34.9ms)
+Rendered rescues/_request_and_response (1.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing EquipesController#index (for 127.0.0.1 at 2010-06-17 22:18:56) [GET]
+  [4;36;1mEquipe Load (0.4ms)[0m   [0;1mSELECT * FROM "equipes" [0m
+Rendering template within layouts/application
+Rendering equipes/index
+Rendered equipes/_sidebar (22.6ms)
+Completed in 112ms (View: 109, DB: 0) | 200 OK [http://localhost/equipes]
+
+
+Processing EquipesController#new (for 127.0.0.1 at 2010-06-17 22:19:00) [GET]
+Rendering template within layouts/application
+Rendering equipes/new
+Rendered equipes/_form (28.6ms)
+Rendered equipes/_sidebar (0.1ms)
+Completed in 77ms (View: 73, DB: 0) | 200 OK [http://localhost/equipes/new]
+
+
+Processing EquipesController#create (for 127.0.0.1 at 2010-06-17 22:19:04) [POST]
+  Parameters: {"authenticity_token"=>"A3qMUgO8uJKC7itKYHbYJcaBCM+ypagerJmT/2Mx6QU=", "equipe"=>{"name"=>"flamengo"}}
+  [4;35;1mEquipe Load (0.1ms)[0m   [0mSELECT "equipes".id FROM "equipes" WHERE ("equipes"."name" = 'flamengo') LIMIT 1[0m
+  [4;36;1mEquipe Create (19.0ms)[0m   [0;1mINSERT INTO "equipes" ("name", "created_at", "updated_at") VALUES('flamengo', '2010-06-18 01:19:04', '2010-06-18 01:19:04')[0m
+Redirected to http://localhost:3000/equipes/1
+Completed in 105ms (DB: 0) | 302 Found [http://localhost/equipes]
+
+
+Processing EquipesController#show (for 127.0.0.1 at 2010-06-17 22:19:04) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mEquipe Load (0.2ms)[0m   [0mSELECT * FROM "equipes" WHERE ("equipes"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering equipes/show
+Rendered equipes/_sidebar (0.1ms)
+Completed in 20ms (View: 16, DB: 0) | 200 OK [http://localhost/equipes/1]
+
+
+Processing EquipesController#index (for 127.0.0.1 at 2010-06-17 22:19:06) [GET]
+  [4;36;1mEquipe Load (0.5ms)[0m   [0;1mSELECT * FROM "equipes" [0m
+Rendering template within layouts/application
+Rendering equipes/index
+Rendered equipes/_sidebar (0.1ms)
+Completed in 142ms (View: 139, DB: 0) | 200 OK [http://localhost/equipes]
+
+
+Processing EquipesController#new (for 127.0.0.1 at 2010-06-17 22:19:08) [GET]
+Rendering template within layouts/application
+Rendering equipes/new
+Rendered equipes/_form (2.6ms)
+Rendered equipes/_sidebar (0.1ms)
+Completed in 12ms (View: 8, DB: 0) | 200 OK [http://localhost/equipes/new]
+
+
+Processing EquipesController#create (for 127.0.0.1 at 2010-06-17 22:19:11) [POST]
+  Parameters: {"authenticity_token"=>"A3qMUgO8uJKC7itKYHbYJcaBCM+ypagerJmT/2Mx6QU=", "equipe"=>{"name"=>"flamengo"}}
+  [4;35;1mEquipe Load (0.2ms)[0m   [0mSELECT "equipes".id FROM "equipes" WHERE ("equipes"."name" = 'flamengo') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering equipes/new
+Rendered equipes/_form (3.0ms)
+Rendered equipes/_sidebar (0.1ms)
+Completed in 78ms (View: 8, DB: 0) | 200 OK [http://localhost/equipes]
+
+
+Processing EquipesController#create (for 127.0.0.1 at 2010-06-17 22:20:06) [POST]
+  Parameters: {"authenticity_token"=>"A3qMUgO8uJKC7itKYHbYJcaBCM+ypagerJmT/2Mx6QU=", "equipe"=>{"name"=>"flamengo"}}
+  [4;36;1mEquipe Load (0.3ms)[0m   [0;1mSELECT "equipes".id FROM "equipes" WHERE ("equipes"."name" = 'flamengo') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering equipes/new
+Rendered equipes/_form (21.2ms)
+Rendered equipes/_sidebar (0.9ms)
+Completed in 71ms (View: 51, DB: 0) | 200 OK [http://localhost/equipes]
+
+
+Processing EquipesController#create (for 127.0.0.1 at 2010-06-17 22:20:07) [POST]
+  Parameters: {"authenticity_token"=>"A3qMUgO8uJKC7itKYHbYJcaBCM+ypagerJmT/2Mx6QU=", "equipe"=>{"name"=>"flamengo"}}
+  [4;35;1mEquipe Load (0.2ms)[0m   [0mSELECT "equipes".id FROM "equipes" WHERE ("equipes"."name" = 'flamengo') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering equipes/new
+Rendered equipes/_form (3.9ms)
+Rendered equipes/_sidebar (0.1ms)
+Completed in 16ms (View: 9, DB: 0) | 200 OK [http://localhost/equipes]
+
+
+Processing EquipesController#index (for 127.0.0.1 at 2010-06-17 22:20:14) [GET]
+  [4;36;1mEquipe Load (0.7ms)[0m   [0;1mSELECT * FROM "equipes" [0m
+Rendering template within layouts/application
+Rendering equipes/index
+Rendered equipes/_sidebar (0.1ms)
+Completed in 173ms (View: 170, DB: 1) | 200 OK [http://localhost/equipes]
+
+
+Processing EquipesController#index (for 127.0.0.1 at 2010-06-17 22:25:59) [GET]
+  [4;35;1mEquipe Load (0.5ms)[0m   [0mSELECT * FROM "equipes" [0m
+Rendering template within layouts/application
+Rendering equipes/index
+Rendered equipes/_sidebar (0.1ms)
+Completed in 13ms (View: 10, DB: 0) | 200 OK [http://localhost/equipes]
+
+
+Processing EquipesController#index (for 127.0.0.1 at 2010-06-17 22:26:00) [GET]
+  [4;36;1mEquipe Load (0.5ms)[0m   [0;1mSELECT * FROM "equipes" [0m
+Rendering template within layouts/application
+Rendering equipes/index
+Rendered equipes/_sidebar (0.1ms)
+Completed in 13ms (View: 10, DB: 0) | 200 OK [http://localhost/equipes]
+
+
+Processing EquipesController#index (for 127.0.0.1 at 2010-06-17 22:26:01) [GET]
+  [4;35;1mEquipe Load (0.4ms)[0m   [0mSELECT * FROM "equipes" [0m
+Rendering template within layouts/application
+Rendering equipes/index
+Rendered equipes/_sidebar (0.1ms)
+Completed in 12ms (View: 10, DB: 0) | 200 OK [http://localhost/equipes]
+
+
+Processing EquipesController#index (for 127.0.0.1 at 2010-06-17 22:26:01) [GET]
+  [4;36;1mEquipe Load (0.5ms)[0m   [0;1mSELECT * FROM "equipes" [0m
+Rendering template within layouts/application
+Rendering equipes/index
+Rendered equipes/_sidebar (0.1ms)
+Completed in 13ms (View: 10, DB: 0) | 200 OK [http://localhost/equipes]
+
+
+Processing EquipesController#index (for 127.0.0.1 at 2010-06-17 22:27:21) [GET]
+  [4;35;1mEquipe Load (0.5ms)[0m   [0mSELECT * FROM "equipes" [0m
+Rendering template within layouts/application
+Rendering equipes/index
+Rendered equipes/_sidebar (0.6ms)
+Completed in 20ms (View: 17, DB: 0) | 200 OK [http://localhost/equipes]
+
+
+Processing EquipesController#new (for 127.0.0.1 at 2010-06-17 22:27:39) [GET]
+Rendering template within layouts/application
+Rendering equipes/new
+Rendered equipes/_form (3.6ms)
+Rendered equipes/_sidebar (0.2ms)
+Completed in 16ms (View: 13, DB: 0) | 200 OK [http://localhost/equipes/new]
+
+
+Processing EquipesController#new (for 127.0.0.1 at 2010-06-17 22:30:56) [GET]
+Rendering template within layouts/application
+Rendering equipes/new
+Rendered equipes/_form (3.1ms)
+Rendered equipes/_sidebar (0.1ms)
+Completed in 20ms (View: 16, DB: 0) | 200 OK [http://localhost/equipes/new]
+
+
+Processing EquipesController#new (for 127.0.0.1 at 2010-06-17 22:30:57) [GET]
+Rendering template within layouts/application
+Rendering equipes/new
+Rendered equipes/_form (2.6ms)
+Rendered equipes/_sidebar (0.2ms)
+Completed in 11ms (View: 8, DB: 0) | 200 OK [http://localhost/equipes/new]
+
+
+Processing EquipesController#new (for 127.0.0.1 at 2010-06-17 22:30:58) [GET]
+Rendering template within layouts/application
+Rendering equipes/new
+Rendered equipes/_form (2.6ms)
+Rendered equipes/_sidebar (0.2ms)
+Completed in 13ms (View: 9, DB: 0) | 200 OK [http://localhost/equipes/new]
+
+
+Processing EquipesController#new (for 127.0.0.1 at 2010-06-17 22:30:59) [GET]
+Rendering template within layouts/application
+Rendering equipes/new
+Rendered equipes/_form (2.4ms)
+Rendered equipes/_sidebar (0.2ms)
+Completed in 11ms (View: 8, DB: 0) | 200 OK [http://localhost/equipes/new]
+
+
+Processing EquipesController#index (for 127.0.0.1 at 2010-06-17 22:31:02) [GET]
+  [4;36;1mEquipe Load (0.5ms)[0m   [0;1mSELECT * FROM "equipes" [0m
+Rendering template within layouts/application
+Rendering equipes/index
+Rendered equipes/_sidebar (0.2ms)
+Completed in 12ms (View: 9, DB: 0) | 200 OK [http://localhost/equipes]
+
+
+Processing EquipesController#new (for 127.0.0.1 at 2010-06-17 22:31:05) [GET]
+Rendering template within layouts/application
+Rendering equipes/new
+Rendered equipes/_form (3.1ms)
+Rendered equipes/_sidebar (0.2ms)
+Completed in 12ms (View: 8, DB: 0) | 200 OK [http://localhost/equipes/new]
+
+
+Processing EquipesController#new (for 127.0.0.1 at 2010-06-17 22:31:07) [GET]
+Rendering template within layouts/application
+Rendering equipes/new
+Rendered equipes/_form (2.5ms)
+Rendered equipes/_sidebar (0.2ms)
+Completed in 76ms (View: 8, DB: 0) | 200 OK [http://localhost/equipes/new]
+
+
+Processing EquipesController#new (for 127.0.0.1 at 2010-06-17 22:31:16) [GET]
+Rendering template within layouts/application
+Rendering equipes/new
+Rendered equipes/_form (4.7ms)
+Rendered equipes/_sidebar (0.7ms)
+Completed in 45ms (View: 41, DB: 0) | 200 OK [http://localhost/equipes/new]
+
+
+Processing EquipesController#new (for 127.0.0.1 at 2010-06-17 22:31:41) [GET]
+Rendering template within layouts/application
+Rendering equipes/new
+Rendered equipes/_form (6.1ms)
+Rendered equipes/_sidebar (0.2ms)
+Completed in 17ms (View: 14, DB: 0) | 200 OK [http://localhost/equipes/new]
+
+
+Processing EquipesController#index (for 127.0.0.1 at 2010-06-17 22:31:42) [GET]
+  [4;36;1mEquipe Load (0.5ms)[0m   [0;1mSELECT * FROM "equipes" [0m
+Rendering template within layouts/application
+Rendering equipes/index
+Rendered equipes/_sidebar (0.2ms)
+Completed in 1103ms (View: 1100, DB: 0) | 200 OK [http://localhost/equipes]
+
+
+Processing EquipesController#index (for 127.0.0.1 at 2010-06-17 23:13:43) [GET]
+  [4;35;1mEquipe Load (11.5ms)[0m   [0mSELECT * FROM "equipes" [0m
+Rendering template within layouts/application
+Rendering equipes/index
+Rendered equipes/_sidebar (0.2ms)
+Completed in 143ms (View: 128, DB: 11) | 200 OK [http://localhost/equipes]
+
+
+Processing EquipesController#index (for 127.0.0.1 at 2010-06-17 23:14:10) [GET]
+  [4;36;1mEquipe Load (14.3ms)[0m   [0;1mSELECT * FROM "equipes" [0m
+Rendering template within layouts/application
+Rendering equipes/index
+Rendered equipes/_sidebar (0.3ms)
+Completed in 135ms (View: 116, DB: 14) | 200 OK [http://localhost/equipes]
+
+
+Processing EquipesController#index (for 127.0.0.1 at 2010-06-17 23:14:44) [GET]
+  [4;35;1mEquipe Load (0.5ms)[0m   [0mSELECT * FROM "equipes" [0m
+Rendering template within layouts/application
+Rendering equipes/index
+Rendered equipes/_sidebar (0.2ms)
+Completed in 553ms (View: 549, DB: 0) | 200 OK [http://localhost/equipes]
+
+
+Processing EquipesController#edit (for 127.0.0.1 at 2010-06-17 23:15:15) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mEquipe Load (0.6ms)[0m   [0;1mSELECT * FROM "equipes" WHERE ("equipes"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering equipes/edit
+Rendered equipes/_form (2.3ms)
+Rendered equipes/_sidebar (0.1ms)
+Completed in 21ms (View: 16, DB: 1) | 200 OK [http://localhost/equipes/1/edit]
+
+
+Processing EquipesController#update (for 127.0.0.1 at 2010-06-17 23:15:19) [PUT]
+  Parameters: {"authenticity_token"=>"A3qMUgO8uJKC7itKYHbYJcaBCM+ypagerJmT/2Mx6QU=", "id"=>"1", "equipe"=>{"name"=>"FLAMENGO"}}
+  [4;35;1mEquipe Load (0.2ms)[0m   [0mSELECT * FROM "equipes" WHERE ("equipes"."id" = 1) [0m
+  [4;36;1mEquipe Load (0.3ms)[0m   [0;1mSELECT "equipes".id FROM "equipes" WHERE ("equipes"."name" = 'FLAMENGO' AND "equipes".id <> 1) LIMIT 1[0m
+  [4;35;1mEquipe Update (0.4ms)[0m   [0mUPDATE "equipes" SET "updated_at" = '2010-06-18 02:15:19', "name" = 'FLAMENGO' WHERE "id" = 1[0m
+Redirected to http://localhost:3000/equipes/1
+Completed in 20ms (DB: 0) | 302 Found [http://localhost/equipes/1]
+
+
+Processing EquipesController#show (for 127.0.0.1 at 2010-06-17 23:15:19) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mEquipe Load (0.2ms)[0m   [0;1mSELECT * FROM "equipes" WHERE ("equipes"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering equipes/show
+Rendered equipes/_sidebar (0.2ms)
+Completed in 20ms (View: 17, DB: 0) | 200 OK [http://localhost/equipes/1]
+
+
+Processing EquipesController#index (for 127.0.0.1 at 2010-06-17 23:15:21) [GET]
+  [4;35;1mEquipe Load (0.4ms)[0m   [0mSELECT * FROM "equipes" [0m
+Rendering template within layouts/application
+Rendering equipes/index
+Rendered equipes/_sidebar (0.2ms)
+Completed in 13ms (View: 10, DB: 0) | 200 OK [http://localhost/equipes]
+
+
+Processing EquipesController#new (for 127.0.0.1 at 2010-06-17 23:15:24) [GET]
+Rendering template within layouts/application
+Rendering equipes/new
+Rendered equipes/_form (28.4ms)
+Rendered equipes/_sidebar (0.2ms)
+Completed in 35ms (View: 32, DB: 0) | 200 OK [http://localhost/equipes/new]
+
+
+Processing EquipesController#create (for 127.0.0.1 at 2010-06-17 23:15:26) [POST]
+  Parameters: {"authenticity_token"=>"A3qMUgO8uJKC7itKYHbYJcaBCM+ypagerJmT/2Mx6QU=", "equipe"=>{"name"=>"PALMEIRAS"}}
+  [4;36;1mEquipe Load (0.1ms)[0m   [0;1mSELECT "equipes".id FROM "equipes" WHERE ("equipes"."name" = 'PALMEIRAS') LIMIT 1[0m
+  [4;35;1mEquipe Create (26.1ms)[0m   [0mINSERT INTO "equipes" ("name", "created_at", "updated_at") VALUES('PALMEIRAS', '2010-06-18 02:15:26', '2010-06-18 02:15:26')[0m
+Redirected to http://localhost:3000/equipes/2
+Completed in 50ms (DB: 0) | 302 Found [http://localhost/equipes]
+
+
+Processing EquipesController#show (for 127.0.0.1 at 2010-06-17 23:15:26) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mEquipe Load (0.2ms)[0m   [0;1mSELECT * FROM "equipes" WHERE ("equipes"."id" = 2) [0m
+Rendering template within layouts/application
+Rendering equipes/show
+Rendered equipes/_sidebar (0.2ms)
+Completed in 15ms (View: 11, DB: 0) | 200 OK [http://localhost/equipes/2]
+
+
+Processing EquipesController#index (for 127.0.0.1 at 2010-06-17 23:15:28) [GET]
+  [4;35;1mEquipe Load (0.5ms)[0m   [0mSELECT * FROM "equipes" [0m
+Rendering template within layouts/application
+Rendering equipes/index
+Rendered equipes/_sidebar (0.2ms)
+Completed in 17ms (View: 14, DB: 1) | 200 OK [http://localhost/equipes]
+
+
+Processing EquipesController#index (for 127.0.0.1 at 2010-06-17 23:24:38) [GET]
+  [4;36;1mEquipe Load (0.5ms)[0m   [0;1mSELECT * FROM "equipes" [0m
+Rendering template within layouts/application
+Rendering equipes/index
+Rendered equipes/_sidebar (0.8ms)
+Completed in 50ms (View: 47, DB: 1) | 200 OK [http://localhost/equipes]
+
+
+Processing EquipesController#index (for 127.0.0.1 at 2010-06-17 23:38:49) [GET]
+  [4;35;1mEquipe Load (23.7ms)[0m   [0mSELECT * FROM "equipes" [0m
+Rendering template within layouts/application
+Rendering equipes/index
+Rendered equipes/_sidebar (0.2ms)
+Completed in 40ms (View: 14, DB: 24) | 200 OK [http://localhost/equipes]
+
+
+Processing EquipesController#show (for 127.0.0.1 at 2010-06-17 23:39:01) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mEquipe Load (0.2ms)[0m   [0;1mSELECT * FROM "equipes" WHERE ("equipes"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering equipes/show
+Rendered equipes/_sidebar (0.2ms)
+Completed in 14ms (View: 10, DB: 0) | 200 OK [http://localhost/equipes/1]
+
+
+Processing EquipesController#index (for 127.0.0.1 at 2010-06-17 23:40:03) [GET]
+  [4;35;1mEquipe Load (0.6ms)[0m   [0mSELECT * FROM "equipes" [0m
+Rendering template within layouts/application
+Rendering equipes/index
+Rendered equipes/_sidebar (0.2ms)
+Completed in 17ms (View: 13, DB: 1) | 200 OK [http://localhost/equipes]
+
+
+Processing EquipesController#show (for 127.0.0.1 at 2010-06-17 23:49:51) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mEquipe Load (22.5ms)[0m   [0;1mSELECT * FROM "equipes" WHERE ("equipes"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering equipes/show
+
+ActionView::TemplateError (undefined method `equipe_players_path' for #<ActionView::Base:0x10413f0d8>) on line #7 of app/views/equipes/_sidebar.html.erb:
+4: 		<li><%= link_to "Voltar", equipes_path %></li>
+5:     <li><%= link_to "Criar Equipe", new_equipe_path %></li>
+6: 		<% if @equipe && !@equipe.new_record? %>
+7: 			<li><%= link_to "Lista de Jogadores", equipe_players_path(@equipe) %></li>
+8: 		<% end %>
+9:   </ul>
+10: </div>
+
+    app/views/equipes/_sidebar.html.erb:7
+    app/views/equipes/show.html.erb:24
+    /Library/Ruby/Gems/1.8/gems/inherited_resources-1.0.2/lib/inherited_resources/legacy/respond_to.rb:105:in `retrieve_response_from_mimes'
+    /Library/Ruby/Gems/1.8/gems/inherited_resources-1.0.2/lib/inherited_resources/legacy/responder.rb:183:in `call'
+    /Library/Ruby/Gems/1.8/gems/inherited_resources-1.0.2/lib/inherited_resources/legacy/responder.rb:183:in `default_render'
+    /Library/Ruby/Gems/1.8/gems/inherited_resources-1.0.2/lib/inherited_resources/legacy/responder.rb:124:in `to_html'
+    responders (0.4.2) lib/responders/flash_responder.rb:89:in `to_html'
+    /Library/Ruby/Gems/1.8/gems/inherited_resources-1.0.2/lib/inherited_resources/legacy/responder.rb:117:in `send'
+    /Library/Ruby/Gems/1.8/gems/inherited_resources-1.0.2/lib/inherited_resources/legacy/responder.rb:117:in `respond'
+    /Library/Ruby/Gems/1.8/gems/inherited_resources-1.0.2/lib/inherited_resources/legacy/responder.rb:110:in `call'
+    /Library/Ruby/Gems/1.8/gems/inherited_resources-1.0.2/lib/inherited_resources/legacy/respond_to.rb:67:in `respond_with'
+    /Library/Ruby/Gems/1.8/gems/inherited_resources-1.0.2/lib/inherited_resources/actions.rb:13:in `show'
+
+Rendered rescues/_trace (56.7ms)
+Rendered rescues/_request_and_response (1.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing EquipesController#show (for 127.0.0.1 at 2010-06-17 23:50:11) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mEquipe Load (0.2ms)[0m   [0mSELECT * FROM "equipes" WHERE ("equipes"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering equipes/show
+Rendered equipes/_sidebar (0.3ms)
+Completed in 14ms (View: 10, DB: 0) | 200 OK [http://localhost/equipes/1]
+
+
+Processing PlayersController#index (for 127.0.0.1 at 2010-06-17 23:50:13) [GET]
+  Parameters: {"equipe_id"=>"1"}
+  [4;36;1mPlayer Load (0.0ms)[0m   [0;1mSQLite3::SQLException: no such table: players: SELECT * FROM "players" [0m
+
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such table: players: SELECT * FROM "players" ):
+  /Library/Ruby/Gems/1.8/gems/inherited_resources-1.0.2/lib/inherited_resources/base_helpers.rb:23:in `collection'
+  /Library/Ruby/Gems/1.8/gems/inherited_resources-1.0.2/lib/inherited_resources/actions.rb:7:in `index'
+
+Rendered rescues/_trace (56.1ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateEquipes (20100618011002)
+Migrating to CreatePlayers (20100618022955)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mCREATE TABLE "players" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "equipe_id" integer, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100618022955')[0m
+Migrating to AddNumberToPlayers (20100618023227)
+  [4;35;1mSQL (0.6ms)[0m   [0mALTER TABLE "players" ADD "number" int[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100618023227')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("equipes")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("players")[0m
+
+
+Processing PlayersController#index (for 127.0.0.1 at 2010-06-17 23:50:27) [GET]
+  Parameters: {"equipe_id"=>"1"}
+  [4;35;1mPlayer Load (0.4ms)[0m   [0mSELECT * FROM "players" [0m
+
+ActionView::MissingTemplate (Missing template players/index.erb in view path app/views):
+  /Library/Ruby/Gems/1.8/gems/inherited_resources-1.0.2/lib/inherited_resources/legacy/respond_to.rb:105:in `retrieve_response_from_mimes'
+  /Library/Ruby/Gems/1.8/gems/inherited_resources-1.0.2/lib/inherited_resources/legacy/responder.rb:183:in `call'
+  /Library/Ruby/Gems/1.8/gems/inherited_resources-1.0.2/lib/inherited_resources/legacy/responder.rb:183:in `default_render'
+  /Library/Ruby/Gems/1.8/gems/inherited_resources-1.0.2/lib/inherited_resources/legacy/responder.rb:124:in `to_html'
+  responders (0.4.2) lib/responders/flash_responder.rb:89:in `to_html'
+  /Library/Ruby/Gems/1.8/gems/inherited_resources-1.0.2/lib/inherited_resources/legacy/responder.rb:117:in `send'
+  /Library/Ruby/Gems/1.8/gems/inherited_resources-1.0.2/lib/inherited_resources/legacy/responder.rb:117:in `respond'
+  /Library/Ruby/Gems/1.8/gems/inherited_resources-1.0.2/lib/inherited_resources/legacy/responder.rb:110:in `call'
+  /Library/Ruby/Gems/1.8/gems/inherited_resources-1.0.2/lib/inherited_resources/legacy/respond_to.rb:67:in `respond_with'
+  /Library/Ruby/Gems/1.8/gems/inherited_resources-1.0.2/lib/inherited_resources/actions.rb:7:in `index'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PlayersController#index (for 127.0.0.1 at 2010-06-17 23:51:03) [GET]
+  Parameters: {"equipe_id"=>"1"}
+  [4;36;1mPlayer Load (0.4ms)[0m   [0;1mSELECT * FROM "players" [0m
+Rendering template within layouts/application
+Rendering players/index
+
+ActionView::TemplateError (undefined local variable or method `players_path' for #<ActionView::Base:0x1040d1498>) on line #4 of app/views/players/index.html.erb:
+1: <div class="block">
+2:   <div class="secondary-navigation">
+3:     <ul class="wat-cf">
+4: 	    <li class="first active"><%= link_to "#{t("web-app-theme.list", :default => "List")}", players_path  %></li>
+5:   		<li><%= link_to "#{t("web-app-theme.new", :default => "New")}", new_player_path %></li>
+6:     </ul>
+7:   </div>          
+
+    app/views/players/index.html.erb:4
+    /Library/Ruby/Gems/1.8/gems/inherited_resources-1.0.2/lib/inherited_resources/legacy/respond_to.rb:105:in `retrieve_response_from_mimes'
+    /Library/Ruby/Gems/1.8/gems/inherited_resources-1.0.2/lib/inherited_resources/legacy/responder.rb:183:in `call'
+    /Library/Ruby/Gems/1.8/gems/inherited_resources-1.0.2/lib/inherited_resources/legacy/responder.rb:183:in `default_render'
+    /Library/Ruby/Gems/1.8/gems/inherited_resources-1.0.2/lib/inherited_resources/legacy/responder.rb:124:in `to_html'
+    responders (0.4.2) lib/responders/flash_responder.rb:89:in `to_html'
+    /Library/Ruby/Gems/1.8/gems/inherited_resources-1.0.2/lib/inherited_resources/legacy/responder.rb:117:in `send'
+    /Library/Ruby/Gems/1.8/gems/inherited_resources-1.0.2/lib/inherited_resources/legacy/responder.rb:117:in `respond'
+    /Library/Ruby/Gems/1.8/gems/inherited_resources-1.0.2/lib/inherited_resources/legacy/responder.rb:110:in `call'
+    /Library/Ruby/Gems/1.8/gems/inherited_resources-1.0.2/lib/inherited_resources/legacy/respond_to.rb:67:in `respond_with'
+    /Library/Ruby/Gems/1.8/gems/inherited_resources-1.0.2/lib/inherited_resources/actions.rb:7:in `index'
+
+Rendered rescues/_trace (47.4ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PlayersController#index (for 127.0.0.1 at 2010-06-17 23:52:42) [GET]
+  Parameters: {"equipe_id"=>"1"}
+  [4;35;1mPlayer Load (0.4ms)[0m   [0mSELECT * FROM "players" [0m
+Rendering template within layouts/application
+Rendering players/index
+
+ActionView::TemplateError (undefined local variable or method `players_path' for #<ActionView::Base:0x10422e408>) on line #4 of app/views/players/index.html.erb:
+1: <div class="block">
+2:   <div class="secondary-navigation">
+3:     <ul class="wat-cf">
+4: 	    <li class="first"><%= link_to "Equipes", players_path  %></li>
+5:   		<li><%= link_to @equipe.name, @equipe %></li>
+6:   		<li class="active"><%= link_to "Jogadores", "#" %></li>
+7:     </ul>
+
+    app/views/players/index.html.erb:4
+    /Library/Ruby/Gems/1.8/gems/inherited_resources-1.0.2/lib/inherited_resources/legacy/respond_to.rb:105:in `retrieve_response_from_mimes'
+    /Library/Ruby/Gems/1.8/gems/inherited_resources-1.0.2/lib/inherited_resources/legacy/responder.rb:183:in `call'
+    /Library/Ruby/Gems/1.8/gems/inherited_resources-1.0.2/lib/inherited_resources/legacy/responder.rb:183:in `default_render'
+    /Library/Ruby/Gems/1.8/gems/inherited_resources-1.0.2/lib/inherited_resources/legacy/responder.rb:124:in `to_html'
+    responders (0.4.2) lib/responders/flash_responder.rb:89:in `to_html'
+    /Library/Ruby/Gems/1.8/gems/inherited_resources-1.0.2/lib/inherited_resources/legacy/responder.rb:117:in `send'
+    /Library/Ruby/Gems/1.8/gems/inherited_resources-1.0.2/lib/inherited_resources/legacy/responder.rb:117:in `respond'
+    /Library/Ruby/Gems/1.8/gems/inherited_resources-1.0.2/lib/inherited_resources/legacy/responder.rb:110:in `call'
+    /Library/Ruby/Gems/1.8/gems/inherited_resources-1.0.2/lib/inherited_resources/legacy/respond_to.rb:67:in `respond_with'
+    /Library/Ruby/Gems/1.8/gems/inherited_resources-1.0.2/lib/inherited_resources/actions.rb:7:in `index'
+
+Rendered rescues/_trace (165.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PlayersController#index (for 127.0.0.1 at 2010-06-17 23:52:55) [GET]
+  Parameters: {"equipe_id"=>"1"}
+  [4;36;1mPlayer Load (0.4ms)[0m   [0;1mSELECT * FROM "players" [0m
+Rendering template within layouts/application
+Rendering players/index
+
+ActionView::TemplateError (undefined method `name' for nil:NilClass) on line #5 of app/views/players/index.html.erb:
+2:   <div class="secondary-navigation">
+3:     <ul class="wat-cf">
+4: 	    <li class="first"><%= link_to "Equipes", equipes_path  %></li>
+5:   		<li><%= link_to @equipe.name, @equipe %></li>
+6:   		<li class="active"><%= link_to "Jogadores", "#" %></li>
+7:     </ul>
+8:   </div>          
+
+    app/views/players/index.html.erb:5
+    /Library/Ruby/Gems/1.8/gems/inherited_resources-1.0.2/lib/inherited_resources/legacy/respond_to.rb:105:in `retrieve_response_from_mimes'
+    /Library/Ruby/Gems/1.8/gems/inherited_resources-1.0.2/lib/inherited_resources/legacy/responder.rb:183:in `call'
+    /Library/Ruby/Gems/1.8/gems/inherited_resources-1.0.2/lib/inherited_resources/legacy/responder.rb:183:in `default_render'
+    /Library/Ruby/Gems/1.8/gems/inherited_resources-1.0.2/lib/inherited_resources/legacy/responder.rb:124:in `to_html'
+    responders (0.4.2) lib/responders/flash_responder.rb:89:in `to_html'
+    /Library/Ruby/Gems/1.8/gems/inherited_resources-1.0.2/lib/inherited_resources/legacy/responder.rb:117:in `send'
+    /Library/Ruby/Gems/1.8/gems/inherited_resources-1.0.2/lib/inherited_resources/legacy/responder.rb:117:in `respond'
+    /Library/Ruby/Gems/1.8/gems/inherited_resources-1.0.2/lib/inherited_resources/legacy/responder.rb:110:in `call'
+    /Library/Ruby/Gems/1.8/gems/inherited_resources-1.0.2/lib/inherited_resources/legacy/respond_to.rb:67:in `respond_with'
+    /Library/Ruby/Gems/1.8/gems/inherited_resources-1.0.2/lib/inherited_resources/actions.rb:7:in `index'
+
+Rendered rescues/_trace (53.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PlayersController#index (for 127.0.0.1 at 2010-06-17 23:53:11) [GET]
+  Parameters: {"equipe_id"=>"1"}
+  [4;35;1mEquipe Load (0.3ms)[0m   [0mSELECT * FROM "equipes" WHERE ("equipes"."id" = 1) [0m
+  [4;36;1mPlayer Load (0.3ms)[0m   [0;1mSELECT * FROM "players" WHERE ("players".equipe_id = 1) [0m
+Rendering template within layouts/application
+Rendering players/index
+Rendered players/_sidebar (0.6ms)
+Completed in 20ms (View: 12, DB: 1) | 200 OK [http://localhost/equipes/1/players]
+
+
+Processing PlayersController#index (for 127.0.0.1 at 2010-06-17 23:54:05) [GET]
+  Parameters: {"equipe_id"=>"1"}
+  [4;35;1mEquipe Load (0.2ms)[0m   [0mSELECT * FROM "equipes" WHERE ("equipes"."id" = 1) [0m
+  [4;36;1mPlayer Load (0.2ms)[0m   [0;1mSELECT * FROM "players" WHERE ("players".equipe_id = 1) [0m
+Rendering template within layouts/application
+Rendering players/index
+Rendered players/_sidebar (0.1ms)
+Completed in 20ms (View: 15, DB: 0) | 200 OK [http://localhost/equipes/1/players]
+
+
+Processing PlayersController#index (for 127.0.0.1 at 2010-06-18 00:19:55) [GET]
+  Parameters: {"equipe_id"=>"1"}
+  [4;35;1mEquipe Load (0.2ms)[0m   [0mSELECT * FROM "equipes" WHERE ("equipes"."id" = 1) [0m
+  [4;36;1mPlayer Load (0.4ms)[0m   [0;1mSELECT * FROM "players" WHERE ("players".equipe_id = 1) [0m
+Rendering template within layouts/application
+Rendering players/index
+Rendered players/_sidebar (1.1ms)
+Completed in 23ms (View: 17, DB: 1) | 200 OK [http://localhost/equipes/1/players]
+
+
+Processing PlayersController#new (for 127.0.0.1 at 2010-06-18 00:19:56) [GET]
+  Parameters: {"equipe_id"=>"1"}
+  [4;35;1mEquipe Load (0.2ms)[0m   [0mSELECT * FROM "equipes" WHERE ("equipes"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering players/new
+Rendered players/_form (5.7ms)
+Rendered players/_sidebar (0.6ms)
+Completed in 113ms (View: 106, DB: 0) | 200 OK [http://localhost/equipes/1/players/new]
+
+
+Processing PlayersController#create (for 127.0.0.1 at 2010-06-18 00:20:07) [POST]
+  Parameters: {"player"=>{"number"=>"9", "name"=>"WAGNER LOVE"}, "equipe_id"=>"1", "authenticity_token"=>"A3qMUgO8uJKC7itKYHbYJcaBCM+ypagerJmT/2Mx6QU="}
+  [4;36;1mEquipe Load (0.2ms)[0m   [0;1mSELECT * FROM "equipes" WHERE ("equipes"."id" = 1) [0m
+  [4;35;1mPlayer Load (0.2ms)[0m   [0mSELECT "players".id FROM "players" WHERE ("players"."number" = 9 AND "players".equipe_id = 1) LIMIT 1[0m
+  [4;36;1mPlayer Create (0.3ms)[0m   [0;1mINSERT INTO "players" ("name", "number", "created_at", "equipe_id", "updated_at") VALUES('WAGNER LOVE', 9, '2010-06-18 03:20:07', 1, '2010-06-18 03:20:07')[0m
+Redirected to http://localhost:3000/equipes/1/players/1
+Completed in 15ms (DB: 0) | 302 Found [http://localhost/equipes/1/players]
+
+
+Processing PlayersController#show (for 127.0.0.1 at 2010-06-18 00:20:07) [GET]
+  Parameters: {"equipe_id"=>"1", "id"=>"1"}
+  [4;35;1mEquipe Load (0.3ms)[0m   [0mSELECT * FROM "equipes" WHERE ("equipes"."id" = 1) [0m
+  [4;36;1mPlayer Load (0.4ms)[0m   [0;1mSELECT * FROM "players" WHERE ("players"."id" = 1 AND ("players".equipe_id = 1)) [0m
+Rendering template within layouts/application
+Rendering players/show
+Rendered players/_sidebar (0.5ms)
+Completed in 29ms (View: 18, DB: 1) | 200 OK [http://localhost/equipes/1/players/1]
+
+
+Processing EquipesController#index (for 127.0.0.1 at 2010-06-18 00:20:42) [GET]
+  [4;35;1mEquipe Load (0.5ms)[0m   [0mSELECT * FROM "equipes" [0m
+Rendering template within layouts/application
+Rendering equipes/index
+Rendered equipes/_sidebar (0.2ms)
+Completed in 18ms (View: 14, DB: 1) | 200 OK [http://localhost/equipes]
+
+
+Processing EquipesController#show (for 127.0.0.1 at 2010-06-18 00:20:52) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mEquipe Load (0.2ms)[0m   [0;1mSELECT * FROM "equipes" WHERE ("equipes"."id" = 2) [0m
+Rendering template within layouts/application
+Rendering equipes/show
+Rendered equipes/_sidebar (0.3ms)
+Completed in 14ms (View: 10, DB: 0) | 200 OK [http://localhost/equipes/2]
+
+
+Processing PlayersController#index (for 127.0.0.1 at 2010-06-18 00:20:56) [GET]
+  Parameters: {"equipe_id"=>"2"}
+  [4;35;1mEquipe Load (0.3ms)[0m   [0mSELECT * FROM "equipes" WHERE ("equipes"."id" = 2) [0m
+  [4;36;1mPlayer Load (0.2ms)[0m   [0;1mSELECT * FROM "players" WHERE ("players".equipe_id = 2) [0m
+Rendering template within layouts/application
+Rendering players/index
+Rendered players/_sidebar (0.6ms)
+Completed in 13ms (View: 8, DB: 0) | 200 OK [http://localhost/equipes/2/players]
+
+
+Processing PlayersController#new (for 127.0.0.1 at 2010-06-18 00:20:56) [GET]
+  Parameters: {"equipe_id"=>"2"}
+  [4;35;1mEquipe Load (0.2ms)[0m   [0mSELECT * FROM "equipes" WHERE ("equipes"."id" = 2) [0m
+Rendering template within layouts/application
+Rendering players/new
+Rendered players/_form (2.3ms)
+Rendered players/_sidebar (0.5ms)
+Completed in 16ms (View: 10, DB: 0) | 200 OK [http://localhost/equipes/2/players/new]
+
+
+Processing PlayersController#new (for 127.0.0.1 at 2010-06-18 00:21:18) [GET]
+  Parameters: {"equipe_id"=>"2"}
+  [4;36;1mEquipe Load (0.2ms)[0m   [0;1mSELECT * FROM "equipes" WHERE ("equipes"."id" = 2) [0m
+Rendering template within layouts/application
+Rendering players/new
+Rendered players/_form (2.5ms)
+Rendered players/_sidebar (0.6ms)
+Completed in 22ms (View: 16, DB: 0) | 200 OK [http://localhost/equipes/2/players/new]
+
+
+Processing PlayersController#new (for 127.0.0.1 at 2010-06-18 00:21:30) [GET]
+  Parameters: {"equipe_id"=>"2"}
+  [4;35;1mEquipe Load (0.3ms)[0m   [0mSELECT * FROM "equipes" WHERE ("equipes"."id" = 2) [0m
+Rendering template within layouts/application
+Rendering players/new
+Rendered players/_form (3.6ms)
+Rendered players/_sidebar (0.7ms)
+Completed in 110ms (View: 97, DB: 0) | 200 OK [http://localhost/equipes/2/players/new]
+
+
+Processing PlayersController#index (for 127.0.0.1 at 2010-06-18 00:21:38) [GET]
+  Parameters: {"equipe_id"=>"2"}
+  [4;36;1mEquipe Load (0.2ms)[0m   [0;1mSELECT * FROM "equipes" WHERE ("equipes"."id" = 2) [0m
+  [4;35;1mPlayer Load (0.1ms)[0m   [0mSELECT * FROM "players" WHERE ("players".equipe_id = 2) [0m
+Rendering template within layouts/application
+Rendering players/index
+Rendered players/_sidebar (0.6ms)
+Completed in 12ms (View: 7, DB: 0) | 200 OK [http://localhost/equipes/2/players]
+
+
+Processing PlayersController#new (for 127.0.0.1 at 2010-06-18 00:21:40) [GET]
+  Parameters: {"equipe_id"=>"2"}
+  [4;36;1mEquipe Load (0.2ms)[0m   [0;1mSELECT * FROM "equipes" WHERE ("equipes"."id" = 2) [0m
+Rendering template within layouts/application
+Rendering players/new
+Rendered players/_form (2.4ms)
+Rendered players/_sidebar (0.6ms)
+Completed in 17ms (View: 10, DB: 0) | 200 OK [http://localhost/equipes/2/players/new]
+
+
+Processing PlayersController#create (for 127.0.0.1 at 2010-06-18 00:21:48) [POST]
+  Parameters: {"player"=>{"name"=>"MARCOS", "number"=>"12"}, "equipe_id"=>"2", "authenticity_token"=>"A3qMUgO8uJKC7itKYHbYJcaBCM+ypagerJmT/2Mx6QU="}
+  [4;35;1mEquipe Load (0.2ms)[0m   [0mSELECT * FROM "equipes" WHERE ("equipes"."id" = 2) [0m
+  [4;36;1mPlayer Load (0.2ms)[0m   [0;1mSELECT "players".id FROM "players" WHERE ("players"."number" = 12 AND "players".equipe_id = 2) LIMIT 1[0m
+  [4;35;1mPlayer Create (0.3ms)[0m   [0mINSERT INTO "players" ("name", "number", "created_at", "equipe_id", "updated_at") VALUES('MARCOS', 12, '2010-06-18 03:21:48', 2, '2010-06-18 03:21:48')[0m
+Redirected to http://localhost:3000/equipes/2/players/2
+Completed in 14ms (DB: 0) | 302 Found [http://localhost/equipes/2/players]
+
+
+Processing PlayersController#show (for 127.0.0.1 at 2010-06-18 00:21:48) [GET]
+  Parameters: {"equipe_id"=>"2", "id"=>"2"}
+  [4;36;1mEquipe Load (0.2ms)[0m   [0;1mSELECT * FROM "equipes" WHERE ("equipes"."id" = 2) [0m
+  [4;35;1mPlayer Load (0.3ms)[0m   [0mSELECT * FROM "players" WHERE ("players"."id" = 2 AND ("players".equipe_id = 2)) [0m
+Rendering template within layouts/application
+Rendering players/show
+Rendered players/_sidebar (0.6ms)
+Completed in 87ms (View: 81, DB: 0) | 200 OK [http://localhost/equipes/2/players/2]
+
+
+Processing PlayersController#index (for 127.0.0.1 at 2010-06-18 00:21:50) [GET]
+  Parameters: {"equipe_id"=>"2"}
+  [4;36;1mEquipe Load (0.2ms)[0m   [0;1mSELECT * FROM "equipes" WHERE ("equipes"."id" = 2) [0m
+  [4;35;1mPlayer Load (0.3ms)[0m   [0mSELECT * FROM "players" WHERE ("players".equipe_id = 2) [0m
+Rendering template within layouts/application
+Rendering players/index
+
+ActionView::TemplateError (undefined method `player_path' for #<ActionView::Base:0x1043b4c00>) on line #31 of app/views/players/index.html.erb:
+28:           <td class="last">
+29:             <%= link_to "#{t("web-app-theme.show", :default => "Show")}", [@equipe, player] %> |
+30:             <%= link_to "#{t("web-app-theme.edit", :default => "Edit")}", edit_equipe_player_path(@equipe, player) %> |
+31:             <%= link_to "#{t("web-app-theme.delete", :default => "Delete")}", player_path(player), :method => :delete, :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}" %>
+32:           </td>
+33:         </tr>          
+34:         <% end -%>
+
+    app/views/players/index.html.erb:31
+    app/views/players/index.html.erb:20:in `each'
+    app/views/players/index.html.erb:20
+    /Library/Ruby/Gems/1.8/gems/inherited_resources-1.0.2/lib/inherited_resources/legacy/respond_to.rb:105:in `retrieve_response_from_mimes'
+    /Library/Ruby/Gems/1.8/gems/inherited_resources-1.0.2/lib/inherited_resources/legacy/responder.rb:183:in `call'
+    /Library/Ruby/Gems/1.8/gems/inherited_resources-1.0.2/lib/inherited_resources/legacy/responder.rb:183:in `default_render'
+    /Library/Ruby/Gems/1.8/gems/inherited_resources-1.0.2/lib/inherited_resources/legacy/responder.rb:124:in `to_html'
+    responders (0.4.2) lib/responders/flash_responder.rb:89:in `to_html'
+    /Library/Ruby/Gems/1.8/gems/inherited_resources-1.0.2/lib/inherited_resources/legacy/responder.rb:117:in `send'
+    /Library/Ruby/Gems/1.8/gems/inherited_resources-1.0.2/lib/inherited_resources/legacy/responder.rb:117:in `respond'
+    /Library/Ruby/Gems/1.8/gems/inherited_resources-1.0.2/lib/inherited_resources/legacy/responder.rb:110:in `call'
+    /Library/Ruby/Gems/1.8/gems/inherited_resources-1.0.2/lib/inherited_resources/legacy/respond_to.rb:67:in `respond_with'
+    /Library/Ruby/Gems/1.8/gems/inherited_resources-1.0.2/lib/inherited_resources/actions.rb:7:in `index'
+
+Rendered rescues/_trace (49.7ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PlayersController#index (for 127.0.0.1 at 2010-06-18 00:22:13) [GET]
+  Parameters: {"equipe_id"=>"2"}
+  [4;36;1mEquipe Load (0.2ms)[0m   [0;1mSELECT * FROM "equipes" WHERE ("equipes"."id" = 2) [0m
+  [4;35;1mPlayer Load (0.3ms)[0m   [0mSELECT * FROM "players" WHERE ("players".equipe_id = 2) [0m
+Rendering template within layouts/application
+Rendering players/index
+Rendered players/_sidebar (0.6ms)
+Completed in 117ms (View: 23, DB: 1) | 200 OK [http://localhost/equipes/2/players]
+
+
+Processing PlayersController#edit (for 127.0.0.1 at 2010-06-18 00:22:18) [GET]
+  Parameters: {"equipe_id"=>"2", "id"=>"2"}
+  [4;36;1mEquipe Load (0.2ms)[0m   [0;1mSELECT * FROM "equipes" WHERE ("equipes"."id" = 2) [0m
+  [4;35;1mPlayer Load (0.2ms)[0m   [0mSELECT * FROM "players" WHERE ("players"."id" = 2 AND ("players".equipe_id = 2)) [0m
+Rendering template within layouts/application
+Rendering players/edit
+
+ActionView::TemplateError (undefined local variable or method `players_path' for #<ActionView::Base:0x10433f450>) on line #4 of app/views/players/edit.html.erb:
+1: <div class="block">
+2:   <div class="secondary-navigation">
+3:     <ul class="wat-cf">
+4:       <li class="first"><%= link_to "#{t("web-app-theme.list", :default => "List")}", players_path  %></li>
+5:       <li><%= link_to "#{t("web-app-theme.new", :default => "New")}", new_player_path %></li>
+6:       <li class="active"><%= link_to "#{t("web-app-theme.edit", :default => "Edit")}", edit_player_path %></li>
+7:     </ul>
+
+    app/views/players/edit.html.erb:4
+    /Library/Ruby/Gems/1.8/gems/inherited_resources-1.0.2/lib/inherited_resources/legacy/respond_to.rb:105:in `retrieve_response_from_mimes'
+    /Library/Ruby/Gems/1.8/gems/inherited_resources-1.0.2/lib/inherited_resources/legacy/responder.rb:183:in `call'
+    /Library/Ruby/Gems/1.8/gems/inherited_resources-1.0.2/lib/inherited_resources/legacy/responder.rb:183:in `default_render'
+    /Library/Ruby/Gems/1.8/gems/inherited_resources-1.0.2/lib/inherited_resources/legacy/responder.rb:124:in `to_html'
+    responders (0.4.2) lib/responders/flash_responder.rb:89:in `to_html'
+    /Library/Ruby/Gems/1.8/gems/inherited_resources-1.0.2/lib/inherited_resources/legacy/responder.rb:117:in `send'
+    /Library/Ruby/Gems/1.8/gems/inherited_resources-1.0.2/lib/inherited_resources/legacy/responder.rb:117:in `respond'
+    /Library/Ruby/Gems/1.8/gems/inherited_resources-1.0.2/lib/inherited_resources/legacy/responder.rb:110:in `call'
+    /Library/Ruby/Gems/1.8/gems/inherited_resources-1.0.2/lib/inherited_resources/legacy/respond_to.rb:67:in `respond_with'
+    /Library/Ruby/Gems/1.8/gems/inherited_resources-1.0.2/lib/inherited_resources/actions.rb:25:in `edit'
+
+Rendered rescues/_trace (46.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PlayersController#index (for 127.0.0.1 at 2010-06-18 00:22:33) [GET]
+  Parameters: {"equipe_id"=>"2"}
+  [4;36;1mEquipe Load (0.2ms)[0m   [0;1mSELECT * FROM "equipes" WHERE ("equipes"."id" = 2) [0m
+  [4;35;1mPlayer Load (0.3ms)[0m   [0mSELECT * FROM "players" WHERE ("players".equipe_id = 2) [0m
+Rendering template within layouts/application
+Rendering players/index
+Rendered players/_sidebar (0.6ms)
+Completed in 28ms (View: 23, DB: 1) | 200 OK [http://localhost/equipes/2/players]
+
+
+Processing PlayersController#index (for 127.0.0.1 at 2010-06-18 00:22:43) [GET]
+  Parameters: {"equipe_id"=>"2"}
+  [4;36;1mEquipe Load (0.3ms)[0m   [0;1mSELECT * FROM "equipes" WHERE ("equipes"."id" = 2) [0m
+  [4;35;1mPlayer Load (0.3ms)[0m   [0mSELECT * FROM "players" WHERE ("players".equipe_id = 2) [0m
+Rendering template within layouts/application
+Rendering players/index
+Rendered players/_sidebar (0.6ms)
+Completed in 25ms (View: 18, DB: 1) | 200 OK [http://localhost/equipes/2/players]
+
+
+Processing PlayersController#index (for 127.0.0.1 at 2010-06-18 00:23:27) [GET]
+  Parameters: {"equipe_id"=>"2"}
+  [4;36;1mEquipe Load (0.2ms)[0m   [0;1mSELECT * FROM "equipes" WHERE ("equipes"."id" = 2) [0m
+  [4;35;1mPlayer Load (0.2ms)[0m   [0mSELECT * FROM "players" WHERE ("players".equipe_id = 2) [0m
+Rendering template within layouts/application
+Rendering players/index
+Rendered players/_sidebar (0.5ms)
+Completed in 21ms (View: 17, DB: 0) | 200 OK [http://localhost/equipes/2/players]
+
+
+Processing PlayersController#new (for 127.0.0.1 at 2010-06-18 00:23:28) [GET]
+  Parameters: {"equipe_id"=>"2"}
+  [4;36;1mEquipe Load (0.2ms)[0m   [0;1mSELECT * FROM "equipes" WHERE ("equipes"."id" = 2) [0m
+Rendering template within layouts/application
+Rendering players/new
+Rendered players/_form (2.4ms)
+Rendered players/_sidebar (0.6ms)
+Completed in 84ms (View: 12, DB: 0) | 200 OK [http://localhost/equipes/2/players/new]
+
+
+Processing PlayersController#create (for 127.0.0.1 at 2010-06-18 00:23:41) [POST]
+  Parameters: {"player"=>{"name"=>"VALDIVIA", "number"=>"10"}, "equipe_id"=>"2", "authenticity_token"=>"A3qMUgO8uJKC7itKYHbYJcaBCM+ypagerJmT/2Mx6QU="}
+  [4;35;1mEquipe Load (0.2ms)[0m   [0mSELECT * FROM "equipes" WHERE ("equipes"."id" = 2) [0m
+  [4;36;1mPlayer Load (0.2ms)[0m   [0;1mSELECT "players".id FROM "players" WHERE ("players"."number" = 10 AND "players".equipe_id = 2) LIMIT 1[0m
+  [4;35;1mPlayer Create (0.3ms)[0m   [0mINSERT INTO "players" ("name", "number", "created_at", "equipe_id", "updated_at") VALUES('VALDIVIA', 10, '2010-06-18 03:23:41', 2, '2010-06-18 03:23:41')[0m
+Redirected to http://localhost:3000/equipes/2/players/3
+Completed in 106ms (DB: 0) | 302 Found [http://localhost/equipes/2/players]
+
+
+Processing PlayersController#show (for 127.0.0.1 at 2010-06-18 00:23:41) [GET]
+  Parameters: {"equipe_id"=>"2", "id"=>"3"}
+  [4;36;1mEquipe Load (0.2ms)[0m   [0;1mSELECT * FROM "equipes" WHERE ("equipes"."id" = 2) [0m
+  [4;35;1mPlayer Load (0.3ms)[0m   [0mSELECT * FROM "players" WHERE ("players"."id" = 3 AND ("players".equipe_id = 2)) [0m
+Rendering template within layouts/application
+Rendering players/show
+
+ActionView::TemplateError (edit_equipe_player_url failed to generate from {:action=>"edit", :controller=>"players", :equipe_id=>#<Player id: 3, equipe_id: 2, name: "VALDIVIA", created_at: "2010-06-18 03:23:41", updated_at: "2010-06-18 03:23:41", number: 10>}, expected: {:action=>"edit", :controller=>"players"}, diff: {:equipe_id=>#<Player id: 3, equipe_id: 2, name: "VALDIVIA", created_at: "2010-06-18 03:23:41", updated_at: "2010-06-18 03:23:41", number: 10>}) on line #23 of app/views/players/show.html.erb:
+20:           <%= @player.number %>
+21:         </p>
+22:       <div class="wat-cf">
+23:         <%= link_to "#{image_tag("web-app-theme/application_edit.png", :alt => "#{t("web-app-theme.edit", :default=> "Edit")}")} #{t("web-app-theme.edit", :default=> "Edit")}", edit_equipe_player_path(@player), :class => "button" %> 
+24:         <%= link_to "#{image_tag("web-app-theme/cross.png", :alt => "#{t("web-app-theme.delete", :default=> "Delete")}")} #{t("web-app-theme.delete", :default => "Delete")}", [@equipe, @player], :method => "delete", :class => "button", :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}" %>
+25:       </div>      
+26:     </div>
+
+    (eval):16:in `edit_equipe_player_path'
+    app/views/players/show.html.erb:23
+    /Library/Ruby/Gems/1.8/gems/inherited_resources-1.0.2/lib/inherited_resources/legacy/respond_to.rb:105:in `retrieve_response_from_mimes'
+    /Library/Ruby/Gems/1.8/gems/inherited_resources-1.0.2/lib/inherited_resources/legacy/responder.rb:183:in `call'
+    /Library/Ruby/Gems/1.8/gems/inherited_resources-1.0.2/lib/inherited_resources/legacy/responder.rb:183:in `default_render'
+    /Library/Ruby/Gems/1.8/gems/inherited_resources-1.0.2/lib/inherited_resources/legacy/responder.rb:124:in `to_html'
+    responders (0.4.2) lib/responders/flash_responder.rb:89:in `to_html'
+    /Library/Ruby/Gems/1.8/gems/inherited_resources-1.0.2/lib/inherited_resources/legacy/responder.rb:117:in `send'
+    /Library/Ruby/Gems/1.8/gems/inherited_resources-1.0.2/lib/inherited_resources/legacy/responder.rb:117:in `respond'
+    /Library/Ruby/Gems/1.8/gems/inherited_resources-1.0.2/lib/inherited_resources/legacy/responder.rb:110:in `call'
+    /Library/Ruby/Gems/1.8/gems/inherited_resources-1.0.2/lib/inherited_resources/legacy/respond_to.rb:67:in `respond_with'
+    /Library/Ruby/Gems/1.8/gems/inherited_resources-1.0.2/lib/inherited_resources/actions.rb:13:in `show'
+
+Rendered rescues/_trace (126.4ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PlayersController#show (for 127.0.0.1 at 2010-06-18 00:24:05) [GET]
+  Parameters: {"equipe_id"=>"2", "id"=>"3"}
+  [4;36;1mEquipe Load (0.2ms)[0m   [0;1mSELECT * FROM "equipes" WHERE ("equipes"."id" = 2) [0m
+  [4;35;1mPlayer Load (0.2ms)[0m   [0mSELECT * FROM "players" WHERE ("players"."id" = 3 AND ("players".equipe_id = 2)) [0m
+Rendering template within layouts/application
+Rendering players/show
+Rendered players/_sidebar (0.5ms)
+Completed in 22ms (View: 16, DB: 0) | 200 OK [http://localhost/equipes/2/players/3]
+
+
+Processing PlayersController#index (for 127.0.0.1 at 2010-06-18 00:24:10) [GET]
+  Parameters: {"equipe_id"=>"2"}
+  [4;36;1mEquipe Load (0.2ms)[0m   [0;1mSELECT * FROM "equipes" WHERE ("equipes"."id" = 2) [0m
+  [4;35;1mPlayer Load (0.3ms)[0m   [0mSELECT * FROM "players" WHERE ("players".equipe_id = 2) [0m
+Rendering template within layouts/application
+Rendering players/index
+Rendered players/_sidebar (0.5ms)
+Completed in 21ms (View: 16, DB: 0) | 200 OK [http://localhost/equipes/2/players]
+
+
+Processing EquipesController#index (for 127.0.0.1 at 2010-06-18 00:24:13) [GET]
+  [4;36;1mEquipe Load (0.6ms)[0m   [0;1mSELECT * FROM "equipes" [0m
+Rendering template within layouts/application
+Rendering equipes/index
+Rendered equipes/_sidebar (0.3ms)
+Completed in 17ms (View: 13, DB: 1) | 200 OK [http://localhost/equipes]
+
+
+Processing EquipesController#show (for 127.0.0.1 at 2010-06-18 00:24:15) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mEquipe Load (0.2ms)[0m   [0mSELECT * FROM "equipes" WHERE ("equipes"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering equipes/show
+Rendered equipes/_sidebar (0.4ms)
+Completed in 16ms (View: 12, DB: 0) | 200 OK [http://localhost/equipes/1]
+
+
+Processing EquipesController#new (for 127.0.0.1 at 2010-06-18 00:24:19) [GET]
+Rendering template within layouts/application
+Rendering equipes/new
+Rendered equipes/_form (7.1ms)
+Rendered equipes/_sidebar (0.2ms)
+Completed in 14ms (View: 11, DB: 0) | 200 OK [http://localhost/equipes/new]
+
+
+Processing EquipesController#index (for 127.0.0.1 at 2010-06-18 00:24:21) [GET]
+  [4;36;1mEquipe Load (0.5ms)[0m   [0;1mSELECT * FROM "equipes" [0m
+Rendering template within layouts/application
+Rendering equipes/index
+Rendered equipes/_sidebar (0.3ms)
+Completed in 16ms (View: 13, DB: 1) | 200 OK [http://localhost/equipes]
+
+
+Processing EquipesController#show (for 127.0.0.1 at 2010-06-18 00:24:22) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mEquipe Load (0.2ms)[0m   [0mSELECT * FROM "equipes" WHERE ("equipes"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering equipes/show
+Rendered equipes/_sidebar (0.3ms)
+Completed in 14ms (View: 10, DB: 0) | 200 OK [http://localhost/equipes/1]
+
+
+Processing PlayersController#index (for 127.0.0.1 at 2010-06-18 00:24:24) [GET]
+  Parameters: {"equipe_id"=>"1"}
+  [4;36;1mEquipe Load (0.2ms)[0m   [0;1mSELECT * FROM "equipes" WHERE ("equipes"."id" = 1) [0m
+  [4;35;1mPlayer Load (0.2ms)[0m   [0mSELECT * FROM "players" WHERE ("players".equipe_id = 1) [0m
+Rendering template within layouts/application
+Rendering players/index
+Rendered players/_sidebar (0.6ms)
+Completed in 18ms (View: 13, DB: 0) | 200 OK [http://localhost/equipes/1/players]
+
+
+Processing EquipesController#index (for 127.0.0.1 at 2010-06-18 00:24:31) [GET]
+  [4;36;1mEquipe Load (0.5ms)[0m   [0;1mSELECT * FROM "equipes" [0m
+Rendering template within layouts/application
+Rendering equipes/index
+Rendered equipes/_sidebar (0.3ms)
+Completed in 18ms (View: 15, DB: 1) | 200 OK [http://localhost/equipes]
+
+
+Processing EquipesController#index (for 127.0.0.1 at 2010-06-18 00:42:55) [GET]
+  [4;35;1mEquipe Load (0.9ms)[0m   [0mSELECT * FROM "equipes" [0m
+Rendering template within layouts/application
+Rendering equipes/index
+Rendered equipes/_sidebar (0.2ms)
+Completed in 17ms (View: 14, DB: 1) | 200 OK [http://localhost/equipes]
+
+
+Processing EquipesController#index (for 127.0.0.1 at 2010-06-18 00:42:57) [GET]
+  [4;36;1mEquipe Load (0.6ms)[0m   [0;1mSELECT * FROM "equipes" [0m
+Rendering template within layouts/application
+Rendering equipes/index
+Rendered equipes/_sidebar (0.2ms)
+Completed in 17ms (View: 13, DB: 1) | 200 OK [http://localhost/equipes]
+
+
+Processing EquipesController#index (for 127.0.0.1 at 2010-06-18 00:42:58) [GET]
+  [4;35;1mEquipe Load (0.6ms)[0m   [0mSELECT * FROM "equipes" [0m
+Rendering template within layouts/application
+Rendering equipes/index
+Rendered equipes/_sidebar (0.2ms)
+Completed in 20ms (View: 15, DB: 1) | 200 OK [http://localhost/equipes]
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateEquipes (20100618011002)
+Migrating to CreatePlayers (20100618022955)
+Migrating to AddNumberToPlayers (20100618023227)
+Migrating to CreateChampionships (20100618042308)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCREATE TABLE "championships" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (6.3ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100618042308')[0m
+Migrating to AddEquipesChampionsships (20100618043311)
+  [4;35;1mSQL (0.4ms)[0m   [0mCREATE TABLE "equipes_championships" ("equipe_id" integer, "championships_id" integer) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100618043311')[0m
+  [4;35;1mSQL (1.1ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("championships")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("equipes")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("equipes_championships")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("players")[0m
+
+
+Processing EquipesController#index (for 127.0.0.1 at 2010-06-18 02:30:45) [GET]
+  [4;36;1mEquipe Load (0.6ms)[0m   [0;1mSELECT * FROM "equipes" [0m
+Rendering template within layouts/application
+Rendering equipes/index
+Rendered equipes/_sidebar (0.2ms)
+Completed in 21ms (View: 17, DB: 1) | 200 OK [http://localhost/equipes]
+
+
+Processing ChampionshipsController#index (for 127.0.0.1 at 2010-06-18 02:30:47) [GET]
+  [4;35;1mChampionship Load (0.4ms)[0m   [0mSELECT * FROM "championships" [0m
+Rendering template within layouts/application
+Rendering championships/index
+Rendered championships/_sidebar (0.7ms)
+Completed in 17ms (View: 14, DB: 0) | 200 OK [http://localhost/championships]
+
+
+Processing EquipesController#index (for 127.0.0.1 at 2010-06-18 02:30:49) [GET]
+  [4;36;1mEquipe Load (0.6ms)[0m   [0;1mSELECT * FROM "equipes" [0m
+Rendering template within layouts/application
+Rendering equipes/index
+Rendered equipes/_sidebar (0.2ms)
+Completed in 17ms (View: 13, DB: 1) | 200 OK [http://localhost/equipes]
+
+
+Processing ChampionshipsController#index (for 127.0.0.1 at 2010-06-18 02:30:49) [GET]
+  [4;35;1mChampionship Load (0.4ms)[0m   [0mSELECT * FROM "championships" [0m
+Rendering template within layouts/application
+Rendering championships/index
+Rendered championships/_sidebar (0.3ms)
+Completed in 79ms (View: 76, DB: 0) | 200 OK [http://localhost/championships]
+
+
+Processing EquipesController#index (for 127.0.0.1 at 2010-06-18 02:30:50) [GET]
+  [4;36;1mEquipe Load (1.1ms)[0m   [0;1mSELECT * FROM "equipes" [0m
+Rendering template within layouts/application
+Rendering equipes/index
+Rendered equipes/_sidebar (0.2ms)
+Completed in 19ms (View: 14, DB: 1) | 200 OK [http://localhost/equipes]
+
+
+Processing ChampionshipsController#index (for 127.0.0.1 at 2010-06-18 02:30:52) [GET]
+  [4;35;1mChampionship Load (0.4ms)[0m   [0mSELECT * FROM "championships" [0m
+Rendering template within layouts/application
+Rendering championships/index
+Rendered championships/_sidebar (0.3ms)
+Completed in 9ms (View: 6, DB: 0) | 200 OK [http://localhost/championships]
+
+
+Processing EquipesController#index (for 127.0.0.1 at 2010-06-18 02:30:53) [GET]
+  [4;36;1mEquipe Load (0.5ms)[0m   [0;1mSELECT * FROM "equipes" [0m
+Rendering template within layouts/application
+Rendering equipes/index
+Rendered equipes/_sidebar (0.2ms)
+Completed in 16ms (View: 13, DB: 1) | 200 OK [http://localhost/equipes]
+
+
+Processing ChampionshipsController#index (for 127.0.0.1 at 2010-06-18 02:30:54) [GET]
+  [4;35;1mChampionship Load (0.4ms)[0m   [0mSELECT * FROM "championships" [0m
+Rendering template within layouts/application
+Rendering championships/index
+Rendered championships/_sidebar (0.3ms)
+Completed in 8ms (View: 6, DB: 0) | 200 OK [http://localhost/championships]
+
+
+Processing EquipesController#index (for 127.0.0.1 at 2010-06-18 02:30:54) [GET]
+  [4;36;1mEquipe Load (0.5ms)[0m   [0;1mSELECT * FROM "equipes" [0m
+Rendering template within layouts/application
+Rendering equipes/index
+Rendered equipes/_sidebar (0.3ms)
+Completed in 83ms (View: 80, DB: 1) | 200 OK [http://localhost/equipes]
+
+
+Processing ChampionshipsController#index (for 127.0.0.1 at 2010-06-18 02:30:55) [GET]
+  [4;35;1mChampionship Load (0.4ms)[0m   [0mSELECT * FROM "championships" [0m
+Rendering template within layouts/application
+Rendering championships/index
+Rendered championships/_sidebar (0.3ms)
+Completed in 9ms (View: 6, DB: 0) | 200 OK [http://localhost/championships]
+
+
+Processing EquipesController#index (for 127.0.0.1 at 2010-06-18 02:30:56) [GET]
+  [4;36;1mEquipe Load (0.5ms)[0m   [0;1mSELECT * FROM "equipes" [0m
+Rendering template within layouts/application
+Rendering equipes/index
+Rendered equipes/_sidebar (0.2ms)
+Completed in 17ms (View: 13, DB: 1) | 200 OK [http://localhost/equipes]
+
+
+Processing ChampionshipsController#index (for 127.0.0.1 at 2010-06-18 02:30:58) [GET]
+  [4;35;1mChampionship Load (0.4ms)[0m   [0mSELECT * FROM "championships" [0m
+Rendering template within layouts/application
+Rendering championships/index
+Rendered championships/_sidebar (0.3ms)
+Completed in 8ms (View: 5, DB: 0) | 200 OK [http://localhost/championships]
+
+
+Processing EquipesController#index (for 127.0.0.1 at 2010-06-18 02:30:59) [GET]
+  [4;36;1mEquipe Load (0.5ms)[0m   [0;1mSELECT * FROM "equipes" [0m
+Rendering template within layouts/application
+Rendering equipes/index
+Rendered equipes/_sidebar (0.2ms)
+Completed in 16ms (View: 13, DB: 1) | 200 OK [http://localhost/equipes]
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateEquipes (20100618011002)
+Migrating to CreatePlayers (20100618022955)
+Migrating to AddNumberToPlayers (20100618023227)
+Migrating to CreateChampionships (20100618042308)
+Migrating to AddEquipesChampionsships (20100618043311)
+Migrating to RenameChampionship (20100618054544)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCREATE TEMPORARY TABLE "altered_equipes_championships" ("equipe_id" integer, "championship_id" integer) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("equipes_championships")[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mDROP TABLE "equipes_championships"[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCREATE TABLE "equipes_championships" ("equipe_id" integer, "championship_id" integer) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("altered_equipes_championships")[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mDROP TABLE "altered_equipes_championships"[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100618054544')[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("championships")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("equipes")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("equipes_championships")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("players")[0m
+
+
+Processing EquipesController#index (for 127.0.0.1 at 2010-06-18 02:47:36) [GET]
+  [4;35;1mEquipe Load (0.6ms)[0m   [0mSELECT * FROM "equipes" [0m
+Rendering template within layouts/application
+Rendering equipes/index
+Rendered equipes/_sidebar (0.3ms)
+Completed in 84ms (View: 14, DB: 1) | 200 OK [http://localhost/equipes]
+
+
+Processing ChampionshipsController#index (for 127.0.0.1 at 2010-06-18 02:47:37) [GET]
+  [4;36;1mChampionship Load (0.4ms)[0m   [0;1mSELECT * FROM "championships" [0m
+Rendering template within layouts/application
+Rendering championships/index
+Rendered championships/_sidebar (0.3ms)
+Completed in 8ms (View: 5, DB: 0) | 200 OK [http://localhost/championships]
+
+
+Processing EquipesController#index (for 127.0.0.1 at 2010-06-18 02:47:38) [GET]
+  [4;35;1mEquipe Load (0.5ms)[0m   [0mSELECT * FROM "equipes" [0m
+Rendering template within layouts/application
+Rendering equipes/index
+Rendered equipes/_sidebar (0.2ms)
+Completed in 16ms (View: 13, DB: 1) | 200 OK [http://localhost/equipes]
+
+
+Processing EquipesController#index (for 127.0.0.1 at 2010-06-18 03:00:30) [GET]
+  [4;36;1mEquipe Load (0.6ms)[0m   [0;1mSELECT * FROM "equipes" [0m
+Rendering template within layouts/application
+Rendering equipes/index
+Rendered equipes/_sidebar (0.2ms)
+Completed in 17ms (View: 14, DB: 1) | 200 OK [http://localhost/equipes]
+
+
+Processing EquipesController#index (for 127.0.0.1 at 2010-06-18 03:00:42) [GET]
+  [4;35;1mEquipe Load (0.5ms)[0m   [0mSELECT * FROM "equipes" [0m
+Rendering template within layouts/application
+Rendering equipes/index
+Rendered equipes/_sidebar (0.2ms)
+Completed in 16ms (View: 13, DB: 1) | 200 OK [http://localhost/equipes]

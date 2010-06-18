@@ -1,0 +1,20 @@
+<div class="block">
+  <div class="secondary-navigation">
+    <ul class="wat-cf">
+	    <li class="first"><%= link_to "Equipes", equipes_path  %></li>
+  		<li><%= link_to @equipe.name, @equipe %></li>
+  		<li><%= link_to "Jogadores", equipe_players_path(@equipe) %></li>
+      <li class="active"><%= link_to "#{t("web-app-theme.new", :default => "New")}", "#" %></li>
+    </ul>
+  </div>          
+  <div class="content">            
+    <h2 class="title"></h2>
+    <div class="inner">
+      <% form_for :player, :url => equipe_players_path(@equipe), :html => { :class => :form } do |f| -%>
+        <%= render :partial => "form", :locals => {:f => f} %>
+      <% end -%>
+    </div>
+  </div>
+</div>
+
+<% content_for :sidebar, render(:partial => 'sidebar') -%>

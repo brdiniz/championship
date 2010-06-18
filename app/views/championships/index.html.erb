@@ -1,0 +1,43 @@
+<div class="block">
+  <div class="secondary-navigation">
+    <ul class="wat-cf">
+	    <li class="first active"><%= link_to "Campeonatos", "#"  %></li>
+    </ul>
+  </div>          
+  <div class="content">          
+    <h2 class="title"></h2>
+    <div class="inner">
+      <table class="table">
+        <tr>             
+          <th class="first">ID</th>
+					<th>
+						<%= t("activerecord.attributes.championship.name", :default => t("activerecord.labels.name", :default => "Name")) %>
+					</th>
+          <th class="last">&nbsp;</th>
+        </tr>
+        <% @championships.each do |championship| -%>
+        <tr class="<%= cycle("odd", "even") %>">
+          <td>
+            <%= championship.id %>
+          </td>
+										<td>
+						<%= link_to championship.name, championship_path(championship) %>
+					</td>
+          <td class="last">
+            <%= link_to "#{t("web-app-theme.show", :default => "Show")}", championship_path(championship) %> |
+            <%= link_to "#{t("web-app-theme.edit", :default => "Edit")}", edit_championship_path(championship) %> |
+            <%= link_to "#{t("web-app-theme.delete", :default => "Delete")}", championship_path(championship), :method => :delete, :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}" %>
+          </td>
+        </tr>          
+        <% end -%>
+      </table>
+      <div class="actions-bar wat-cf">
+        <div class="actions">
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+<% content_for :sidebar, render(:partial => 'sidebar') -%>

@@ -1,0 +1,10 @@
+<div class="block">
+  <h3>Ações para Equipe</h3>
+  <ul class="navigation">
+		<li><%= link_to "Voltar", equipes_path %></li>
+    <li><%= link_to "Criar Equipe", new_equipe_path %></li>
+		<% if @equipe && !@equipe.new_record? %>
+			<li><%= link_to "Lista de Jogadores", equipe_players_path(@equipe) %></li>
+		<% end %>
+  </ul>
+</div>
