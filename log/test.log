@@ -1063,3 +1063,262 @@ Redirected to http://test.host/championships/1
 Completed in 2ms (DB: 2) | 302 Found [http://test.host/championships/manage_equipe/1?equipe_id=1]
   [4;35;1mChampionship Load (0.3ms)[0m   [0mSELECT * FROM "championships" WHERE ("championships"."id" = 1) [0m
   [4;36;1mEquipe Load (0.1ms)[0m   [0;1mSELECT * FROM "equipes" INNER JOIN "equipes_championships" ON "equipes".id = "equipes_championships".equipe_id WHERE ("equipes_championships".championship_id = 1 ) [0m
+  [4;36;1mEquipe Load (0.3ms)[0m   [0;1mSELECT "equipes".id FROM "equipes" WHERE ("equipes"."name" IS NULL) LIMIT 1[0m
+  [4;35;1mEquipe Load (0.2ms)[0m   [0mSELECT "equipes".id FROM "equipes" WHERE ("equipes"."name" = 'Flamengo') LIMIT 1[0m
+  [4;36;1mEquipe Create (0.6ms)[0m   [0;1mINSERT INTO "equipes" ("name", "created_at", "updated_at") VALUES('Flamengo', '2010-06-21 15:18:42', '2010-06-21 15:18:42')[0m
+  [4;35;1mEquipe Load (0.2ms)[0m   [0mSELECT "equipes".id FROM "equipes" WHERE ("equipes"."name" = 'Flamengo') LIMIT 1[0m
+  [4;36;1mEquipe Load (0.1ms)[0m   [0;1mSELECT "equipes".id FROM "equipes" WHERE ("equipes"."name" = 'Palmeiras') LIMIT 1[0m
+  [4;35;1mPlayer Load (0.2ms)[0m   [0mSELECT "players".id FROM "players" WHERE ("players"."number" IS NULL AND "players".equipe_id IS NULL) LIMIT 1[0m
+  [4;36;1mEquipe Load (0.2ms)[0m   [0;1mSELECT "equipes".id FROM "equipes" WHERE ("equipes"."name" = 'equipe_#<Factory::Proxy::Create:0x10330a148>') LIMIT 1[0m
+  [4;35;1mEquipe Create (0.3ms)[0m   [0mINSERT INTO "equipes" ("name", "created_at", "updated_at") VALUES('equipe_#<Factory::Proxy::Create:0x10330a148>', '2010-06-21 15:18:42', '2010-06-21 15:18:42')[0m
+  [4;36;1mPlayer Load (0.1ms)[0m   [0;1mSELECT "players".id FROM "players" WHERE ("players"."number" = 0 AND "players".equipe_id = 1) LIMIT 1[0m
+  [4;35;1mPlayer Create (0.1ms)[0m   [0mINSERT INTO "players" ("name", "number", "created_at", "equipe_id", "updated_at") VALUES('name_#<Factory::Proxy::Create:0x10330b048>', 0, '2010-06-21 15:18:42', 1, '2010-06-21 15:18:42')[0m
+  [4;36;1mPlayer Load (0.1ms)[0m   [0;1mSELECT "players".id FROM "players" WHERE ("players"."number" = 0 AND "players".equipe_id = 1) LIMIT 1[0m
+  [4;35;1mChampionship Create (0.6ms)[0m   [0mINSERT INTO "championships" ("name", "created_at", "updated_at") VALUES('campeonato_#<Factory::Proxy::Create:0x1032c8748>', '2010-06-21 15:18:42', '2010-06-21 15:18:42')[0m
+  [4;36;1mEquipe Load (0.1ms)[0m   [0;1mSELECT "equipes".id FROM "equipes" WHERE ("equipes"."name" = 'equipe_#<Factory::Proxy::Create:0x1032c3270>') LIMIT 1[0m
+  [4;35;1mEquipe Create (0.2ms)[0m   [0mINSERT INTO "equipes" ("name", "created_at", "updated_at") VALUES('equipe_#<Factory::Proxy::Create:0x1032c3270>', '2010-06-21 15:18:42', '2010-06-21 15:18:42')[0m
+  [4;36;1mEquipe Load (0.6ms)[0m   [0;1mSELECT * FROM "equipes" WHERE ("equipes"."name" = 'equipe_#<Factory::Proxy::Create:0x1032c3270>') LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO "equipes_championships" ("championship_id", "equipe_id") VALUES (1, 1)[0m
+  [4;36;1mEquipe Load (0.1ms)[0m   [0;1mSELECT "equipes".id FROM "equipes" WHERE ("equipes"."name" = 'equipe_#<Factory::Proxy::Create:0x1032b1070>') LIMIT 1[0m
+  [4;35;1mEquipe Create (0.1ms)[0m   [0mINSERT INTO "equipes" ("name", "created_at", "updated_at") VALUES('equipe_#<Factory::Proxy::Create:0x1032b1070>', '2010-06-21 15:18:42', '2010-06-21 15:18:42')[0m
+  [4;36;1mEquipe Load (0.2ms)[0m   [0;1mSELECT * FROM "equipes" WHERE ("equipes"."name" = 'equipe_#<Factory::Proxy::Create:0x1032b1070>') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO "equipes_championships" ("championship_id", "equipe_id") VALUES (1, 2)[0m
+  [4;36;1mChampionship Load (0.2ms)[0m   [0;1mSELECT * FROM "championships" WHERE ("championships"."id" = 1) [0m
+  [4;35;1mEquipe Load (0.3ms)[0m   [0mSELECT * FROM "equipes" INNER JOIN "equipes_championships" ON "equipes".id = "equipes_championships".equipe_id WHERE ("equipes_championships".championship_id = 1 ) [0m
+  [4;36;1mChampionship Create (0.3ms)[0m   [0;1mINSERT INTO "championships" ("name", "created_at", "updated_at") VALUES('campeonato_#<Factory::Proxy::Create:0x103299718>', '2010-06-21 15:18:42', '2010-06-21 15:18:42')[0m
+  [4;35;1mEquipe Load (0.1ms)[0m   [0mSELECT "equipes".id FROM "equipes" WHERE ("equipes"."name" = 'equipe_#<Factory::Proxy::Create:0x1032952f8>') LIMIT 1[0m
+  [4;36;1mEquipe Create (0.1ms)[0m   [0;1mINSERT INTO "equipes" ("name", "created_at", "updated_at") VALUES('equipe_#<Factory::Proxy::Create:0x1032952f8>', '2010-06-21 15:18:42', '2010-06-21 15:18:42')[0m
+
+
+Processing ChampionshipsController#manage_equipe (for 0.0.0.0 at 2010-06-21 12:18:42) [POST]
+  Parameters: {"id"=>"1", "championship"=>{"equipe_name"=>"equipe_#<Factory::Proxy::Create:0x1032952f8>"}}
+  [4;35;1mChampionship Load (0.2ms)[0m   [0mSELECT * FROM "championships" WHERE ("championships"."id" = 1) [0m
+  [4;36;1mEquipe Load (0.2ms)[0m   [0;1mSELECT * FROM "equipes" WHERE ("equipes"."name" = 'equipe_#<Factory::Proxy::Create:0x1032952f8>') LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO "equipes_championships" ("championship_id", "equipe_id") VALUES (1, 1)[0m
+Redirected to http://test.host/championships/1
+Completed in 6ms (DB: 6) | 302 Found [http://test.host/championships/manage_equipe/1?championship%5Bequipe_name%5D=equipe_%23%3CFactory%3A%3AProxy%3A%3ACreate%3A0x1032952f8%3E]
+  [4;36;1mChampionship Load (0.2ms)[0m   [0;1mSELECT * FROM "championships" WHERE ("championships"."id" = 1) [0m
+  [4;35;1mEquipe Load (0.3ms)[0m   [0mSELECT * FROM "equipes" INNER JOIN "equipes_championships" ON "equipes".id = "equipes_championships".equipe_id WHERE ("equipes_championships".championship_id = 1 ) [0m
+  [4;36;1mChampionship Create (0.4ms)[0m   [0;1mINSERT INTO "championships" ("name", "created_at", "updated_at") VALUES('campeonato_#<Factory::Proxy::Create:0x1032695e0>', '2010-06-21 15:18:42', '2010-06-21 15:18:42')[0m
+  [4;35;1mEquipe Load (0.1ms)[0m   [0mSELECT "equipes".id FROM "equipes" WHERE ("equipes"."name" = 'equipe_#<Factory::Proxy::Create:0x1032651c0>') LIMIT 1[0m
+  [4;36;1mEquipe Create (0.1ms)[0m   [0;1mINSERT INTO "equipes" ("name", "created_at", "updated_at") VALUES('equipe_#<Factory::Proxy::Create:0x1032651c0>', '2010-06-21 15:18:42', '2010-06-21 15:18:42')[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO "equipes_championships" ("championship_id", "equipe_id") VALUES (1, 1)[0m
+
+
+Processing ChampionshipsController#manage_equipe (for 0.0.0.0 at 2010-06-21 12:18:42) [DELETE]
+  Parameters: {"equipe_id"=>"1", "id"=>"1"}
+  [4;36;1mChampionship Load (0.2ms)[0m   [0;1mSELECT * FROM "championships" WHERE ("championships"."id" = 1) [0m
+  [4;35;1mEquipe Load (0.2ms)[0m   [0mSELECT * FROM "equipes" WHERE ("equipes"."id" = 1) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mDELETE FROM "equipes_championships" WHERE championship_id = 1 AND equipe_id IN (1)[0m
+Redirected to http://test.host/championships/1
+Completed in 3ms (DB: 2) | 302 Found [http://test.host/championships/manage_equipe/1?equipe_id=1]
+  [4;35;1mChampionship Load (0.2ms)[0m   [0mSELECT * FROM "championships" WHERE ("championships"."id" = 1) [0m
+  [4;36;1mEquipe Load (0.1ms)[0m   [0;1mSELECT * FROM "equipes" INNER JOIN "equipes_championships" ON "equipes".id = "equipes_championships".equipe_id WHERE ("equipes_championships".championship_id = 1 ) [0m
+  [4;36;1mEquipe Load (18.9ms)[0m   [0;1mSELECT "equipes".id FROM "equipes" WHERE ("equipes"."name" IS NULL) LIMIT 1[0m
+  [4;35;1mEquipe Load (0.2ms)[0m   [0mSELECT "equipes".id FROM "equipes" WHERE ("equipes"."name" = 'Flamengo') LIMIT 1[0m
+  [4;36;1mEquipe Create (0.4ms)[0m   [0;1mINSERT INTO "equipes" ("name", "created_at", "updated_at") VALUES('Flamengo', '2010-06-21 15:22:52', '2010-06-21 15:22:52')[0m
+  [4;35;1mEquipe Load (0.2ms)[0m   [0mSELECT "equipes".id FROM "equipes" WHERE ("equipes"."name" = 'Flamengo') LIMIT 1[0m
+  [4;36;1mEquipe Load (0.1ms)[0m   [0;1mSELECT "equipes".id FROM "equipes" WHERE ("equipes"."name" = 'Palmeiras') LIMIT 1[0m
+  [4;35;1mPlayer Load (1.2ms)[0m   [0mSELECT "players".id FROM "players" WHERE ("players"."number" IS NULL AND "players".equipe_id IS NULL) LIMIT 1[0m
+  [4;36;1mEquipe Load (0.2ms)[0m   [0;1mSELECT "equipes".id FROM "equipes" WHERE ("equipes"."name" = 'equipe_#<Factory::Proxy::Create:0x10330a170>') LIMIT 1[0m
+  [4;35;1mEquipe Create (0.3ms)[0m   [0mINSERT INTO "equipes" ("name", "created_at", "updated_at") VALUES('equipe_#<Factory::Proxy::Create:0x10330a170>', '2010-06-21 15:22:52', '2010-06-21 15:22:52')[0m
+  [4;36;1mPlayer Load (0.1ms)[0m   [0;1mSELECT "players".id FROM "players" WHERE ("players"."number" = 0 AND "players".equipe_id = 1) LIMIT 1[0m
+  [4;35;1mPlayer Create (0.1ms)[0m   [0mINSERT INTO "players" ("name", "number", "created_at", "equipe_id", "updated_at") VALUES('name_#<Factory::Proxy::Create:0x10330b070>', 0, '2010-06-21 15:22:52', 1, '2010-06-21 15:22:52')[0m
+  [4;36;1mPlayer Load (0.2ms)[0m   [0;1mSELECT "players".id FROM "players" WHERE ("players"."number" = 0 AND "players".equipe_id = 1) LIMIT 1[0m
+  [4;35;1mChampionship Create (0.4ms)[0m   [0mINSERT INTO "championships" ("name", "created_at", "updated_at") VALUES('campeonato_#<Factory::Proxy::Create:0x1032c8770>', '2010-06-21 15:22:52', '2010-06-21 15:22:52')[0m
+  [4;36;1mEquipe Load (0.1ms)[0m   [0;1mSELECT "equipes".id FROM "equipes" WHERE ("equipes"."name" = 'equipe_#<Factory::Proxy::Create:0x1032c3298>') LIMIT 1[0m
+  [4;35;1mEquipe Create (0.1ms)[0m   [0mINSERT INTO "equipes" ("name", "created_at", "updated_at") VALUES('equipe_#<Factory::Proxy::Create:0x1032c3298>', '2010-06-21 15:22:52', '2010-06-21 15:22:52')[0m
+  [4;36;1mEquipe Load (1.3ms)[0m   [0;1mSELECT * FROM "equipes" WHERE ("equipes"."name" = 'equipe_#<Factory::Proxy::Create:0x1032c3298>') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO "equipes_championships" ("championship_id", "equipe_id") VALUES (1, 1)[0m
+  [4;36;1mEquipe Load (0.1ms)[0m   [0;1mSELECT "equipes".id FROM "equipes" WHERE ("equipes"."name" = 'equipe_#<Factory::Proxy::Create:0x1032b1098>') LIMIT 1[0m
+  [4;35;1mEquipe Create (0.1ms)[0m   [0mINSERT INTO "equipes" ("name", "created_at", "updated_at") VALUES('equipe_#<Factory::Proxy::Create:0x1032b1098>', '2010-06-21 15:22:52', '2010-06-21 15:22:52')[0m
+  [4;36;1mEquipe Load (0.2ms)[0m   [0;1mSELECT * FROM "equipes" WHERE ("equipes"."name" = 'equipe_#<Factory::Proxy::Create:0x1032b1098>') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO "equipes_championships" ("championship_id", "equipe_id") VALUES (1, 2)[0m
+  [4;36;1mChampionship Load (0.1ms)[0m   [0;1mSELECT * FROM "championships" WHERE ("championships"."id" = 1) [0m
+  [4;35;1mEquipe Load (0.3ms)[0m   [0mSELECT * FROM "equipes" INNER JOIN "equipes_championships" ON "equipes".id = "equipes_championships".equipe_id WHERE ("equipes_championships".championship_id = 1 ) [0m
+  [4;36;1mChampionship Create (0.4ms)[0m   [0;1mINSERT INTO "championships" ("name", "created_at", "updated_at") VALUES('campeonato_#<Factory::Proxy::Create:0x103299740>', '2010-06-21 15:22:52', '2010-06-21 15:22:52')[0m
+  [4;35;1mEquipe Load (0.1ms)[0m   [0mSELECT "equipes".id FROM "equipes" WHERE ("equipes"."name" = 'equipe_#<Factory::Proxy::Create:0x103295320>') LIMIT 1[0m
+  [4;36;1mEquipe Create (0.1ms)[0m   [0;1mINSERT INTO "equipes" ("name", "created_at", "updated_at") VALUES('equipe_#<Factory::Proxy::Create:0x103295320>', '2010-06-21 15:22:52', '2010-06-21 15:22:52')[0m
+
+
+Processing ChampionshipsController#manage_equipe (for 0.0.0.0 at 2010-06-21 12:22:52) [POST]
+  Parameters: {"id"=>"1", "championship"=>{"equipe_name"=>"equipe_#<Factory::Proxy::Create:0x103295320>"}}
+  [4;35;1mChampionship Load (0.2ms)[0m   [0mSELECT * FROM "championships" WHERE ("championships"."id" = 1) [0m
+  [4;36;1mEquipe Load (0.3ms)[0m   [0;1mSELECT * FROM "equipes" WHERE ("equipes"."name" = 'equipe_#<Factory::Proxy::Create:0x103295320>') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO "equipes_championships" ("championship_id", "equipe_id") VALUES (1, 1)[0m
+Redirected to http://test.host/championships/1
+Completed in 6ms (DB: 26) | 302 Found [http://test.host/championships/manage_equipe/1?championship%5Bequipe_name%5D=equipe_%23%3CFactory%3A%3AProxy%3A%3ACreate%3A0x103295320%3E]
+  [4;36;1mChampionship Load (0.2ms)[0m   [0;1mSELECT * FROM "championships" WHERE ("championships"."id" = 1) [0m
+  [4;35;1mEquipe Load (0.2ms)[0m   [0mSELECT * FROM "equipes" INNER JOIN "equipes_championships" ON "equipes".id = "equipes_championships".equipe_id WHERE ("equipes_championships".championship_id = 1 ) [0m
+  [4;36;1mChampionship Create (0.5ms)[0m   [0;1mINSERT INTO "championships" ("name", "created_at", "updated_at") VALUES('campeonato_#<Factory::Proxy::Create:0x103269608>', '2010-06-21 15:22:52', '2010-06-21 15:22:52')[0m
+  [4;35;1mEquipe Load (0.1ms)[0m   [0mSELECT "equipes".id FROM "equipes" WHERE ("equipes"."name" = 'equipe_#<Factory::Proxy::Create:0x1032651e8>') LIMIT 1[0m
+  [4;36;1mEquipe Create (0.1ms)[0m   [0;1mINSERT INTO "equipes" ("name", "created_at", "updated_at") VALUES('equipe_#<Factory::Proxy::Create:0x1032651e8>', '2010-06-21 15:22:52', '2010-06-21 15:22:52')[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO "equipes_championships" ("championship_id", "equipe_id") VALUES (1, 1)[0m
+
+
+Processing ChampionshipsController#manage_equipe (for 0.0.0.0 at 2010-06-21 12:22:52) [DELETE]
+  Parameters: {"equipe_id"=>"1", "id"=>"1"}
+  [4;36;1mChampionship Load (0.2ms)[0m   [0;1mSELECT * FROM "championships" WHERE ("championships"."id" = 1) [0m
+  [4;35;1mEquipe Load (0.8ms)[0m   [0mSELECT * FROM "equipes" WHERE ("equipes"."id" = 1) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mDELETE FROM "equipes_championships" WHERE championship_id = 1 AND equipe_id IN (1)[0m
+Redirected to http://test.host/championships/1
+Completed in 4ms (DB: 2) | 302 Found [http://test.host/championships/manage_equipe/1?equipe_id=1]
+  [4;35;1mChampionship Load (0.2ms)[0m   [0mSELECT * FROM "championships" WHERE ("championships"."id" = 1) [0m
+  [4;36;1mEquipe Load (0.1ms)[0m   [0;1mSELECT * FROM "equipes" INNER JOIN "equipes_championships" ON "equipes".id = "equipes_championships".equipe_id WHERE ("equipes_championships".championship_id = 1 ) [0m
+  [4;36;1mChampionship Create (0.5ms)[0m   [0;1mINSERT INTO "championships" ("name", "created_at", "updated_at") VALUES('campeonato_#<Factory::Proxy::Create:0x1033c4660>', '2010-06-21 15:27:38', '2010-06-21 15:27:38')[0m
+  [4;35;1mEquipe Load (5.5ms)[0m   [0mSELECT "equipes".id FROM "equipes" WHERE ("equipes"."name" = 'equipe_#<Factory::Proxy::Create:0x103361588>') LIMIT 1[0m
+  [4;36;1mEquipe Create (0.1ms)[0m   [0;1mINSERT INTO "equipes" ("name", "created_at", "updated_at") VALUES('equipe_#<Factory::Proxy::Create:0x103361588>', '2010-06-21 15:27:38', '2010-06-21 15:27:38')[0m
+  [4;35;1mEquipe Load (0.2ms)[0m   [0mSELECT * FROM "equipes" WHERE ("equipes"."name" = 'equipe_#<Factory::Proxy::Create:0x103361588>') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO "equipes_championships" ("championship_id", "equipe_id") VALUES (1, 1)[0m
+  [4;35;1mEquipe Load (0.1ms)[0m   [0mSELECT "equipes".id FROM "equipes" WHERE ("equipes"."name" = 'equipe_#<Factory::Proxy::Create:0x103333598>') LIMIT 1[0m
+  [4;36;1mEquipe Create (0.1ms)[0m   [0;1mINSERT INTO "equipes" ("name", "created_at", "updated_at") VALUES('equipe_#<Factory::Proxy::Create:0x103333598>', '2010-06-21 15:27:38', '2010-06-21 15:27:38')[0m
+  [4;35;1mEquipe Load (0.2ms)[0m   [0mSELECT * FROM "equipes" WHERE ("equipes"."name" = 'equipe_#<Factory::Proxy::Create:0x103333598>') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO "equipes_championships" ("championship_id", "equipe_id") VALUES (1, 2)[0m
+  [4;35;1mChampionship Load (0.2ms)[0m   [0mSELECT * FROM "championships" WHERE ("championships"."id" = 1) [0m
+  [4;36;1mEquipe Load (0.3ms)[0m   [0;1mSELECT * FROM "equipes" INNER JOIN "equipes_championships" ON "equipes".id = "equipes_championships".equipe_id WHERE ("equipes_championships".championship_id = 1 ) [0m
+  [4;35;1mChampionship Create (0.4ms)[0m   [0mINSERT INTO "championships" ("name", "created_at", "updated_at") VALUES('campeonato_#<Factory::Proxy::Create:0x10331e058>', '2010-06-21 15:27:38', '2010-06-21 15:27:38')[0m
+  [4;36;1mEquipe Load (0.1ms)[0m   [0;1mSELECT "equipes".id FROM "equipes" WHERE ("equipes"."name" = 'equipe_#<Factory::Proxy::Create:0x103319710>') LIMIT 1[0m
+  [4;35;1mEquipe Create (0.1ms)[0m   [0mINSERT INTO "equipes" ("name", "created_at", "updated_at") VALUES('equipe_#<Factory::Proxy::Create:0x103319710>', '2010-06-21 15:27:38', '2010-06-21 15:27:38')[0m
+  [4;36;1mEquipe Load (0.2ms)[0m   [0;1mSELECT * FROM "equipes" WHERE ("equipes"."name" = 'equipe_#<Factory::Proxy::Create:0x103319710>') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO "equipes_championships" ("championship_id", "equipe_id") VALUES (1, 1)[0m
+  [4;36;1mChampionship Load (0.1ms)[0m   [0;1mSELECT * FROM "championships" WHERE ("championships"."id" = 1) [0m
+  [4;35;1mEquipe Load (0.1ms)[0m   [0mSELECT * FROM "equipes" WHERE ("equipes"."name" = 'equipe_#<Factory::Proxy::Create:0x103319710>') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO "equipes_championships" ("championship_id", "equipe_id") VALUES (1, 1)[0m
+  [4;36;1mChampionship Create (0.5ms)[0m   [0;1mINSERT INTO "championships" ("name", "created_at", "updated_at") VALUES('campeonato_#<Factory::Proxy::Create:0x1033c3b20>', '2010-06-21 15:30:24', '2010-06-21 15:30:24')[0m
+  [4;35;1mEquipe Load (4.8ms)[0m   [0mSELECT "equipes".id FROM "equipes" WHERE ("equipes"."name" = 'equipe_#<Factory::Proxy::Create:0x103360a48>') LIMIT 1[0m
+  [4;36;1mEquipe Create (0.2ms)[0m   [0;1mINSERT INTO "equipes" ("name", "created_at", "updated_at") VALUES('equipe_#<Factory::Proxy::Create:0x103360a48>', '2010-06-21 15:30:24', '2010-06-21 15:30:24')[0m
+  [4;35;1mEquipe Load (0.2ms)[0m   [0mSELECT * FROM "equipes" WHERE ("equipes"."name" = 'equipe_#<Factory::Proxy::Create:0x103360a48>') LIMIT 1[0m
+  [4;36;1mEquipe Load (0.1ms)[0m   [0;1mSELECT * FROM "equipes" INNER JOIN "equipes_championships" ON "equipes".id = "equipes_championships".equipe_id WHERE ("equipes"."id" = 1 AND ("equipes_championships".championship_id = 1 )) [0m
+  [4;35;1mChampionship Create (0.3ms)[0m   [0mINSERT INTO "championships" ("name", "created_at", "updated_at") VALUES('campeonato_#<Factory::Proxy::Create:0x103331f40>', '2010-06-21 15:30:24', '2010-06-21 15:30:24')[0m
+  [4;36;1mEquipe Load (0.1ms)[0m   [0;1mSELECT "equipes".id FROM "equipes" WHERE ("equipes"."name" = 'equipe_#<Factory::Proxy::Create:0x10332d5f8>') LIMIT 1[0m
+  [4;35;1mEquipe Create (0.1ms)[0m   [0mINSERT INTO "equipes" ("name", "created_at", "updated_at") VALUES('equipe_#<Factory::Proxy::Create:0x10332d5f8>', '2010-06-21 15:30:24', '2010-06-21 15:30:24')[0m
+  [4;36;1mEquipe Load (0.2ms)[0m   [0;1mSELECT * FROM "equipes" WHERE ("equipes"."name" = 'equipe_#<Factory::Proxy::Create:0x10332d5f8>') LIMIT 1[0m
+  [4;35;1mEquipe Load (0.1ms)[0m   [0mSELECT * FROM "equipes" INNER JOIN "equipes_championships" ON "equipes".id = "equipes_championships".equipe_id WHERE ("equipes"."id" = 1 AND ("equipes_championships".championship_id = 1 )) [0m
+  [4;36;1mChampionship Create (0.4ms)[0m   [0;1mINSERT INTO "championships" ("name", "created_at", "updated_at") VALUES('campeonato_#<Factory::Proxy::Create:0x1033c3b20>', '2010-06-21 15:32:46', '2010-06-21 15:32:46')[0m
+  [4;35;1mEquipe Load (0.1ms)[0m   [0mSELECT "equipes".id FROM "equipes" WHERE ("equipes"."name" = 'equipe_#<Factory::Proxy::Create:0x103360a48>') LIMIT 1[0m
+  [4;36;1mEquipe Create (0.1ms)[0m   [0;1mINSERT INTO "equipes" ("name", "created_at", "updated_at") VALUES('equipe_#<Factory::Proxy::Create:0x103360a48>', '2010-06-21 15:32:46', '2010-06-21 15:32:46')[0m
+  [4;35;1mEquipe Load (0.2ms)[0m   [0mSELECT * FROM "equipes" WHERE ("equipes"."name" = 'equipe_#<Factory::Proxy::Create:0x103360a48>') LIMIT 1[0m
+  [4;36;1mEquipe Load (0.1ms)[0m   [0;1mSELECT * FROM "equipes" INNER JOIN "equipes_championships" ON "equipes".id = "equipes_championships".equipe_id WHERE ("equipes"."id" = 1 AND ("equipes_championships".championship_id = 1 )) [0m
+  [4;35;1mChampionship Create (0.4ms)[0m   [0mINSERT INTO "championships" ("name", "created_at", "updated_at") VALUES('campeonato_#<Factory::Proxy::Create:0x103331f40>', '2010-06-21 15:32:46', '2010-06-21 15:32:46')[0m
+  [4;36;1mEquipe Load (0.9ms)[0m   [0;1mSELECT "equipes".id FROM "equipes" WHERE ("equipes"."name" = 'equipe_#<Factory::Proxy::Create:0x10332d5f8>') LIMIT 1[0m
+  [4;35;1mEquipe Create (0.1ms)[0m   [0mINSERT INTO "equipes" ("name", "created_at", "updated_at") VALUES('equipe_#<Factory::Proxy::Create:0x10332d5f8>', '2010-06-21 15:32:46', '2010-06-21 15:32:46')[0m
+  [4;36;1mEquipe Load (0.2ms)[0m   [0;1mSELECT * FROM "equipes" WHERE ("equipes"."name" = 'equipe_#<Factory::Proxy::Create:0x10332d5f8>') LIMIT 1[0m
+  [4;35;1mEquipe Load (0.1ms)[0m   [0mSELECT * FROM "equipes" INNER JOIN "equipes_championships" ON "equipes".id = "equipes_championships".equipe_id WHERE ("equipes"."id" = 1 AND ("equipes_championships".championship_id = 1 )) [0m
+  [4;36;1mChampionship Create (0.4ms)[0m   [0;1mINSERT INTO "championships" ("name", "created_at", "updated_at") VALUES('campeonato_#<Factory::Proxy::Create:0x1033c3ad0>', '2010-06-21 15:33:56', '2010-06-21 15:33:56')[0m
+  [4;35;1mEquipe Load (4.7ms)[0m   [0mSELECT "equipes".id FROM "equipes" WHERE ("equipes"."name" = 'equipe_#<Factory::Proxy::Create:0x1033609f8>') LIMIT 1[0m
+  [4;36;1mEquipe Create (0.2ms)[0m   [0;1mINSERT INTO "equipes" ("name", "created_at", "updated_at") VALUES('equipe_#<Factory::Proxy::Create:0x1033609f8>', '2010-06-21 15:33:56', '2010-06-21 15:33:56')[0m
+  [4;35;1mEquipe Load (0.2ms)[0m   [0mSELECT * FROM "equipes" WHERE ("equipes"."name" = 'equipe_#<Factory::Proxy::Create:0x1033609f8>') LIMIT 1[0m
+  [4;36;1mEquipe Load (0.2ms)[0m   [0;1mSELECT * FROM "equipes" INNER JOIN "equipes_championships" ON "equipes".id = "equipes_championships".equipe_id WHERE ("equipes"."id" = 1 AND ("equipes_championships".championship_id = 1 )) [0m
+  [4;35;1mChampionship Create (0.3ms)[0m   [0mINSERT INTO "championships" ("name", "created_at", "updated_at") VALUES('campeonato_#<Factory::Proxy::Create:0x103331ef0>', '2010-06-21 15:33:56', '2010-06-21 15:33:56')[0m
+  [4;36;1mEquipe Load (0.1ms)[0m   [0;1mSELECT "equipes".id FROM "equipes" WHERE ("equipes"."name" = 'equipe_#<Factory::Proxy::Create:0x10332d5a8>') LIMIT 1[0m
+  [4;35;1mEquipe Create (0.1ms)[0m   [0mINSERT INTO "equipes" ("name", "created_at", "updated_at") VALUES('equipe_#<Factory::Proxy::Create:0x10332d5a8>', '2010-06-21 15:33:56', '2010-06-21 15:33:56')[0m
+  [4;36;1mEquipe Load (0.2ms)[0m   [0;1mSELECT * FROM "equipes" WHERE ("equipes"."name" = 'equipe_#<Factory::Proxy::Create:0x10332d5a8>') LIMIT 1[0m
+  [4;35;1mEquipe Load (0.1ms)[0m   [0mSELECT * FROM "equipes" INNER JOIN "equipes_championships" ON "equipes".id = "equipes_championships".equipe_id WHERE ("equipes"."id" = 1 AND ("equipes_championships".championship_id = 1 )) [0m
+  [4;36;1mChampionship Create (0.4ms)[0m   [0;1mINSERT INTO "championships" ("name", "created_at", "updated_at") VALUES('campeonato_#<Factory::Proxy::Create:0x1033c3e18>', '2010-06-21 15:35:01', '2010-06-21 15:35:01')[0m
+  [4;35;1mEquipe Load (0.1ms)[0m   [0mSELECT "equipes".id FROM "equipes" WHERE ("equipes"."name" = 'equipe_#<Factory::Proxy::Create:0x103360d40>') LIMIT 1[0m
+  [4;36;1mEquipe Create (0.1ms)[0m   [0;1mINSERT INTO "equipes" ("name", "created_at", "updated_at") VALUES('equipe_#<Factory::Proxy::Create:0x103360d40>', '2010-06-21 15:35:01', '2010-06-21 15:35:01')[0m
+  [4;35;1mEquipe Load (0.2ms)[0m   [0mSELECT * FROM "equipes" WHERE ("equipes"."name" = 'equipe_#<Factory::Proxy::Create:0x103360d40>') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO "equipes_championships" ("championship_id", "equipe_id") VALUES (1, 1)[0m
+  [4;35;1mEquipe Load (0.1ms)[0m   [0mSELECT "equipes".id FROM "equipes" WHERE ("equipes"."name" = 'equipe_#<Factory::Proxy::Create:0x103332c10>') LIMIT 1[0m
+  [4;36;1mEquipe Create (0.1ms)[0m   [0;1mINSERT INTO "equipes" ("name", "created_at", "updated_at") VALUES('equipe_#<Factory::Proxy::Create:0x103332c10>', '2010-06-21 15:35:01', '2010-06-21 15:35:01')[0m
+  [4;35;1mEquipe Load (0.2ms)[0m   [0mSELECT * FROM "equipes" WHERE ("equipes"."name" = 'equipe_#<Factory::Proxy::Create:0x103332c10>') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO "equipes_championships" ("championship_id", "equipe_id") VALUES (1, 2)[0m
+  [4;35;1mChampionship Load (0.5ms)[0m   [0mSELECT * FROM "championships" WHERE ("championships"."id" = 1) [0m
+  [4;36;1mEquipe Load (0.3ms)[0m   [0;1mSELECT * FROM "equipes" INNER JOIN "equipes_championships" ON "equipes".id = "equipes_championships".equipe_id WHERE ("equipes_championships".championship_id = 1 ) [0m
+  [4;35;1mChampionship Create (0.3ms)[0m   [0mINSERT INTO "championships" ("name", "created_at", "updated_at") VALUES('campeonato_#<Factory::Proxy::Create:0x10331d590>', '2010-06-21 15:35:01', '2010-06-21 15:35:01')[0m
+  [4;36;1mEquipe Load (0.1ms)[0m   [0;1mSELECT "equipes".id FROM "equipes" WHERE ("equipes"."name" = 'equipe_#<Factory::Proxy::Create:0x103318c48>') LIMIT 1[0m
+  [4;35;1mEquipe Create (0.1ms)[0m   [0mINSERT INTO "equipes" ("name", "created_at", "updated_at") VALUES('equipe_#<Factory::Proxy::Create:0x103318c48>', '2010-06-21 15:35:01', '2010-06-21 15:35:01')[0m
+  [4;36;1mEquipe Load (0.2ms)[0m   [0;1mSELECT * FROM "equipes" WHERE ("equipes"."name" = 'equipe_#<Factory::Proxy::Create:0x103318c48>') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO "equipes_championships" ("championship_id", "equipe_id") VALUES (1, 1)[0m
+  [4;36;1mChampionship Load (0.2ms)[0m   [0;1mSELECT * FROM "championships" WHERE ("championships"."id" = 1) [0m
+  [4;35;1mEquipe Load (0.1ms)[0m   [0mSELECT * FROM "equipes" WHERE ("equipes"."name" = 'equipe_#<Factory::Proxy::Create:0x103318c48>') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO "equipes_championships" ("championship_id", "equipe_id") VALUES (1, 1)[0m
+  [4;36;1mChampionship Create (0.4ms)[0m   [0;1mINSERT INTO "championships" ("name", "created_at", "updated_at") VALUES('campeonato_#<Factory::Proxy::Create:0x1033c3b48>', '2010-06-21 15:36:47', '2010-06-21 15:36:47')[0m
+  [4;35;1mEquipe Load (4.7ms)[0m   [0mSELECT "equipes".id FROM "equipes" WHERE ("equipes"."name" = 'equipe_#<Factory::Proxy::Create:0x103360a70>') LIMIT 1[0m
+  [4;36;1mEquipe Create (0.2ms)[0m   [0;1mINSERT INTO "equipes" ("name", "created_at", "updated_at") VALUES('equipe_#<Factory::Proxy::Create:0x103360a70>', '2010-06-21 15:36:47', '2010-06-21 15:36:47')[0m
+  [4;35;1mEquipe Load (0.2ms)[0m   [0mSELECT * FROM "equipes" WHERE ("equipes"."name" = 'equipe_#<Factory::Proxy::Create:0x103360a70>') LIMIT 1[0m
+  [4;36;1mEquipe Load (0.1ms)[0m   [0;1mSELECT "equipes".id FROM "equipes" INNER JOIN "equipes_championships" ON "equipes".id = "equipes_championships".equipe_id WHERE ("equipes"."id" = 1) AND ("equipes_championships".championship_id = 1 ) LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO "equipes_championships" ("championship_id", "equipe_id") VALUES (1, 1)[0m
+  [4;36;1mEquipe Load (0.1ms)[0m   [0;1mSELECT "equipes".id FROM "equipes" WHERE ("equipes"."name" = 'equipe_#<Factory::Proxy::Create:0x103330730>') LIMIT 1[0m
+  [4;35;1mEquipe Create (0.1ms)[0m   [0mINSERT INTO "equipes" ("name", "created_at", "updated_at") VALUES('equipe_#<Factory::Proxy::Create:0x103330730>', '2010-06-21 15:36:47', '2010-06-21 15:36:47')[0m
+  [4;36;1mEquipe Load (0.2ms)[0m   [0;1mSELECT * FROM "equipes" WHERE ("equipes"."name" = 'equipe_#<Factory::Proxy::Create:0x103330730>') LIMIT 1[0m
+  [4;35;1mEquipe Load (0.1ms)[0m   [0mSELECT "equipes".id FROM "equipes" INNER JOIN "equipes_championships" ON "equipes".id = "equipes_championships".equipe_id WHERE ("equipes"."id" = 2) AND ("equipes_championships".championship_id = 1 ) LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO "equipes_championships" ("championship_id", "equipe_id") VALUES (1, 2)[0m
+  [4;35;1mChampionship Load (0.2ms)[0m   [0mSELECT * FROM "championships" WHERE ("championships"."id" = 1) [0m
+  [4;36;1mEquipe Load (0.3ms)[0m   [0;1mSELECT * FROM "equipes" INNER JOIN "equipes_championships" ON "equipes".id = "equipes_championships".equipe_id WHERE ("equipes_championships".championship_id = 1 ) [0m
+  [4;35;1mChampionship Create (1.2ms)[0m   [0mINSERT INTO "championships" ("name", "created_at", "updated_at") VALUES('campeonato_#<Factory::Proxy::Create:0x103318ec8>', '2010-06-21 15:36:47', '2010-06-21 15:36:47')[0m
+  [4;36;1mEquipe Load (0.1ms)[0m   [0;1mSELECT "equipes".id FROM "equipes" WHERE ("equipes"."name" = 'equipe_#<Factory::Proxy::Create:0x103314580>') LIMIT 1[0m
+  [4;35;1mEquipe Create (0.1ms)[0m   [0mINSERT INTO "equipes" ("name", "created_at", "updated_at") VALUES('equipe_#<Factory::Proxy::Create:0x103314580>', '2010-06-21 15:36:47', '2010-06-21 15:36:47')[0m
+  [4;36;1mEquipe Load (0.2ms)[0m   [0;1mSELECT * FROM "equipes" WHERE ("equipes"."name" = 'equipe_#<Factory::Proxy::Create:0x103314580>') LIMIT 1[0m
+  [4;35;1mEquipe Load (0.1ms)[0m   [0mSELECT "equipes".id FROM "equipes" INNER JOIN "equipes_championships" ON "equipes".id = "equipes_championships".equipe_id WHERE ("equipes"."id" = 1) AND ("equipes_championships".championship_id = 1 ) LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO "equipes_championships" ("championship_id", "equipe_id") VALUES (1, 1)[0m
+  [4;35;1mChampionship Load (0.1ms)[0m   [0mSELECT * FROM "championships" WHERE ("championships"."id" = 1) [0m
+  [4;36;1mEquipe Load (0.1ms)[0m   [0;1mSELECT * FROM "equipes" WHERE ("equipes"."name" = 'equipe_#<Factory::Proxy::Create:0x103314580>') LIMIT 1[0m
+  [4;35;1mEquipe Load (0.1ms)[0m   [0mSELECT "equipes".id FROM "equipes" INNER JOIN "equipes_championships" ON "equipes".id = "equipes_championships".equipe_id WHERE ("equipes"."id" = 1) AND ("equipes_championships".championship_id = 1 ) LIMIT 1[0m
+  [4;36;1mChampionship Load (0.2ms)[0m   [0;1mSELECT * FROM "championships" WHERE ("championships"."id" = 1) [0m
+  [4;35;1mEquipe Load (0.3ms)[0m   [0mSELECT * FROM "equipes" INNER JOIN "equipes_championships" ON "equipes".id = "equipes_championships".equipe_id WHERE ("equipes_championships".championship_id = 1 ) [0m
+  [4;36;1mEquipe Load (0.2ms)[0m   [0;1mSELECT "equipes".id FROM "equipes" WHERE ("equipes"."name" IS NULL) LIMIT 1[0m
+  [4;35;1mEquipe Load (0.2ms)[0m   [0mSELECT "equipes".id FROM "equipes" WHERE ("equipes"."name" = 'Flamengo') LIMIT 1[0m
+  [4;36;1mEquipe Create (0.4ms)[0m   [0;1mINSERT INTO "equipes" ("name", "created_at", "updated_at") VALUES('Flamengo', '2010-06-21 15:36:54', '2010-06-21 15:36:54')[0m
+  [4;35;1mEquipe Load (0.2ms)[0m   [0mSELECT "equipes".id FROM "equipes" WHERE ("equipes"."name" = 'Flamengo') LIMIT 1[0m
+  [4;36;1mEquipe Load (0.1ms)[0m   [0;1mSELECT "equipes".id FROM "equipes" WHERE ("equipes"."name" = 'Palmeiras') LIMIT 1[0m
+  [4;35;1mPlayer Load (0.2ms)[0m   [0mSELECT "players".id FROM "players" WHERE ("players"."number" IS NULL AND "players".equipe_id IS NULL) LIMIT 1[0m
+  [4;36;1mEquipe Load (0.2ms)[0m   [0;1mSELECT "equipes".id FROM "equipes" WHERE ("equipes"."name" = 'equipe_#<Factory::Proxy::Create:0x10330ab20>') LIMIT 1[0m
+  [4;35;1mEquipe Create (0.3ms)[0m   [0mINSERT INTO "equipes" ("name", "created_at", "updated_at") VALUES('equipe_#<Factory::Proxy::Create:0x10330ab20>', '2010-06-21 15:36:54', '2010-06-21 15:36:54')[0m
+  [4;36;1mPlayer Load (0.1ms)[0m   [0;1mSELECT "players".id FROM "players" WHERE ("players"."number" = 0 AND "players".equipe_id = 1) LIMIT 1[0m
+  [4;35;1mPlayer Create (0.1ms)[0m   [0mINSERT INTO "players" ("name", "number", "created_at", "equipe_id", "updated_at") VALUES('name_#<Factory::Proxy::Create:0x10330ba20>', 0, '2010-06-21 15:36:54', 1, '2010-06-21 15:36:54')[0m
+  [4;36;1mPlayer Load (0.2ms)[0m   [0;1mSELECT "players".id FROM "players" WHERE ("players"."number" = 0 AND "players".equipe_id = 1) LIMIT 1[0m
+  [4;35;1mChampionship Create (0.4ms)[0m   [0mINSERT INTO "championships" ("name", "created_at", "updated_at") VALUES('campeonato_#<Factory::Proxy::Create:0x1032da150>', '2010-06-21 15:36:54', '2010-06-21 15:36:54')[0m
+  [4;36;1mEquipe Load (0.1ms)[0m   [0;1mSELECT "equipes".id FROM "equipes" WHERE ("equipes"."name" = 'equipe_#<Factory::Proxy::Create:0x1032ccac8>') LIMIT 1[0m
+  [4;35;1mEquipe Create (0.1ms)[0m   [0mINSERT INTO "equipes" ("name", "created_at", "updated_at") VALUES('equipe_#<Factory::Proxy::Create:0x1032ccac8>', '2010-06-21 15:36:54', '2010-06-21 15:36:54')[0m
+
+
+Processing ChampionshipsController#manage_equipe (for 0.0.0.0 at 2010-06-21 12:36:54) [POST]
+  Parameters: {"id"=>"1", "championship"=>{"equipe_name"=>"equipe_#<Factory::Proxy::Create:0x1032ccac8>"}}
+  [4;36;1mChampionship Load (0.2ms)[0m   [0;1mSELECT * FROM "championships" WHERE ("championships"."id" = 1) [0m
+  [4;35;1mEquipe Load (0.3ms)[0m   [0mSELECT * FROM "equipes" WHERE ("equipes"."name" = 'equipe_#<Factory::Proxy::Create:0x1032ccac8>') LIMIT 1[0m
+  [4;36;1mEquipe Load (0.2ms)[0m   [0;1mSELECT "equipes".id FROM "equipes" INNER JOIN "equipes_championships" ON "equipes".id = "equipes_championships".equipe_id WHERE ("equipes"."id" = 1) AND ("equipes_championships".championship_id = 1 ) LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO "equipes_championships" ("championship_id", "equipe_id") VALUES (1, 1)[0m
+Redirected to http://test.host/championships/1
+Completed in 6ms (DB: 4) | 302 Found [http://test.host/championships/manage_equipe/1?championship%5Bequipe_name%5D=equipe_%23%3CFactory%3A%3AProxy%3A%3ACreate%3A0x1032ccac8%3E]
+  [4;36;1mChampionship Load (0.2ms)[0m   [0;1mSELECT * FROM "championships" WHERE ("championships"."id" = 1) [0m
+  [4;35;1mEquipe Load (0.2ms)[0m   [0mSELECT * FROM "equipes" INNER JOIN "equipes_championships" ON "equipes".id = "equipes_championships".equipe_id WHERE ("equipes_championships".championship_id = 1 ) [0m
+  [4;36;1mChampionship Create (0.4ms)[0m   [0;1mINSERT INTO "championships" ("name", "created_at", "updated_at") VALUES('campeonato_#<Factory::Proxy::Create:0x10329b680>', '2010-06-21 15:36:54', '2010-06-21 15:36:54')[0m
+  [4;35;1mEquipe Load (0.1ms)[0m   [0mSELECT "equipes".id FROM "equipes" WHERE ("equipes"."name" = 'equipe_#<Factory::Proxy::Create:0x103297260>') LIMIT 1[0m
+  [4;36;1mEquipe Create (0.1ms)[0m   [0;1mINSERT INTO "equipes" ("name", "created_at", "updated_at") VALUES('equipe_#<Factory::Proxy::Create:0x103297260>', '2010-06-21 15:36:54', '2010-06-21 15:36:54')[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO "equipes_championships" ("championship_id", "equipe_id") VALUES (1, 1)[0m
+
+
+Processing ChampionshipsController#manage_equipe (for 0.0.0.0 at 2010-06-21 12:36:54) [DELETE]
+  Parameters: {"equipe_id"=>"1", "id"=>"1"}
+  [4;36;1mChampionship Load (0.2ms)[0m   [0;1mSELECT * FROM "championships" WHERE ("championships"."id" = 1) [0m
+  [4;35;1mEquipe Load (0.1ms)[0m   [0mSELECT * FROM "equipes" WHERE ("equipes"."id" = 1) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mDELETE FROM "equipes_championships" WHERE championship_id = 1 AND equipe_id IN (1)[0m
+Redirected to http://test.host/championships/1
+Completed in 2ms (DB: 1) | 302 Found [http://test.host/championships/manage_equipe/1?equipe_id=1]
+  [4;35;1mChampionship Load (0.2ms)[0m   [0mSELECT * FROM "championships" WHERE ("championships"."id" = 1) [0m
+  [4;36;1mEquipe Load (0.2ms)[0m   [0;1mSELECT * FROM "equipes" INNER JOIN "equipes_championships" ON "equipes".id = "equipes_championships".equipe_id WHERE ("equipes_championships".championship_id = 1 ) [0m
+  [4;35;1mChampionship Create (0.4ms)[0m   [0mINSERT INTO "championships" ("name", "created_at", "updated_at") VALUES('campeonato_#<Factory::Proxy::Create:0x10326d0c8>', '2010-06-21 15:36:54', '2010-06-21 15:36:54')[0m
+  [4;36;1mEquipe Load (0.1ms)[0m   [0;1mSELECT "equipes".id FROM "equipes" WHERE ("equipes"."name" = 'equipe_#<Factory::Proxy::Create:0x103268780>') LIMIT 1[0m
+  [4;35;1mEquipe Create (0.1ms)[0m   [0mINSERT INTO "equipes" ("name", "created_at", "updated_at") VALUES('equipe_#<Factory::Proxy::Create:0x103268780>', '2010-06-21 15:36:54', '2010-06-21 15:36:54')[0m
+  [4;36;1mEquipe Load (0.2ms)[0m   [0;1mSELECT * FROM "equipes" WHERE ("equipes"."name" = 'equipe_#<Factory::Proxy::Create:0x103268780>') LIMIT 1[0m
+  [4;35;1mEquipe Load (0.1ms)[0m   [0mSELECT "equipes".id FROM "equipes" INNER JOIN "equipes_championships" ON "equipes".id = "equipes_championships".equipe_id WHERE ("equipes"."id" = 1) AND ("equipes_championships".championship_id = 1 ) LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO "equipes_championships" ("championship_id", "equipe_id") VALUES (1, 1)[0m
+  [4;35;1mEquipe Load (0.2ms)[0m   [0mSELECT "equipes".id FROM "equipes" WHERE ("equipes"."name" = 'equipe_#<Factory::Proxy::Create:0x103257548>') LIMIT 1[0m
+  [4;36;1mEquipe Create (0.1ms)[0m   [0;1mINSERT INTO "equipes" ("name", "created_at", "updated_at") VALUES('equipe_#<Factory::Proxy::Create:0x103257548>', '2010-06-21 15:36:54', '2010-06-21 15:36:54')[0m
+  [4;35;1mEquipe Load (0.3ms)[0m   [0mSELECT * FROM "equipes" WHERE ("equipes"."name" = 'equipe_#<Factory::Proxy::Create:0x103257548>') LIMIT 1[0m
+  [4;36;1mEquipe Load (0.1ms)[0m   [0;1mSELECT "equipes".id FROM "equipes" INNER JOIN "equipes_championships" ON "equipes".id = "equipes_championships".equipe_id WHERE ("equipes"."id" = 2) AND ("equipes_championships".championship_id = 1 ) LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO "equipes_championships" ("championship_id", "equipe_id") VALUES (1, 2)[0m
+  [4;36;1mChampionship Load (0.2ms)[0m   [0;1mSELECT * FROM "championships" WHERE ("championships"."id" = 1) [0m
+  [4;35;1mEquipe Load (0.3ms)[0m   [0mSELECT * FROM "equipes" INNER JOIN "equipes_championships" ON "equipes".id = "equipes_championships".equipe_id WHERE ("equipes_championships".championship_id = 1 ) [0m
+  [4;36;1mChampionship Create (0.4ms)[0m   [0;1mINSERT INTO "championships" ("name", "created_at", "updated_at") VALUES('campeonato_#<Factory::Proxy::Create:0x10323fd08>', '2010-06-21 15:36:54', '2010-06-21 15:36:54')[0m
+  [4;35;1mEquipe Load (0.1ms)[0m   [0mSELECT "equipes".id FROM "equipes" WHERE ("equipes"."name" = 'equipe_#<Factory::Proxy::Create:0x10323b3c0>') LIMIT 1[0m
+  [4;36;1mEquipe Create (0.1ms)[0m   [0;1mINSERT INTO "equipes" ("name", "created_at", "updated_at") VALUES('equipe_#<Factory::Proxy::Create:0x10323b3c0>', '2010-06-21 15:36:54', '2010-06-21 15:36:54')[0m
+  [4;35;1mEquipe Load (0.6ms)[0m   [0mSELECT * FROM "equipes" WHERE ("equipes"."name" = 'equipe_#<Factory::Proxy::Create:0x10323b3c0>') LIMIT 1[0m
+  [4;36;1mEquipe Load (0.3ms)[0m   [0;1mSELECT "equipes".id FROM "equipes" INNER JOIN "equipes_championships" ON "equipes".id = "equipes_championships".equipe_id WHERE ("equipes"."id" = 1) AND ("equipes_championships".championship_id = 1 ) LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO "equipes_championships" ("championship_id", "equipe_id") VALUES (1, 1)[0m
+  [4;36;1mChampionship Load (0.4ms)[0m   [0;1mSELECT * FROM "championships" WHERE ("championships"."id" = 1) [0m
+  [4;35;1mEquipe Load (0.1ms)[0m   [0mSELECT * FROM "equipes" WHERE ("equipes"."name" = 'equipe_#<Factory::Proxy::Create:0x10323b3c0>') LIMIT 1[0m
+  [4;36;1mEquipe Load (0.2ms)[0m   [0;1mSELECT "equipes".id FROM "equipes" INNER JOIN "equipes_championships" ON "equipes".id = "equipes_championships".equipe_id WHERE ("equipes"."id" = 1) AND ("equipes_championships".championship_id = 1 ) LIMIT 1[0m
+  [4;35;1mChampionship Load (0.2ms)[0m   [0mSELECT * FROM "championships" WHERE ("championships"."id" = 1) [0m
+  [4;36;1mEquipe Load (0.2ms)[0m   [0;1mSELECT * FROM "equipes" INNER JOIN "equipes_championships" ON "equipes".id = "equipes_championships".equipe_id WHERE ("equipes_championships".championship_id = 1 ) [0m

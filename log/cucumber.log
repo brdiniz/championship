@@ -7825,3 +7825,796 @@ Rendering template within layouts/application
 Rendering players/show
 Rendered players/_sidebar (0.5ms)
 Completed in 9ms (View: 7, DB: 0) | 200 OK [http://www.example.com/equipes/1/players/1]
+REQUESTING PAGE: GET /championships with {} and HTTP headers {}
+
+
+Processing ChampionshipsController#index (for 127.0.0.1 at 2010-06-21 12:18:47) [GET]
+  [4;36;1mChampionship Load (0.5ms)[0m   [0;1mSELECT * FROM "championships" [0m
+Rendering template within layouts/application
+Rendering championships/index
+Rendered championships/_sidebar (0.7ms)
+Completed in 30ms (View: 26, DB: 0) | 200 OK [http://www.example.com/championships]
+REQUESTING PAGE: GET /championships/new with {} and HTTP headers {"HTTP_REFERER"=>"/championships"}
+
+
+Processing ChampionshipsController#new (for 127.0.0.1 at 2010-06-21 12:18:47) [GET]
+Rendering template within layouts/application
+Rendering championships/new
+Rendered championships/_form (3.5ms)
+Rendered championships/_sidebar (0.2ms)
+Completed in 8ms (View: 7, DB: 0) | 200 OK [http://www.example.com/championships/new]
+REQUESTING PAGE: POST /championships with {"championship"=>{"name"=>"Campeonato Brasileiro 2010"}} and HTTP headers {"HTTP_REFERER"=>"/championships/new"}
+
+
+Processing ChampionshipsController#create (for 127.0.0.1 at 2010-06-21 12:18:47) [POST]
+  Parameters: {"championship"=>{"name"=>"Campeonato Brasileiro 2010"}}
+  [4;35;1mChampionship Create (0.5ms)[0m   [0mINSERT INTO "championships" ("name", "created_at", "updated_at") VALUES('Campeonato Brasileiro 2010', '2010-06-21 15:18:47', '2010-06-21 15:18:47')[0m
+Redirected to http://www.example.com/championships/1
+Completed in 5ms (DB: 0) | 302 Found [http://www.example.com/championships]
+REQUESTING PAGE: GET http://www.example.com/championships/1 with {} and HTTP headers {"HTTP_REFERER"=>"/championships"}
+
+
+Processing ChampionshipsController#show (for 127.0.0.1 at 2010-06-21 12:18:47) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mChampionship Load (0.3ms)[0m   [0;1mSELECT * FROM "championships" WHERE ("championships"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering championships/show
+Rendered championships/_sidebar (0.3ms)
+Completed in 8ms (View: 6, DB: 0) | 200 OK [http://www.example.com/championships/1]
+REQUESTING PAGE: GET /equipes with {} and HTTP headers {}
+
+
+Processing EquipesController#index (for 127.0.0.1 at 2010-06-21 12:18:47) [GET]
+  [4;35;1mEquipe Load (0.2ms)[0m   [0mSELECT * FROM "equipes" [0m
+Rendering template within layouts/application
+Rendering equipes/index
+Rendered equipes/_sidebar (0.6ms)
+Completed in 7ms (View: 3, DB: 0) | 200 OK [http://www.example.com/equipes]
+REQUESTING PAGE: GET /equipes/new with {} and HTTP headers {"HTTP_REFERER"=>"/equipes"}
+
+
+Processing EquipesController#new (for 127.0.0.1 at 2010-06-21 12:18:47) [GET]
+Rendering template within layouts/application
+Rendering equipes/new
+Rendered equipes/_form (2.9ms)
+Rendered equipes/_sidebar (0.7ms)
+Completed in 8ms (View: 7, DB: 0) | 200 OK [http://www.example.com/equipes/new]
+REQUESTING PAGE: POST /equipes with {"equipe"=>{"name"=>"Palmeiras"}} and HTTP headers {"HTTP_REFERER"=>"/equipes/new"}
+
+
+Processing EquipesController#create (for 127.0.0.1 at 2010-06-21 12:18:47) [POST]
+  Parameters: {"equipe"=>{"name"=>"Palmeiras"}}
+  [4;36;1mEquipe Load (0.2ms)[0m   [0;1mSELECT "equipes".id FROM "equipes" WHERE ("equipes"."name" = 'Palmeiras') LIMIT 1[0m
+  [4;35;1mEquipe Create (0.4ms)[0m   [0mINSERT INTO "equipes" ("name", "created_at", "updated_at") VALUES('Palmeiras', '2010-06-21 15:18:47', '2010-06-21 15:18:47')[0m
+Redirected to http://www.example.com/equipes/1
+Completed in 9ms (DB: 0) | 302 Found [http://www.example.com/equipes]
+REQUESTING PAGE: GET http://www.example.com/equipes/1 with {} and HTTP headers {"HTTP_REFERER"=>"/equipes"}
+
+
+Processing EquipesController#show (for 127.0.0.1 at 2010-06-21 12:18:47) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mEquipe Load (0.3ms)[0m   [0;1mSELECT * FROM "equipes" WHERE ("equipes"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering equipes/show
+Rendered equipes/_sidebar (0.3ms)
+Completed in 7ms (View: 6, DB: 0) | 200 OK [http://www.example.com/equipes/1]
+  [4;35;1mEquipe Load (0.2ms)[0m   [0mSELECT "equipes".id FROM "equipes" WHERE ("equipes"."name" = 'Palmeiras') LIMIT 1[0m
+  [4;36;1mEquipe Create (0.3ms)[0m   [0;1mINSERT INTO "equipes" ("name", "created_at", "updated_at") VALUES('Palmeiras', '2010-06-21 15:18:47', '2010-06-21 15:18:47')[0m
+REQUESTING PAGE: GET /equipes with {} and HTTP headers {}
+
+
+Processing EquipesController#index (for 127.0.0.1 at 2010-06-21 12:18:47) [GET]
+  [4;35;1mEquipe Load (0.3ms)[0m   [0mSELECT * FROM "equipes" [0m
+Rendering template within layouts/application
+Rendering equipes/index
+Rendered equipes/_sidebar (0.2ms)
+Completed in 15ms (View: 13, DB: 1) | 200 OK [http://www.example.com/equipes]
+REQUESTING PAGE: GET /equipes/1 with {} and HTTP headers {"HTTP_REFERER"=>"/equipes"}
+
+
+Processing EquipesController#show (for 127.0.0.1 at 2010-06-21 12:18:47) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mEquipe Load (0.3ms)[0m   [0;1mSELECT * FROM "equipes" WHERE ("equipes"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering equipes/show
+Rendered equipes/_sidebar (0.3ms)
+Completed in 6ms (View: 5, DB: 0) | 200 OK [http://www.example.com/equipes/1]
+REQUESTING PAGE: GET /equipes/1/players with {} and HTTP headers {"HTTP_REFERER"=>"/equipes/1"}
+
+
+Processing PlayersController#index (for 127.0.0.1 at 2010-06-21 12:18:47) [GET]
+  Parameters: {"equipe_id"=>"1"}
+  [4;35;1mEquipe Load (0.3ms)[0m   [0mSELECT * FROM "equipes" WHERE ("equipes"."id" = 1) [0m
+  [4;36;1mPlayer Load (0.1ms)[0m   [0;1mSELECT * FROM "players" WHERE ("players".equipe_id = 1) [0m
+Rendering template within layouts/application
+Rendering players/index
+Rendered players/_sidebar (0.7ms)
+Completed in 8ms (View: 4, DB: 0) | 200 OK [http://www.example.com/equipes/1/players]
+REQUESTING PAGE: GET /equipes/1/players/new with {} and HTTP headers {"HTTP_REFERER"=>"/equipes/1/players"}
+
+
+Processing PlayersController#new (for 127.0.0.1 at 2010-06-21 12:18:47) [GET]
+  Parameters: {"equipe_id"=>"1"}
+  [4;35;1mEquipe Load (0.3ms)[0m   [0mSELECT * FROM "equipes" WHERE ("equipes"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering players/new
+Rendered players/_form (3.2ms)
+Rendered players/_sidebar (0.6ms)
+Completed in 12ms (View: 8, DB: 0) | 200 OK [http://www.example.com/equipes/1/players/new]
+REQUESTING PAGE: POST /equipes/1/players with {"player"=>{"name"=>"Marcos", "number"=>"12"}} and HTTP headers {"HTTP_REFERER"=>"/equipes/1/players/new"}
+
+
+Processing PlayersController#create (for 127.0.0.1 at 2010-06-21 12:18:47) [POST]
+  Parameters: {"player"=>{"number"=>"12", "name"=>"Marcos"}, "equipe_id"=>"1"}
+  [4;36;1mEquipe Load (0.3ms)[0m   [0;1mSELECT * FROM "equipes" WHERE ("equipes"."id" = 1) [0m
+  [4;35;1mPlayer Load (0.1ms)[0m   [0mSELECT "players".id FROM "players" WHERE ("players"."number" = 12 AND "players".equipe_id = 1) LIMIT 1[0m
+  [4;36;1mPlayer Create (0.1ms)[0m   [0;1mINSERT INTO "players" ("name", "number", "created_at", "equipe_id", "updated_at") VALUES('Marcos', 12, '2010-06-21 15:18:47', 1, '2010-06-21 15:18:47')[0m
+Redirected to http://www.example.com/equipes/1/players/1
+Completed in 5ms (DB: 0) | 302 Found [http://www.example.com/equipes/1/players]
+REQUESTING PAGE: GET http://www.example.com/equipes/1/players/1 with {} and HTTP headers {"HTTP_REFERER"=>"/equipes/1/players"}
+
+
+Processing PlayersController#show (for 127.0.0.1 at 2010-06-21 12:18:47) [GET]
+  Parameters: {"equipe_id"=>"1", "id"=>"1"}
+  [4;35;1mEquipe Load (0.3ms)[0m   [0mSELECT * FROM "equipes" WHERE ("equipes"."id" = 1) [0m
+  [4;36;1mPlayer Load (0.2ms)[0m   [0;1mSELECT * FROM "players" WHERE ("players"."id" = 1 AND ("players".equipe_id = 1)) [0m
+Rendering template within layouts/application
+Rendering players/show
+Rendered players/_sidebar (0.5ms)
+Completed in 12ms (View: 9, DB: 1) | 200 OK [http://www.example.com/equipes/1/players/1]
+REQUESTING PAGE: GET /championships with {} and HTTP headers {}
+
+
+Processing ChampionshipsController#index (for 127.0.0.1 at 2010-06-21 12:21:33) [GET]
+  [4;36;1mChampionship Load (0.4ms)[0m   [0;1mSELECT * FROM "championships" [0m
+Rendering template within layouts/application
+Rendering championships/index
+Rendered championships/_sidebar (0.7ms)
+Completed in 53ms (View: 50, DB: 0) | 200 OK [http://www.example.com/championships]
+REQUESTING PAGE: GET /championships/new with {} and HTTP headers {"HTTP_REFERER"=>"/championships"}
+
+
+Processing ChampionshipsController#new (for 127.0.0.1 at 2010-06-21 12:21:33) [GET]
+Rendering template within layouts/application
+Rendering championships/new
+Rendered championships/_form (3.6ms)
+Rendered championships/_sidebar (0.3ms)
+Completed in 8ms (View: 7, DB: 0) | 200 OK [http://www.example.com/championships/new]
+REQUESTING PAGE: POST /championships with {"championship"=>{"name"=>"Campeonato Brasileiro 2010"}} and HTTP headers {"HTTP_REFERER"=>"/championships/new"}
+
+
+Processing ChampionshipsController#create (for 127.0.0.1 at 2010-06-21 12:21:33) [POST]
+  Parameters: {"championship"=>{"name"=>"Campeonato Brasileiro 2010"}}
+  [4;35;1mChampionship Create (0.5ms)[0m   [0mINSERT INTO "championships" ("name", "created_at", "updated_at") VALUES('Campeonato Brasileiro 2010', '2010-06-21 15:21:33', '2010-06-21 15:21:33')[0m
+Redirected to http://www.example.com/championships/1
+Completed in 4ms (DB: 0) | 302 Found [http://www.example.com/championships]
+REQUESTING PAGE: GET http://www.example.com/championships/1 with {} and HTTP headers {"HTTP_REFERER"=>"/championships"}
+
+
+Processing ChampionshipsController#show (for 127.0.0.1 at 2010-06-21 12:21:33) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mChampionship Load (0.3ms)[0m   [0;1mSELECT * FROM "championships" WHERE ("championships"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering championships/show
+Rendered championships/_sidebar (0.2ms)
+Completed in 8ms (View: 6, DB: 0) | 200 OK [http://www.example.com/championships/1]
+REQUESTING PAGE: GET /equipes with {} and HTTP headers {}
+
+
+Processing EquipesController#index (for 127.0.0.1 at 2010-06-21 12:21:33) [GET]
+  [4;35;1mEquipe Load (61.2ms)[0m   [0mSELECT * FROM "equipes" [0m
+Rendering template within layouts/application
+Rendering equipes/index
+Rendered equipes/_sidebar (0.8ms)
+Completed in 69ms (View: 5, DB: 61) | 200 OK [http://www.example.com/equipes]
+REQUESTING PAGE: GET /equipes/new with {} and HTTP headers {"HTTP_REFERER"=>"/equipes"}
+
+
+Processing EquipesController#new (for 127.0.0.1 at 2010-06-21 12:21:33) [GET]
+Rendering template within layouts/application
+Rendering equipes/new
+Rendered equipes/_form (2.9ms)
+Rendered equipes/_sidebar (0.2ms)
+Completed in 8ms (View: 6, DB: 0) | 200 OK [http://www.example.com/equipes/new]
+REQUESTING PAGE: POST /equipes with {"equipe"=>{"name"=>"Palmeiras"}} and HTTP headers {"HTTP_REFERER"=>"/equipes/new"}
+
+
+Processing EquipesController#create (for 127.0.0.1 at 2010-06-21 12:21:33) [POST]
+  Parameters: {"equipe"=>{"name"=>"Palmeiras"}}
+  [4;36;1mEquipe Load (0.2ms)[0m   [0;1mSELECT "equipes".id FROM "equipes" WHERE ("equipes"."name" = 'Palmeiras') LIMIT 1[0m
+  [4;35;1mEquipe Create (0.4ms)[0m   [0mINSERT INTO "equipes" ("name", "created_at", "updated_at") VALUES('Palmeiras', '2010-06-21 15:21:33', '2010-06-21 15:21:33')[0m
+Redirected to http://www.example.com/equipes/1
+Completed in 5ms (DB: 0) | 302 Found [http://www.example.com/equipes]
+REQUESTING PAGE: GET http://www.example.com/equipes/1 with {} and HTTP headers {"HTTP_REFERER"=>"/equipes"}
+
+
+Processing EquipesController#show (for 127.0.0.1 at 2010-06-21 12:21:33) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mEquipe Load (0.3ms)[0m   [0;1mSELECT * FROM "equipes" WHERE ("equipes"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering equipes/show
+Rendered equipes/_sidebar (0.3ms)
+Completed in 8ms (View: 6, DB: 0) | 200 OK [http://www.example.com/equipes/1]
+  [4;35;1mEquipe Load (0.2ms)[0m   [0mSELECT "equipes".id FROM "equipes" WHERE ("equipes"."name" = 'Palmeiras') LIMIT 1[0m
+  [4;36;1mEquipe Create (0.3ms)[0m   [0;1mINSERT INTO "equipes" ("name", "created_at", "updated_at") VALUES('Palmeiras', '2010-06-21 15:21:33', '2010-06-21 15:21:33')[0m
+REQUESTING PAGE: GET /equipes with {} and HTTP headers {}
+
+
+Processing EquipesController#index (for 127.0.0.1 at 2010-06-21 12:21:33) [GET]
+  [4;35;1mEquipe Load (0.3ms)[0m   [0mSELECT * FROM "equipes" [0m
+Rendering template within layouts/application
+Rendering equipes/index
+Rendered equipes/_sidebar (0.2ms)
+Completed in 6ms (View: 5, DB: 1) | 200 OK [http://www.example.com/equipes]
+REQUESTING PAGE: GET /equipes/1 with {} and HTTP headers {"HTTP_REFERER"=>"/equipes"}
+
+
+Processing EquipesController#show (for 127.0.0.1 at 2010-06-21 12:21:33) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mEquipe Load (0.3ms)[0m   [0;1mSELECT * FROM "equipes" WHERE ("equipes"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering equipes/show
+Rendered equipes/_sidebar (0.3ms)
+Completed in 7ms (View: 5, DB: 0) | 200 OK [http://www.example.com/equipes/1]
+REQUESTING PAGE: GET /equipes/1/players with {} and HTTP headers {"HTTP_REFERER"=>"/equipes/1"}
+
+
+Processing PlayersController#index (for 127.0.0.1 at 2010-06-21 12:21:33) [GET]
+  Parameters: {"equipe_id"=>"1"}
+  [4;35;1mEquipe Load (0.3ms)[0m   [0mSELECT * FROM "equipes" WHERE ("equipes"."id" = 1) [0m
+  [4;36;1mPlayer Load (0.1ms)[0m   [0;1mSELECT * FROM "players" WHERE ("players".equipe_id = 1) [0m
+Rendering template within layouts/application
+Rendering players/index
+Rendered players/_sidebar (0.9ms)
+Completed in 9ms (View: 5, DB: 0) | 200 OK [http://www.example.com/equipes/1/players]
+REQUESTING PAGE: GET /equipes/1/players/new with {} and HTTP headers {"HTTP_REFERER"=>"/equipes/1/players"}
+
+
+Processing PlayersController#new (for 127.0.0.1 at 2010-06-21 12:21:34) [GET]
+  Parameters: {"equipe_id"=>"1"}
+  [4;35;1mEquipe Load (0.3ms)[0m   [0mSELECT * FROM "equipes" WHERE ("equipes"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering players/new
+Rendered players/_form (2.8ms)
+Rendered players/_sidebar (0.5ms)
+Completed in 12ms (View: 7, DB: 0) | 200 OK [http://www.example.com/equipes/1/players/new]
+REQUESTING PAGE: POST /equipes/1/players with {"player"=>{"name"=>"Marcos", "number"=>"12"}} and HTTP headers {"HTTP_REFERER"=>"/equipes/1/players/new"}
+
+
+Processing PlayersController#create (for 127.0.0.1 at 2010-06-21 12:21:34) [POST]
+  Parameters: {"player"=>{"number"=>"12", "name"=>"Marcos"}, "equipe_id"=>"1"}
+  [4;36;1mEquipe Load (0.3ms)[0m   [0;1mSELECT * FROM "equipes" WHERE ("equipes"."id" = 1) [0m
+  [4;35;1mPlayer Load (0.1ms)[0m   [0mSELECT "players".id FROM "players" WHERE ("players"."number" = 12 AND "players".equipe_id = 1) LIMIT 1[0m
+  [4;36;1mPlayer Create (0.1ms)[0m   [0;1mINSERT INTO "players" ("name", "number", "created_at", "equipe_id", "updated_at") VALUES('Marcos', 12, '2010-06-21 15:21:34', 1, '2010-06-21 15:21:34')[0m
+Redirected to http://www.example.com/equipes/1/players/1
+Completed in 6ms (DB: 0) | 302 Found [http://www.example.com/equipes/1/players]
+REQUESTING PAGE: GET http://www.example.com/equipes/1/players/1 with {} and HTTP headers {"HTTP_REFERER"=>"/equipes/1/players"}
+
+
+Processing PlayersController#show (for 127.0.0.1 at 2010-06-21 12:21:34) [GET]
+  Parameters: {"equipe_id"=>"1", "id"=>"1"}
+  [4;35;1mEquipe Load (0.3ms)[0m   [0mSELECT * FROM "equipes" WHERE ("equipes"."id" = 1) [0m
+  [4;36;1mPlayer Load (0.2ms)[0m   [0;1mSELECT * FROM "players" WHERE ("players"."id" = 1 AND ("players".equipe_id = 1)) [0m
+Rendering template within layouts/application
+Rendering players/show
+Rendered players/_sidebar (0.5ms)
+Completed in 87ms (View: 84, DB: 0) | 200 OK [http://www.example.com/equipes/1/players/1]
+REQUESTING PAGE: GET /championships with {} and HTTP headers {}
+
+
+Processing ChampionshipsController#index (for 127.0.0.1 at 2010-06-21 12:21:50) [GET]
+  [4;36;1mChampionship Load (0.4ms)[0m   [0;1mSELECT * FROM "championships" [0m
+Rendering template within layouts/application
+Rendering championships/index
+Rendered championships/_sidebar (0.7ms)
+Completed in 19ms (View: 16, DB: 0) | 200 OK [http://www.example.com/championships]
+REQUESTING PAGE: GET /championships/new with {} and HTTP headers {"HTTP_REFERER"=>"/championships"}
+
+
+Processing ChampionshipsController#new (for 127.0.0.1 at 2010-06-21 12:21:50) [GET]
+Rendering template within layouts/application
+Rendering championships/new
+Rendered championships/_form (3.9ms)
+Rendered championships/_sidebar (0.3ms)
+Completed in 9ms (View: 7, DB: 0) | 200 OK [http://www.example.com/championships/new]
+REQUESTING PAGE: POST /championships with {"championship"=>{"name"=>"Campeonato Brasileiro 2010"}} and HTTP headers {"HTTP_REFERER"=>"/championships/new"}
+
+
+Processing ChampionshipsController#create (for 127.0.0.1 at 2010-06-21 12:21:50) [POST]
+  Parameters: {"championship"=>{"name"=>"Campeonato Brasileiro 2010"}}
+  [4;35;1mChampionship Create (0.5ms)[0m   [0mINSERT INTO "championships" ("name", "created_at", "updated_at") VALUES('Campeonato Brasileiro 2010', '2010-06-21 15:21:50', '2010-06-21 15:21:50')[0m
+Redirected to http://www.example.com/championships/1
+Completed in 4ms (DB: 0) | 302 Found [http://www.example.com/championships]
+REQUESTING PAGE: GET http://www.example.com/championships/1 with {} and HTTP headers {"HTTP_REFERER"=>"/championships"}
+
+
+Processing ChampionshipsController#show (for 127.0.0.1 at 2010-06-21 12:21:50) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mChampionship Load (0.3ms)[0m   [0;1mSELECT * FROM "championships" WHERE ("championships"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering championships/show
+Rendered championships/_sidebar (0.3ms)
+Completed in 8ms (View: 7, DB: 0) | 200 OK [http://www.example.com/championships/1]
+REQUESTING PAGE: GET /championships with {} and HTTP headers {}
+
+
+Processing ChampionshipsController#index (for 127.0.0.1 at 2010-06-21 12:21:56) [GET]
+  [4;36;1mChampionship Load (0.4ms)[0m   [0;1mSELECT * FROM "championships" [0m
+Rendering template within layouts/application
+Rendering championships/index
+Rendered championships/_sidebar (0.7ms)
+Completed in 19ms (View: 16, DB: 0) | 200 OK [http://www.example.com/championships]
+REQUESTING PAGE: GET /championships/new with {} and HTTP headers {"HTTP_REFERER"=>"/championships"}
+
+
+Processing ChampionshipsController#new (for 127.0.0.1 at 2010-06-21 12:21:56) [GET]
+Rendering template within layouts/application
+Rendering championships/new
+Rendered championships/_form (6.8ms)
+Rendered championships/_sidebar (0.3ms)
+Completed in 12ms (View: 11, DB: 0) | 200 OK [http://www.example.com/championships/new]
+REQUESTING PAGE: POST /championships with {"championship"=>{"name"=>"Campeonato Brasileiro 2010"}} and HTTP headers {"HTTP_REFERER"=>"/championships/new"}
+
+
+Processing ChampionshipsController#create (for 127.0.0.1 at 2010-06-21 12:21:56) [POST]
+  Parameters: {"championship"=>{"name"=>"Campeonato Brasileiro 2010"}}
+  [4;35;1mChampionship Create (0.5ms)[0m   [0mINSERT INTO "championships" ("name", "created_at", "updated_at") VALUES('Campeonato Brasileiro 2010', '2010-06-21 15:21:56', '2010-06-21 15:21:56')[0m
+Redirected to http://www.example.com/championships/1
+Completed in 5ms (DB: 0) | 302 Found [http://www.example.com/championships]
+REQUESTING PAGE: GET http://www.example.com/championships/1 with {} and HTTP headers {"HTTP_REFERER"=>"/championships"}
+
+
+Processing ChampionshipsController#show (for 127.0.0.1 at 2010-06-21 12:21:56) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mChampionship Load (0.3ms)[0m   [0;1mSELECT * FROM "championships" WHERE ("championships"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering championships/show
+Rendered championships/_sidebar (0.3ms)
+Completed in 11ms (View: 8, DB: 0) | 200 OK [http://www.example.com/championships/1]
+REQUESTING PAGE: GET /championships with {} and HTTP headers {}
+
+
+Processing ChampionshipsController#index (for 127.0.0.1 at 2010-06-21 12:22:49) [GET]
+  [4;36;1mChampionship Load (0.4ms)[0m   [0;1mSELECT * FROM "championships" [0m
+Rendering template within layouts/application
+Rendering championships/index
+Rendered championships/_sidebar (0.7ms)
+Completed in 19ms (View: 16, DB: 0) | 200 OK [http://www.example.com/championships]
+REQUESTING PAGE: GET /championships/new with {} and HTTP headers {"HTTP_REFERER"=>"/championships"}
+
+
+Processing ChampionshipsController#new (for 127.0.0.1 at 2010-06-21 12:22:49) [GET]
+Rendering template within layouts/application
+Rendering championships/new
+Rendered championships/_form (3.9ms)
+Rendered championships/_sidebar (0.3ms)
+Completed in 9ms (View: 7, DB: 0) | 200 OK [http://www.example.com/championships/new]
+REQUESTING PAGE: POST /championships with {"championship"=>{"name"=>"Campeonato Brasileiro 2010"}} and HTTP headers {"HTTP_REFERER"=>"/championships/new"}
+
+
+Processing ChampionshipsController#create (for 127.0.0.1 at 2010-06-21 12:22:49) [POST]
+  Parameters: {"championship"=>{"name"=>"Campeonato Brasileiro 2010"}}
+  [4;35;1mChampionship Create (0.5ms)[0m   [0mINSERT INTO "championships" ("name", "created_at", "updated_at") VALUES('Campeonato Brasileiro 2010', '2010-06-21 15:22:49', '2010-06-21 15:22:49')[0m
+Redirected to http://www.example.com/championships/1
+Completed in 4ms (DB: 0) | 302 Found [http://www.example.com/championships]
+REQUESTING PAGE: GET http://www.example.com/championships/1 with {} and HTTP headers {"HTTP_REFERER"=>"/championships"}
+
+
+Processing ChampionshipsController#show (for 127.0.0.1 at 2010-06-21 12:22:49) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mChampionship Load (0.2ms)[0m   [0;1mSELECT * FROM "championships" WHERE ("championships"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering championships/show
+Rendered championships/_sidebar (0.3ms)
+Completed in 7ms (View: 6, DB: 0) | 200 OK [http://www.example.com/championships/1]
+REQUESTING PAGE: GET /championships with {} and HTTP headers {}
+
+
+Processing ChampionshipsController#index (for 127.0.0.1 at 2010-06-21 12:22:55) [GET]
+  [4;36;1mChampionship Load (0.4ms)[0m   [0;1mSELECT * FROM "championships" [0m
+Rendering template within layouts/application
+Rendering championships/index
+Rendered championships/_sidebar (0.7ms)
+Completed in 20ms (View: 17, DB: 0) | 200 OK [http://www.example.com/championships]
+REQUESTING PAGE: GET /championships/new with {} and HTTP headers {"HTTP_REFERER"=>"/championships"}
+
+
+Processing ChampionshipsController#new (for 127.0.0.1 at 2010-06-21 12:22:55) [GET]
+Rendering template within layouts/application
+Rendering championships/new
+Rendered championships/_form (3.9ms)
+Rendered championships/_sidebar (0.3ms)
+Completed in 9ms (View: 7, DB: 0) | 200 OK [http://www.example.com/championships/new]
+REQUESTING PAGE: POST /championships with {"championship"=>{"name"=>"Campeonato Brasileiro 2010"}} and HTTP headers {"HTTP_REFERER"=>"/championships/new"}
+
+
+Processing ChampionshipsController#create (for 127.0.0.1 at 2010-06-21 12:22:55) [POST]
+  Parameters: {"championship"=>{"name"=>"Campeonato Brasileiro 2010"}}
+  [4;35;1mChampionship Create (0.5ms)[0m   [0mINSERT INTO "championships" ("name", "created_at", "updated_at") VALUES('Campeonato Brasileiro 2010', '2010-06-21 15:22:55', '2010-06-21 15:22:55')[0m
+Redirected to http://www.example.com/championships/1
+Completed in 5ms (DB: 0) | 302 Found [http://www.example.com/championships]
+REQUESTING PAGE: GET http://www.example.com/championships/1 with {} and HTTP headers {"HTTP_REFERER"=>"/championships"}
+
+
+Processing ChampionshipsController#show (for 127.0.0.1 at 2010-06-21 12:22:55) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mChampionship Load (0.3ms)[0m   [0;1mSELECT * FROM "championships" WHERE ("championships"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering championships/show
+Rendered championships/_sidebar (0.3ms)
+Completed in 8ms (View: 7, DB: 0) | 200 OK [http://www.example.com/championships/1]
+REQUESTING PAGE: GET /equipes with {} and HTTP headers {}
+
+
+Processing EquipesController#index (for 127.0.0.1 at 2010-06-21 12:22:55) [GET]
+  [4;35;1mEquipe Load (0.2ms)[0m   [0mSELECT * FROM "equipes" [0m
+Rendering template within layouts/application
+Rendering equipes/index
+Rendered equipes/_sidebar (1.7ms)
+Completed in 8ms (View: 5, DB: 0) | 200 OK [http://www.example.com/equipes]
+REQUESTING PAGE: GET /equipes/new with {} and HTTP headers {"HTTP_REFERER"=>"/equipes"}
+
+
+Processing EquipesController#new (for 127.0.0.1 at 2010-06-21 12:22:55) [GET]
+Rendering template within layouts/application
+Rendering equipes/new
+Rendered equipes/_form (3.2ms)
+Rendered equipes/_sidebar (0.2ms)
+Completed in 8ms (View: 6, DB: 0) | 200 OK [http://www.example.com/equipes/new]
+REQUESTING PAGE: POST /equipes with {"equipe"=>{"name"=>"Palmeiras"}} and HTTP headers {"HTTP_REFERER"=>"/equipes/new"}
+
+
+Processing EquipesController#create (for 127.0.0.1 at 2010-06-21 12:22:55) [POST]
+  Parameters: {"equipe"=>{"name"=>"Palmeiras"}}
+  [4;36;1mEquipe Load (0.2ms)[0m   [0;1mSELECT "equipes".id FROM "equipes" WHERE ("equipes"."name" = 'Palmeiras') LIMIT 1[0m
+  [4;35;1mEquipe Create (0.3ms)[0m   [0mINSERT INTO "equipes" ("name", "created_at", "updated_at") VALUES('Palmeiras', '2010-06-21 15:22:55', '2010-06-21 15:22:55')[0m
+Redirected to http://www.example.com/equipes/1
+Completed in 4ms (DB: 0) | 302 Found [http://www.example.com/equipes]
+REQUESTING PAGE: GET http://www.example.com/equipes/1 with {} and HTTP headers {"HTTP_REFERER"=>"/equipes"}
+
+
+Processing EquipesController#show (for 127.0.0.1 at 2010-06-21 12:22:55) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mEquipe Load (0.3ms)[0m   [0;1mSELECT * FROM "equipes" WHERE ("equipes"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering equipes/show
+Rendered equipes/_sidebar (0.4ms)
+Completed in 8ms (View: 6, DB: 0) | 200 OK [http://www.example.com/equipes/1]
+  [4;35;1mEquipe Load (0.2ms)[0m   [0mSELECT "equipes".id FROM "equipes" WHERE ("equipes"."name" = 'Palmeiras') LIMIT 1[0m
+  [4;36;1mEquipe Create (0.3ms)[0m   [0;1mINSERT INTO "equipes" ("name", "created_at", "updated_at") VALUES('Palmeiras', '2010-06-21 15:22:55', '2010-06-21 15:22:55')[0m
+REQUESTING PAGE: GET /equipes with {} and HTTP headers {}
+
+
+Processing EquipesController#index (for 127.0.0.1 at 2010-06-21 12:22:55) [GET]
+  [4;35;1mEquipe Load (0.3ms)[0m   [0mSELECT * FROM "equipes" [0m
+Rendering template within layouts/application
+Rendering equipes/index
+Rendered equipes/_sidebar (0.2ms)
+Completed in 6ms (View: 4, DB: 1) | 200 OK [http://www.example.com/equipes]
+REQUESTING PAGE: GET /equipes/1 with {} and HTTP headers {"HTTP_REFERER"=>"/equipes"}
+
+
+Processing EquipesController#show (for 127.0.0.1 at 2010-06-21 12:22:55) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mEquipe Load (0.3ms)[0m   [0;1mSELECT * FROM "equipes" WHERE ("equipes"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering equipes/show
+Rendered equipes/_sidebar (0.3ms)
+Completed in 7ms (View: 5, DB: 0) | 200 OK [http://www.example.com/equipes/1]
+REQUESTING PAGE: GET /equipes/1/players with {} and HTTP headers {"HTTP_REFERER"=>"/equipes/1"}
+
+
+Processing PlayersController#index (for 127.0.0.1 at 2010-06-21 12:22:55) [GET]
+  Parameters: {"equipe_id"=>"1"}
+  [4;35;1mEquipe Load (0.3ms)[0m   [0mSELECT * FROM "equipes" WHERE ("equipes"."id" = 1) [0m
+  [4;36;1mPlayer Load (0.2ms)[0m   [0;1mSELECT * FROM "players" WHERE ("players".equipe_id = 1) [0m
+Rendering template within layouts/application
+Rendering players/index
+Rendered players/_sidebar (0.7ms)
+Completed in 9ms (View: 4, DB: 0) | 200 OK [http://www.example.com/equipes/1/players]
+REQUESTING PAGE: GET /equipes/1/players/new with {} and HTTP headers {"HTTP_REFERER"=>"/equipes/1/players"}
+
+
+Processing PlayersController#new (for 127.0.0.1 at 2010-06-21 12:22:55) [GET]
+  Parameters: {"equipe_id"=>"1"}
+  [4;35;1mEquipe Load (0.3ms)[0m   [0mSELECT * FROM "equipes" WHERE ("equipes"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering players/new
+Rendered players/_form (3.0ms)
+Rendered players/_sidebar (0.5ms)
+Completed in 12ms (View: 7, DB: 0) | 200 OK [http://www.example.com/equipes/1/players/new]
+REQUESTING PAGE: POST /equipes/1/players with {"player"=>{"name"=>"Marcos", "number"=>"12"}} and HTTP headers {"HTTP_REFERER"=>"/equipes/1/players/new"}
+
+
+Processing PlayersController#create (for 127.0.0.1 at 2010-06-21 12:22:56) [POST]
+  Parameters: {"player"=>{"number"=>"12", "name"=>"Marcos"}, "equipe_id"=>"1"}
+  [4;36;1mEquipe Load (0.3ms)[0m   [0;1mSELECT * FROM "equipes" WHERE ("equipes"."id" = 1) [0m
+  [4;35;1mPlayer Load (0.1ms)[0m   [0mSELECT "players".id FROM "players" WHERE ("players"."number" = 12 AND "players".equipe_id = 1) LIMIT 1[0m
+  [4;36;1mPlayer Create (0.1ms)[0m   [0;1mINSERT INTO "players" ("name", "number", "created_at", "equipe_id", "updated_at") VALUES('Marcos', 12, '2010-06-21 15:22:56', 1, '2010-06-21 15:22:56')[0m
+Redirected to http://www.example.com/equipes/1/players/1
+Completed in 6ms (DB: 0) | 302 Found [http://www.example.com/equipes/1/players]
+REQUESTING PAGE: GET http://www.example.com/equipes/1/players/1 with {} and HTTP headers {"HTTP_REFERER"=>"/equipes/1/players"}
+
+
+Processing PlayersController#show (for 127.0.0.1 at 2010-06-21 12:22:56) [GET]
+  Parameters: {"equipe_id"=>"1", "id"=>"1"}
+  [4;35;1mEquipe Load (0.3ms)[0m   [0mSELECT * FROM "equipes" WHERE ("equipes"."id" = 1) [0m
+  [4;36;1mPlayer Load (0.2ms)[0m   [0;1mSELECT * FROM "players" WHERE ("players"."id" = 1 AND ("players".equipe_id = 1)) [0m
+Rendering template within layouts/application
+Rendering players/show
+Rendered players/_sidebar (0.7ms)
+Completed in 10ms (View: 7, DB: 0) | 200 OK [http://www.example.com/equipes/1/players/1]
+REQUESTING PAGE: GET /championships with {} and HTTP headers {}
+
+
+Processing ChampionshipsController#index (for 127.0.0.1 at 2010-06-21 12:36:51) [GET]
+  [4;36;1mChampionship Load (0.4ms)[0m   [0;1mSELECT * FROM "championships" [0m
+Rendering template within layouts/application
+Rendering championships/index
+Rendered championships/_sidebar (0.7ms)
+Completed in 41ms (View: 38, DB: 0) | 200 OK [http://www.example.com/championships]
+REQUESTING PAGE: GET /championships/new with {} and HTTP headers {"HTTP_REFERER"=>"/championships"}
+
+
+Processing ChampionshipsController#new (for 127.0.0.1 at 2010-06-21 12:36:51) [GET]
+Rendering template within layouts/application
+Rendering championships/new
+Rendered championships/_form (4.4ms)
+Rendered championships/_sidebar (0.2ms)
+Completed in 9ms (View: 8, DB: 0) | 200 OK [http://www.example.com/championships/new]
+REQUESTING PAGE: POST /championships with {"championship"=>{"name"=>"Campeonato Brasileiro 2010"}} and HTTP headers {"HTTP_REFERER"=>"/championships/new"}
+
+
+Processing ChampionshipsController#create (for 127.0.0.1 at 2010-06-21 12:36:51) [POST]
+  Parameters: {"championship"=>{"name"=>"Campeonato Brasileiro 2010"}}
+  [4;35;1mChampionship Create (0.6ms)[0m   [0mINSERT INTO "championships" ("name", "created_at", "updated_at") VALUES('Campeonato Brasileiro 2010', '2010-06-21 15:36:51', '2010-06-21 15:36:51')[0m
+Redirected to http://www.example.com/championships/1
+Completed in 4ms (DB: 0) | 302 Found [http://www.example.com/championships]
+REQUESTING PAGE: GET http://www.example.com/championships/1 with {} and HTTP headers {"HTTP_REFERER"=>"/championships"}
+
+
+Processing ChampionshipsController#show (for 127.0.0.1 at 2010-06-21 12:36:51) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mChampionship Load (0.3ms)[0m   [0;1mSELECT * FROM "championships" WHERE ("championships"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering championships/show
+Rendered championships/_sidebar (0.3ms)
+Completed in 76ms (View: 75, DB: 0) | 200 OK [http://www.example.com/championships/1]
+REQUESTING PAGE: GET /equipes with {} and HTTP headers {}
+
+
+Processing EquipesController#index (for 127.0.0.1 at 2010-06-21 12:36:51) [GET]
+  [4;35;1mEquipe Load (0.2ms)[0m   [0mSELECT * FROM "equipes" [0m
+Rendering template within layouts/application
+Rendering equipes/index
+Rendered equipes/_sidebar (0.7ms)
+Completed in 8ms (View: 5, DB: 0) | 200 OK [http://www.example.com/equipes]
+REQUESTING PAGE: GET /equipes/new with {} and HTTP headers {"HTTP_REFERER"=>"/equipes"}
+
+
+Processing EquipesController#new (for 127.0.0.1 at 2010-06-21 12:36:51) [GET]
+Rendering template within layouts/application
+Rendering equipes/new
+Rendered equipes/_form (3.0ms)
+Rendered equipes/_sidebar (0.2ms)
+Completed in 8ms (View: 6, DB: 0) | 200 OK [http://www.example.com/equipes/new]
+REQUESTING PAGE: POST /equipes with {"equipe"=>{"name"=>"Palmeiras"}} and HTTP headers {"HTTP_REFERER"=>"/equipes/new"}
+
+
+Processing EquipesController#create (for 127.0.0.1 at 2010-06-21 12:36:51) [POST]
+  Parameters: {"equipe"=>{"name"=>"Palmeiras"}}
+  [4;36;1mEquipe Load (0.2ms)[0m   [0;1mSELECT "equipes".id FROM "equipes" WHERE ("equipes"."name" = 'Palmeiras') LIMIT 1[0m
+  [4;35;1mEquipe Create (0.3ms)[0m   [0mINSERT INTO "equipes" ("name", "created_at", "updated_at") VALUES('Palmeiras', '2010-06-21 15:36:51', '2010-06-21 15:36:51')[0m
+Redirected to http://www.example.com/equipes/1
+Completed in 5ms (DB: 0) | 302 Found [http://www.example.com/equipes]
+REQUESTING PAGE: GET http://www.example.com/equipes/1 with {} and HTTP headers {"HTTP_REFERER"=>"/equipes"}
+
+
+Processing EquipesController#show (for 127.0.0.1 at 2010-06-21 12:36:51) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mEquipe Load (0.3ms)[0m   [0;1mSELECT * FROM "equipes" WHERE ("equipes"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering equipes/show
+Rendered equipes/_sidebar (0.3ms)
+Completed in 8ms (View: 6, DB: 0) | 200 OK [http://www.example.com/equipes/1]
+  [4;35;1mEquipe Load (0.2ms)[0m   [0mSELECT "equipes".id FROM "equipes" WHERE ("equipes"."name" = 'Palmeiras') LIMIT 1[0m
+  [4;36;1mEquipe Create (0.3ms)[0m   [0;1mINSERT INTO "equipes" ("name", "created_at", "updated_at") VALUES('Palmeiras', '2010-06-21 15:36:51', '2010-06-21 15:36:51')[0m
+REQUESTING PAGE: GET /equipes with {} and HTTP headers {}
+
+
+Processing EquipesController#index (for 127.0.0.1 at 2010-06-21 12:36:51) [GET]
+  [4;35;1mEquipe Load (0.3ms)[0m   [0mSELECT * FROM "equipes" [0m
+Rendering template within layouts/application
+Rendering equipes/index
+Rendered equipes/_sidebar (0.2ms)
+Completed in 6ms (View: 4, DB: 1) | 200 OK [http://www.example.com/equipes]
+REQUESTING PAGE: GET /equipes/1 with {} and HTTP headers {"HTTP_REFERER"=>"/equipes"}
+
+
+Processing EquipesController#show (for 127.0.0.1 at 2010-06-21 12:36:51) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mEquipe Load (0.3ms)[0m   [0;1mSELECT * FROM "equipes" WHERE ("equipes"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering equipes/show
+Rendered equipes/_sidebar (0.4ms)
+Completed in 7ms (View: 6, DB: 0) | 200 OK [http://www.example.com/equipes/1]
+REQUESTING PAGE: GET /equipes/1/players with {} and HTTP headers {"HTTP_REFERER"=>"/equipes/1"}
+
+
+Processing PlayersController#index (for 127.0.0.1 at 2010-06-21 12:36:51) [GET]
+  Parameters: {"equipe_id"=>"1"}
+  [4;35;1mEquipe Load (0.3ms)[0m   [0mSELECT * FROM "equipes" WHERE ("equipes"."id" = 1) [0m
+  [4;36;1mPlayer Load (0.2ms)[0m   [0;1mSELECT * FROM "players" WHERE ("players".equipe_id = 1) [0m
+Rendering template within layouts/application
+Rendering players/index
+Rendered players/_sidebar (0.8ms)
+Completed in 8ms (View: 4, DB: 0) | 200 OK [http://www.example.com/equipes/1/players]
+REQUESTING PAGE: GET /equipes/1/players/new with {} and HTTP headers {"HTTP_REFERER"=>"/equipes/1/players"}
+
+
+Processing PlayersController#new (for 127.0.0.1 at 2010-06-21 12:36:51) [GET]
+  Parameters: {"equipe_id"=>"1"}
+  [4;35;1mEquipe Load (0.3ms)[0m   [0mSELECT * FROM "equipes" WHERE ("equipes"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering players/new
+Rendered players/_form (2.9ms)
+Rendered players/_sidebar (0.5ms)
+Completed in 12ms (View: 8, DB: 0) | 200 OK [http://www.example.com/equipes/1/players/new]
+REQUESTING PAGE: POST /equipes/1/players with {"player"=>{"name"=>"Marcos", "number"=>"12"}} and HTTP headers {"HTTP_REFERER"=>"/equipes/1/players/new"}
+
+
+Processing PlayersController#create (for 127.0.0.1 at 2010-06-21 12:36:51) [POST]
+  Parameters: {"player"=>{"number"=>"12", "name"=>"Marcos"}, "equipe_id"=>"1"}
+  [4;36;1mEquipe Load (0.3ms)[0m   [0;1mSELECT * FROM "equipes" WHERE ("equipes"."id" = 1) [0m
+  [4;35;1mPlayer Load (0.1ms)[0m   [0mSELECT "players".id FROM "players" WHERE ("players"."number" = 12 AND "players".equipe_id = 1) LIMIT 1[0m
+  [4;36;1mPlayer Create (0.2ms)[0m   [0;1mINSERT INTO "players" ("name", "number", "created_at", "equipe_id", "updated_at") VALUES('Marcos', 12, '2010-06-21 15:36:51', 1, '2010-06-21 15:36:51')[0m
+Redirected to http://www.example.com/equipes/1/players/1
+Completed in 6ms (DB: 0) | 302 Found [http://www.example.com/equipes/1/players]
+REQUESTING PAGE: GET http://www.example.com/equipes/1/players/1 with {} and HTTP headers {"HTTP_REFERER"=>"/equipes/1/players"}
+
+
+Processing PlayersController#show (for 127.0.0.1 at 2010-06-21 12:36:51) [GET]
+  Parameters: {"equipe_id"=>"1", "id"=>"1"}
+  [4;35;1mEquipe Load (0.3ms)[0m   [0mSELECT * FROM "equipes" WHERE ("equipes"."id" = 1) [0m
+  [4;36;1mPlayer Load (0.2ms)[0m   [0;1mSELECT * FROM "players" WHERE ("players"."id" = 1 AND ("players".equipe_id = 1)) [0m
+Rendering template within layouts/application
+Rendering players/show
+Rendered players/_sidebar (1.1ms)
+Completed in 13ms (View: 10, DB: 1) | 200 OK [http://www.example.com/equipes/1/players/1]
+REQUESTING PAGE: GET /championships with {} and HTTP headers {}
+
+
+Processing ChampionshipsController#index (for 127.0.0.1 at 2010-06-21 12:36:57) [GET]
+  [4;36;1mChampionship Load (0.4ms)[0m   [0;1mSELECT * FROM "championships" [0m
+Rendering template within layouts/application
+Rendering championships/index
+Rendered championships/_sidebar (0.7ms)
+Completed in 20ms (View: 17, DB: 0) | 200 OK [http://www.example.com/championships]
+REQUESTING PAGE: GET /championships/new with {} and HTTP headers {"HTTP_REFERER"=>"/championships"}
+
+
+Processing ChampionshipsController#new (for 127.0.0.1 at 2010-06-21 12:36:57) [GET]
+Rendering template within layouts/application
+Rendering championships/new
+Rendered championships/_form (4.2ms)
+Rendered championships/_sidebar (0.2ms)
+Completed in 9ms (View: 7, DB: 0) | 200 OK [http://www.example.com/championships/new]
+REQUESTING PAGE: POST /championships with {"championship"=>{"name"=>"Campeonato Brasileiro 2010"}} and HTTP headers {"HTTP_REFERER"=>"/championships/new"}
+
+
+Processing ChampionshipsController#create (for 127.0.0.1 at 2010-06-21 12:36:57) [POST]
+  Parameters: {"championship"=>{"name"=>"Campeonato Brasileiro 2010"}}
+  [4;35;1mChampionship Create (0.4ms)[0m   [0mINSERT INTO "championships" ("name", "created_at", "updated_at") VALUES('Campeonato Brasileiro 2010', '2010-06-21 15:36:57', '2010-06-21 15:36:57')[0m
+Redirected to http://www.example.com/championships/1
+Completed in 4ms (DB: 0) | 302 Found [http://www.example.com/championships]
+REQUESTING PAGE: GET http://www.example.com/championships/1 with {} and HTTP headers {"HTTP_REFERER"=>"/championships"}
+
+
+Processing ChampionshipsController#show (for 127.0.0.1 at 2010-06-21 12:36:57) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mChampionship Load (0.3ms)[0m   [0;1mSELECT * FROM "championships" WHERE ("championships"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering championships/show
+Rendered championships/_sidebar (0.3ms)
+Completed in 77ms (View: 76, DB: 0) | 200 OK [http://www.example.com/championships/1]
+REQUESTING PAGE: GET /equipes with {} and HTTP headers {}
+
+
+Processing EquipesController#index (for 127.0.0.1 at 2010-06-21 12:36:57) [GET]
+  [4;35;1mEquipe Load (0.2ms)[0m   [0mSELECT * FROM "equipes" [0m
+Rendering template within layouts/application
+Rendering equipes/index
+Rendered equipes/_sidebar (1.0ms)
+Completed in 7ms (View: 4, DB: 0) | 200 OK [http://www.example.com/equipes]
+REQUESTING PAGE: GET /equipes/new with {} and HTTP headers {"HTTP_REFERER"=>"/equipes"}
+
+
+Processing EquipesController#new (for 127.0.0.1 at 2010-06-21 12:36:57) [GET]
+Rendering template within layouts/application
+Rendering equipes/new
+Rendered equipes/_form (2.8ms)
+Rendered equipes/_sidebar (0.2ms)
+Completed in 7ms (View: 6, DB: 0) | 200 OK [http://www.example.com/equipes/new]
+REQUESTING PAGE: POST /equipes with {"equipe"=>{"name"=>"Palmeiras"}} and HTTP headers {"HTTP_REFERER"=>"/equipes/new"}
+
+
+Processing EquipesController#create (for 127.0.0.1 at 2010-06-21 12:36:57) [POST]
+  Parameters: {"equipe"=>{"name"=>"Palmeiras"}}
+  [4;36;1mEquipe Load (0.2ms)[0m   [0;1mSELECT "equipes".id FROM "equipes" WHERE ("equipes"."name" = 'Palmeiras') LIMIT 1[0m
+  [4;35;1mEquipe Create (0.3ms)[0m   [0mINSERT INTO "equipes" ("name", "created_at", "updated_at") VALUES('Palmeiras', '2010-06-21 15:36:57', '2010-06-21 15:36:57')[0m
+Redirected to http://www.example.com/equipes/1
+Completed in 4ms (DB: 0) | 302 Found [http://www.example.com/equipes]
+REQUESTING PAGE: GET http://www.example.com/equipes/1 with {} and HTTP headers {"HTTP_REFERER"=>"/equipes"}
+
+
+Processing EquipesController#show (for 127.0.0.1 at 2010-06-21 12:36:57) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mEquipe Load (0.3ms)[0m   [0;1mSELECT * FROM "equipes" WHERE ("equipes"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering equipes/show
+Rendered equipes/_sidebar (0.3ms)
+Completed in 8ms (View: 6, DB: 0) | 200 OK [http://www.example.com/equipes/1]
+  [4;35;1mEquipe Load (0.2ms)[0m   [0mSELECT "equipes".id FROM "equipes" WHERE ("equipes"."name" = 'Palmeiras') LIMIT 1[0m
+  [4;36;1mEquipe Create (0.3ms)[0m   [0;1mINSERT INTO "equipes" ("name", "created_at", "updated_at") VALUES('Palmeiras', '2010-06-21 15:36:57', '2010-06-21 15:36:57')[0m
+REQUESTING PAGE: GET /equipes with {} and HTTP headers {}
+
+
+Processing EquipesController#index (for 127.0.0.1 at 2010-06-21 12:36:57) [GET]
+  [4;35;1mEquipe Load (0.3ms)[0m   [0mSELECT * FROM "equipes" [0m
+Rendering template within layouts/application
+Rendering equipes/index
+Rendered equipes/_sidebar (0.2ms)
+Completed in 6ms (View: 4, DB: 1) | 200 OK [http://www.example.com/equipes]
+REQUESTING PAGE: GET /equipes/1 with {} and HTTP headers {"HTTP_REFERER"=>"/equipes"}
+
+
+Processing EquipesController#show (for 127.0.0.1 at 2010-06-21 12:36:57) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mEquipe Load (0.3ms)[0m   [0;1mSELECT * FROM "equipes" WHERE ("equipes"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering equipes/show
+Rendered equipes/_sidebar (0.3ms)
+Completed in 6ms (View: 5, DB: 0) | 200 OK [http://www.example.com/equipes/1]
+REQUESTING PAGE: GET /equipes/1/players with {} and HTTP headers {"HTTP_REFERER"=>"/equipes/1"}
+
+
+Processing PlayersController#index (for 127.0.0.1 at 2010-06-21 12:36:57) [GET]
+  Parameters: {"equipe_id"=>"1"}
+  [4;35;1mEquipe Load (0.3ms)[0m   [0mSELECT * FROM "equipes" WHERE ("equipes"."id" = 1) [0m
+  [4;36;1mPlayer Load (0.1ms)[0m   [0;1mSELECT * FROM "players" WHERE ("players".equipe_id = 1) [0m
+Rendering template within layouts/application
+Rendering players/index
+Rendered players/_sidebar (0.9ms)
+Completed in 8ms (View: 5, DB: 0) | 200 OK [http://www.example.com/equipes/1/players]
+REQUESTING PAGE: GET /equipes/1/players/new with {} and HTTP headers {"HTTP_REFERER"=>"/equipes/1/players"}
+
+
+Processing PlayersController#new (for 127.0.0.1 at 2010-06-21 12:36:57) [GET]
+  Parameters: {"equipe_id"=>"1"}
+  [4;35;1mEquipe Load (0.4ms)[0m   [0mSELECT * FROM "equipes" WHERE ("equipes"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering players/new
+Rendered players/_form (2.9ms)
+Rendered players/_sidebar (0.7ms)
+Completed in 13ms (View: 8, DB: 0) | 200 OK [http://www.example.com/equipes/1/players/new]
+REQUESTING PAGE: POST /equipes/1/players with {"player"=>{"name"=>"Marcos", "number"=>"12"}} and HTTP headers {"HTTP_REFERER"=>"/equipes/1/players/new"}
+
+
+Processing PlayersController#create (for 127.0.0.1 at 2010-06-21 12:36:57) [POST]
+  Parameters: {"player"=>{"number"=>"12", "name"=>"Marcos"}, "equipe_id"=>"1"}
+  [4;36;1mEquipe Load (0.3ms)[0m   [0;1mSELECT * FROM "equipes" WHERE ("equipes"."id" = 1) [0m
+  [4;35;1mPlayer Load (0.1ms)[0m   [0mSELECT "players".id FROM "players" WHERE ("players"."number" = 12 AND "players".equipe_id = 1) LIMIT 1[0m
+  [4;36;1mPlayer Create (0.1ms)[0m   [0;1mINSERT INTO "players" ("name", "number", "created_at", "equipe_id", "updated_at") VALUES('Marcos', 12, '2010-06-21 15:36:57', 1, '2010-06-21 15:36:57')[0m
+Redirected to http://www.example.com/equipes/1/players/1
+Completed in 5ms (DB: 0) | 302 Found [http://www.example.com/equipes/1/players]
+REQUESTING PAGE: GET http://www.example.com/equipes/1/players/1 with {} and HTTP headers {"HTTP_REFERER"=>"/equipes/1/players"}
+
+
+Processing PlayersController#show (for 127.0.0.1 at 2010-06-21 12:36:57) [GET]
+  Parameters: {"equipe_id"=>"1", "id"=>"1"}
+  [4;35;1mEquipe Load (0.3ms)[0m   [0mSELECT * FROM "equipes" WHERE ("equipes"."id" = 1) [0m
+  [4;36;1mPlayer Load (0.2ms)[0m   [0;1mSELECT * FROM "players" WHERE ("players"."id" = 1 AND ("players".equipe_id = 1)) [0m
+Rendering template within layouts/application
+Rendering players/show
+Rendered players/_sidebar (2.0ms)
+Completed in 12ms (View: 10, DB: 0) | 200 OK [http://www.example.com/equipes/1/players/1]

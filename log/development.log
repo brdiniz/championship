@@ -1200,3 +1200,160 @@ Rendering template within layouts/application
 Rendering equipes/index
 Rendered equipes/_sidebar (0.2ms)
 Completed in 16ms (View: 13, DB: 1) | 200 OK [http://localhost/equipes]
+
+
+Processing EquipesController#index (for 127.0.0.1 at 2010-06-21 12:18:52) [GET]
+  [4;36;1mEquipe Load (0.9ms)[0m   [0;1mSELECT * FROM "equipes" [0m
+Rendering template within layouts/application
+Rendering equipes/index
+Rendered equipes/_sidebar (1.0ms)
+Completed in 46ms (View: 42, DB: 1) | 200 OK [http://localhost/equipes]
+
+
+Processing ChampionshipsController#index (for 127.0.0.1 at 2010-06-21 12:20:37) [GET]
+  [4;35;1mChampionship Load (14.0ms)[0m   [0mSELECT * FROM "championships" [0m
+Rendering template within layouts/application
+Rendering championships/index
+Rendered championships/_sidebar (0.8ms)
+Completed in 95ms (View: 77, DB: 14) | 200 OK [http://localhost/championships]
+
+
+Processing ChampionshipsController#new (for 127.0.0.1 at 2010-06-21 12:20:39) [GET]
+Rendering template within layouts/application
+Rendering championships/new
+Rendered championships/_form (6.6ms)
+Rendered championships/_sidebar (0.3ms)
+Completed in 24ms (View: 21, DB: 0) | 200 OK [http://localhost/championships/new]
+
+
+Processing ChampionshipsController#create (for 127.0.0.1 at 2010-06-21 12:20:48) [POST]
+  Parameters: {"authenticity_token"=>"z27qNFM6tEB6+s3eFCwm2G/EBrNCAhNre0SEq8d+MrY=", "championship"=>{"name"=>"Brasileirao 2010 - Série A"}}
+  [4;36;1mChampionship Create (15.6ms)[0m   [0;1mINSERT INTO "championships" ("name", "created_at", "updated_at") VALUES('Brasileirao 2010 - Série A', '2010-06-21 15:20:48', '2010-06-21 15:20:48')[0m
+Redirected to http://localhost:3000/championships/1
+Completed in 39ms (DB: 0) | 302 Found [http://localhost/championships]
+
+
+Processing ChampionshipsController#show (for 127.0.0.1 at 2010-06-21 12:20:49) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mChampionship Load (0.2ms)[0m   [0mSELECT * FROM "championships" WHERE ("championships"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering championships/show
+Rendered championships/_sidebar (0.3ms)
+Completed in 21ms (View: 17, DB: 0) | 200 OK [http://localhost/championships/1]
+
+
+Processing ChampionshipsController#index (for 127.0.0.1 at 2010-06-21 12:20:51) [GET]
+  [4;36;1mChampionship Load (0.7ms)[0m   [0;1mSELECT * FROM "championships" [0m
+Rendering template within layouts/application
+Rendering championships/index
+Rendered championships/_sidebar (0.3ms)
+Completed in 86ms (View: 82, DB: 1) | 200 OK [http://localhost/championships]
+
+
+Processing ChampionshipsController#show (for 127.0.0.1 at 2010-06-21 12:21:15) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mChampionship Load (0.2ms)[0m   [0mSELECT * FROM "championships" WHERE ("championships"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering championships/show
+Rendered championships/_sidebar (0.3ms)
+Completed in 14ms (View: 11, DB: 0) | 200 OK [http://localhost/championships/1]
+
+
+Processing ChampionshipsController#show (for 127.0.0.1 at 2010-06-21 12:22:51) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mChampionship Load (0.2ms)[0m   [0;1mSELECT * FROM "championships" WHERE ("championships"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering championships/show
+Rendered championships/_sidebar (0.3ms)
+Completed in 28ms (View: 23, DB: 0) | 200 OK [http://localhost/championships/1]
+
+
+Processing ChampionshipsController#edit (for 127.0.0.1 at 2010-06-21 12:22:53) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mChampionship Load (0.2ms)[0m   [0mSELECT * FROM "championships" WHERE ("championships"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering championships/edit
+Rendered championships/_form (3.3ms)
+Rendered championships/_sidebar (0.3ms)
+Completed in 22ms (View: 17, DB: 0) | 200 OK [http://localhost/championships/1/edit]
+
+
+Processing ChampionshipsController#update (for 127.0.0.1 at 2010-06-21 12:23:54) [PUT]
+  Parameters: {"authenticity_token"=>"z27qNFM6tEB6+s3eFCwm2G/EBrNCAhNre0SEq8d+MrY=", "id"=>"1", "championship"=>{"name"=>"Brasileirao 2010 - Série A"}}
+  [4;36;1mChampionship Load (0.2ms)[0m   [0;1mSELECT * FROM "championships" WHERE ("championships"."id" = 1) [0m
+Redirected to http://localhost:3000/championships/1
+Completed in 36ms (DB: 0) | 302 Found [http://localhost/championships/1]
+
+
+Processing ChampionshipsController#show (for 127.0.0.1 at 2010-06-21 12:23:54) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mChampionship Load (0.2ms)[0m   [0mSELECT * FROM "championships" WHERE ("championships"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering championships/show
+Rendered championships/_sidebar (0.3ms)
+Completed in 15ms (View: 11, DB: 0) | 200 OK [http://localhost/championships/1]
+
+
+Processing ChampionshipsController#index (for 127.0.0.1 at 2010-06-21 12:23:56) [GET]
+  [4;36;1mChampionship Load (0.5ms)[0m   [0;1mSELECT * FROM "championships" [0m
+Rendering template within layouts/application
+Rendering championships/index
+Rendered championships/_sidebar (0.3ms)
+Completed in 14ms (View: 11, DB: 0) | 200 OK [http://localhost/championships]
+
+
+Processing ChampionshipsController#edit (for 127.0.0.1 at 2010-06-21 12:24:54) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mChampionship Load (0.2ms)[0m   [0mSELECT * FROM "championships" WHERE ("championships"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering championships/edit
+Rendered championships/_form (2.5ms)
+Rendered championships/_sidebar (0.3ms)
+Completed in 16ms (View: 12, DB: 0) | 200 OK [http://localhost/championships/1/edit]
+
+
+Processing ChampionshipsController#update (for 127.0.0.1 at 2010-06-21 12:25:04) [PUT]
+  Parameters: {"authenticity_token"=>"z27qNFM6tEB6+s3eFCwm2G/EBrNCAhNre0SEq8d+MrY=", "id"=>"1", "championship"=>{"name"=>"BRASILEIRAO 2010 - SERIE A"}}
+  [4;36;1mChampionship Load (0.2ms)[0m   [0;1mSELECT * FROM "championships" WHERE ("championships"."id" = 1) [0m
+  [4;35;1mChampionship Update (0.3ms)[0m   [0mUPDATE "championships" SET "updated_at" = '2010-06-21 15:25:04', "name" = 'BRASILEIRAO 2010 - SERIE A' WHERE "id" = 1[0m
+Redirected to http://localhost:3000/championships/1
+Completed in 13ms (DB: 0) | 302 Found [http://localhost/championships/1]
+
+
+Processing ChampionshipsController#show (for 127.0.0.1 at 2010-06-21 12:25:05) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mChampionship Load (0.2ms)[0m   [0;1mSELECT * FROM "championships" WHERE ("championships"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering championships/show
+Rendered championships/_sidebar (0.3ms)
+Completed in 15ms (View: 11, DB: 0) | 200 OK [http://localhost/championships/1]
+
+
+Processing ChampionshipsController#index (for 127.0.0.1 at 2010-06-21 12:25:06) [GET]
+  [4;35;1mChampionship Load (0.5ms)[0m   [0mSELECT * FROM "championships" [0m
+Rendering template within layouts/application
+Rendering championships/index
+Rendered championships/_sidebar (0.3ms)
+Completed in 13ms (View: 10, DB: 0) | 200 OK [http://localhost/championships]
+
+
+Processing EquipesController#index (for 127.0.0.1 at 2010-06-21 12:25:47) [GET]
+  [4;36;1mEquipe Load (14.7ms)[0m   [0;1mSELECT * FROM "equipes" [0m
+Rendering template within layouts/application
+Rendering equipes/index
+Rendered equipes/_sidebar (0.3ms)
+Completed in 31ms (View: 13, DB: 15) | 200 OK [http://localhost/equipes]
+
+
+Processing ChampionshipsController#index (for 127.0.0.1 at 2010-06-21 12:25:48) [GET]
+  [4;35;1mChampionship Load (0.5ms)[0m   [0mSELECT * FROM "championships" [0m
+Rendering template within layouts/application
+Rendering championships/index
+Rendered championships/_sidebar (0.3ms)
+Completed in 13ms (View: 10, DB: 0) | 200 OK [http://localhost/championships]
+  [4;36;1mChampionship Load (0.5ms)[0m   [0;1mSELECT * FROM "championships" LIMIT 1[0m
+  [4;35;1mChampionship Load (0.3ms)[0m   [0mSELECT * FROM "championships" LIMIT 1[0m
+  [4;36;1mEquipe Load (21.6ms)[0m   [0;1mSELECT * FROM "equipes" INNER JOIN "equipes_championships" ON "equipes".id = "equipes_championships".equipe_id WHERE ("equipes_championships".championship_id = 1 ) [0m
+  [4;35;1mChampionship Load (0.5ms)[0m   [0mSELECT * FROM "championships" LIMIT 1[0m
+  [4;36;1mEquipe Load (0.3ms)[0m   [0;1mSELECT * FROM "equipes" LIMIT 1[0m
+  [4;35;1mEquipe Load (0.2ms)[0m   [0mSELECT "equipes".id FROM "equipes" INNER JOIN "equipes_championships" ON "equipes".id = "equipes_championships".equipe_id WHERE ("equipes"."id" = 1) AND ("equipes_championships".championship_id = 1 ) LIMIT 1[0m

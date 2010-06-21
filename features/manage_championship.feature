@@ -18,4 +18,8 @@ Feature: Manage championship
 		And I fill in "championship_name" with "Campeonato Brasileiro 2010"
 		And I press "Salvar"
 	  Then I should see "Criação de Campeonato realizada com sucesso"
+		And I should not see "Listar"
+		And I should not see "Novo"
+		And I should not see "Visualizar"
+		And I should see "Campeonatos"
 		And I should see "Campeonato Brasileiro 2010"

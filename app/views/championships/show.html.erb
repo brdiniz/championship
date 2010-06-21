@@ -1,9 +1,8 @@
 <div class="block">
   <div class="secondary-navigation">
     <ul class="wat-cf">
-      <li class="first"><%= link_to "#{t("web-app-theme.list", :default => "List")}", championships_path  %></li>
-      <li><%= link_to "#{t("web-app-theme.new", :default => "New")}", new_championship_path %></li>
-      <li class="active"><%= link_to "#{t("web-app-theme.show", :default => "Show")}", championship_path %></li>
+	    <li class="first"><%= link_to "Campeonatos", championships_path  %></li>
+      <li class="active"><%= link_to @championship.name, "#" %></li>
     </ul>
   </div>          
   <div class="content">
