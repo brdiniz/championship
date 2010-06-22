@@ -47,6 +47,8 @@ pt_br:
       players: Jogadores
       championship: Campeonato
       championships: Campeonatos
+      group: Grupo
+      groups: Grupos
     attributes:
       player:
         name: Nome

@@ -3,5 +3,9 @@
   <ul class="navigation">
 		<li><%= link_to "Voltar", championships_path %></li>
     <li><%= link_to "Criar Campeonato", new_championship_path %></li>
+		<% if @championship && !@championship.new_record? %>
+			<li><%= link_to "Associar uma Equipe", championship_associate_equipes_path(@championship) %></li>
+			<li><%= link_to "Criar Grupo", new_championship_group_path(@championship) %></li>
+		<% end %>
   </ul>
 </div>

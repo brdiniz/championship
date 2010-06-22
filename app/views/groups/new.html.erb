@@ -3,13 +3,14 @@
     <ul class="wat-cf">
 	    <li class="first"><%= link_to "Campeonatos", championships_path  %></li>
       <li><%= link_to @championship.name, @championship %></li>
-      <li class="active"><%= link_to "#{t("web-app-theme.edit", :default => "Edit")}", "#" %></li>
+      <li><%= link_to "Grupos", championship_groups_path %></li>
+      <li class="active"><%= link_to "Novo", "#" %></li>
     </ul>
   </div>          
   <div class="content">            
     <h2 class="title"></h2>
     <div class="inner">
-      <% form_for @championship, :url => championship_path(@championship), :html => { :class => :form } do |f| -%>
+      <% form_for :group, :url => championship_groups_path, :html => { :class => :form } do |f| -%>
         <%= render :partial => "form", :locals => {:f => f} %>
       <% end -%>
     </div>

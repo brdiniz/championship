@@ -11,3 +11,8 @@ end
 Factory.define :championship do |p|
   p.name { |n| "campeonato_#{n}" }
 end
+
+Factory.define :group do |p|
+  p.name { |n| "group_#{n}" }
+	p.association :championship, :factory => :championship
+end

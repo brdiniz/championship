@@ -16,6 +16,24 @@
         <%= link_to "#{image_tag("web-app-theme/application_edit.png", :alt => "#{t("web-app-theme.edit", :default=> "Edit")}")} #{t("web-app-theme.edit", :default=> "Edit")}", edit_championship_path(@championship), :class => "button" %> 
         <%= link_to "#{image_tag("web-app-theme/cross.png", :alt => "#{t("web-app-theme.delete", :default=> "Delete")}")} #{t("web-app-theme.delete", :default => "Delete")}", championship_path(@championship), :method => "delete", :class => "button", :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}" %>
       </div>      
+      <div class="clear"></div>
+      <p />
+			<hr>
+			<h1>Equipes</h1>
+			<div class="clear"></div>
+			<p />
+			<table class="table" id="raks_table">
+				<th class="first">Time</th>
+				<th class="last"></th>
+				<% @championship.equipes.sort.each do |equipe| %>
+					<tr class='<%= cycle("odd", "even") %>'>
+						<td><%= equipe.name %></td>
+						<td class="last">
+							<%= link_to "Desassociar", championship_desassociate_equipes_path(@championship, equipe) %>
+						</td>
+					</tr>
+				<% end %>
+			</table>
     </div>
   </div>
 </div>

@@ -1,4 +1,5 @@
 class Championship < ActiveRecord::Base
+  has_many :groups
   has_and_belongs_to_many :equipes, :join_table => :equipes_championships
   validates_presence_of :name
     
