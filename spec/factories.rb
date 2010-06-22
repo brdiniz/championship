@@ -16,3 +16,14 @@ Factory.define :group do |p|
   p.name { |n| "group_#{n}" }
 	p.association :championship, :factory => :championship
 end
+
+Factory.define :round do |p|
+  p.name { |n| "round_#{n}" }
+	p.association :group, :factory => :group
+end
+
+Factory.define :game do |p|
+	p.association :round, :factory => :round
+	p.equipe_home_name "time 1"
+	p.equipe_visitant_name "time 2"
+end

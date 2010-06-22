@@ -40,22 +40,3 @@ Feature: Manage championship
 		And I should see "Alteração de Campeonato realizada com sucesso"
 		And I should see "Campeonatos"
 		And I should see "Word Cup 2014 - Brazil"
-		
-		
-	Scenario: Associate an equipe in Championship
-		Given I have a new equipe with name "Palmeiras"
-		And I have a new championship with name "libertadores"
-		And I am on the list of championship
-		And I follow "libertadores"
-		And I should see "Campeonatos"
-		And I should see "libertadores"
-		When I follow "Associar uma Equipe"
-		And I should see "Campeonatos"
-		And I should see "libertadores"
-		And I fill in "championship_equipe_name" with "Palmeiras"
-		And I press "Salvar"
-		Then I should see "Associação de Equipe para o Campeonato realizada com sucesso"
-		And I should see "Campeonatos"
-		And I should see "libertadores"
-		And I should see "Palmeiras"
-		And I should see "Desassociar"

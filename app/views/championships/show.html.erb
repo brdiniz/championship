@@ -19,17 +19,19 @@
       <div class="clear"></div>
       <p />
 			<hr>
-			<h1>Equipes</h1>
+			<h1>Grupos</h1>
 			<div class="clear"></div>
 			<p />
-			<table class="table" id="raks_table">
+			<table class="table" id="groups_table">
 				<th class="first">Time</th>
 				<th class="last"></th>
-				<% @championship.equipes.sort.each do |equipe| %>
+				<% @championship.groups.sort.each do |group| %>
 					<tr class='<%= cycle("odd", "even") %>'>
-						<td><%= equipe.name %></td>
+						<td><%= group.name %></td>
 						<td class="last">
-							<%= link_to "Desassociar", championship_desassociate_equipes_path(@championship, equipe) %>
+	            <%= link_to "#{t("web-app-theme.show", :default => "Show")}", [@championship, group] %> |
+	            <%= link_to "#{t("web-app-theme.edit", :default => "Edit")}", edit_championship_group_path(@championship, group) %> |
+	            <%= link_to "#{t("web-app-theme.delete", :default => "Delete")}", [@championship, group], :method => :delete, :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}" %>
 						</td>
 					</tr>
 				<% end %>

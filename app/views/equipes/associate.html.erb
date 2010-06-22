@@ -3,13 +3,15 @@
     <ul class="wat-cf">
 	    <li class="first"><%= link_to "Campeonatos", championships_path  %></li>
       <li><%= link_to @championship.name, @championship %></li>
+      <li><%= link_to "Grupos", championship_groups_path %></li>
+      <li><%= link_to @group.name, "#" %></li>
       <li class="active"><%= link_to "Associar uma equipe", "#" %></li>
     </ul>
   </div>          
   <div class="content">
 		 <h2 class="title"></h2>
     <div class="inner">
-      <% form_for :championship, :url => championship_associate_equipes_path(@championship), :html => { :class => :form } do |f| -%>
+      <% form_for :group, :url => championship_group_associate_equipes_path(@championship, @group), :html => { :class => :form } do |f| -%>
 				  <div class="group">
 				    <%= f.label :equipe_name, t("activerecord.attributes.championship.name", :default => "Name"), :class => :label %>
 				    <%= f.text_field :equipe_name, :class => 'text_field' %>

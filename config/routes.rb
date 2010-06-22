@@ -4,9 +4,10 @@ ActionController::Routing::Routes.draw do |map|
   end
   
   map.resources :championships do |championship|
-    championship.associate_equipes "equipes", :controller => "championships", :action => "manage_equipe", :method => {:get, :post}
-    championship.desassociate_equipes "equipes/:equipe_id", :controller => "championships", :action => "manage_equipe", :method => "delete"
-    championship.resources :groups
+    championship.resources :groups do |group|
+      group.associate_equipes "equipes", :controller => "equipes", :action => "associate", :method => {:get, :post}
+      group.desassociate_equipes "equipes/:equipe_id", :controller => "equipes", :action => "associate", :method => "delete"      
+    end
   end
   
   # The priority is based upon order of creation: first created -> highest priority.
