@@ -1,5 +1,6 @@
 class Group < ActiveRecord::Base
   belongs_to :championship
+  has_many :rounds, :dependent => :destroy
   has_and_belongs_to_many :equipes, :join_table => :equipes_groups
   
   validates_presence_of :name, :championship_id

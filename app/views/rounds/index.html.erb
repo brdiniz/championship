@@ -1,0 +1,45 @@
+<div class="block">
+  <div class="secondary-navigation">
+    <ul class="wat-cf">
+	    <li class="first"><%= link_to "Campeonatos", championships_path  %></li>
+      <li><%= link_to @championship.name, @championship %></li>
+      <li><%= link_to "Grupos", championship_groups_path %></li>
+      <li><%= link_to @group.name, [@championship, @group] %></li>
+			<li class="active"><%= link_to "Rodadas", "#" %></li>
+    </ul>
+  </div>          
+  <div class="content">          
+    <h2 class="title"></h2>
+    <div class="inner">
+      <table class="table">
+        <tr>             
+          <th>Nome</th>
+					<th>Quantidade de partidas</th>
+          <th class="last">&nbsp;</th>
+        </tr>
+        <% @rounds.each do |round| -%>
+        <tr class="<%= cycle("odd", "even") %>">
+          <td>
+            <%= link_to round.name, [@championship, @group, round] %>
+          </td>
+					<td>
+						<%= round.games.size %>
+          </td>
+          <td class="last">
+            <%= link_to "#{t("web-app-theme.show", :default => "Show")}", [@championship, @group, round] %> |
+            <%= link_to "#{t("web-app-theme.edit", :default => "Edit")}", edit_championship_group_round_path(@championship, @group, round) %> |
+            <%= link_to "#{t("web-app-theme.delete", :default => "Delete")}", [@championship, @group, round], :method => :delete, :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}" %>
+          </td>
+        </tr>          
+        <% end -%>
+      </table>
+      <div class="actions-bar wat-cf">
+        <div class="actions">
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+<% content_for :sidebar, render(:partial => 'sidebar') -%>

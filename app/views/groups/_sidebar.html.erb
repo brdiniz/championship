@@ -5,6 +5,7 @@
 		<li><%= link_to "Voltar", championship_groups_path %></li>
 		<li><%= link_to "Criar Grupo", new_championship_group_path %></li>
 		<% if @group && !@group.new_record? %>
+			<li><%= link_to "Criar Rodada", new_championship_group_round_path(@championship, @group) %></li>
 			<li><%= link_to "Associar uma Equipe", championship_group_associate_equipes_path(@championship, @group) %></li>
 		<% end %>
   </ul>

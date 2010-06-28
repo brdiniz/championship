@@ -49,10 +49,19 @@ pt_br:
       championships: Campeonatos
       group: Grupo
       groups: Grupos
+      round: Rodada
+      rounds: Rodadas
+      game: Jogo
+      games: Jogos
     attributes:
       player:
         name: Nome
         number: Número
+      round:
+        name: Nome
+      game:
+        home_type: Time da Casa
+        visitant_type: Time Visitante
     errors:
       template:
         body: "Os seguintes erros impediram esta operação:"

@@ -1,0 +1,12 @@
+<div class="block">
+  <h3>Ações para o Rodada</h3>
+  <ul class="navigation">
+    <li><%= link_to "Voltar para o Campeonato", @championship %></li>
+		<li><%= link_to "Voltar para o Grupo", championship_groups_path %></li>
+		<li><%= link_to "Voltar", championship_group_rounds_path %></li>
+		<li><%= link_to "Criar Rodada", new_championship_group_round_path(@championship, @group) %></li>
+		<% if @round && !@round.new_record? %>
+			<li><%= link_to "Criar Jogo", new_championship_group_round_game_path(@championship, @group, @round) %></li>
+		<% end %>
+  </ul>
+</div>

@@ -1,0 +1,35 @@
+<div class="block">
+  <div class="secondary-navigation">
+    <ul class="wat-cf">
+	    <li class="first"><%= link_to "Campeonatos", championships_path  %></li>
+      <li><%= link_to @championship.name, @championship %></li>
+      <li><%= link_to "Grupos", championship_groups_path %></li>
+      <li><%= link_to @group.name, [@championship, @group] %></li>
+			<li><%= link_to "Rodadas", championship_group_rounds_path %></li>
+			<li><%= link_to @round.name, [@championship, @group, @round] %></li>
+			<li><%= link_to "Jogos", championship_group_round_games_path %></li>
+			<li class="active"><%= link_to @game.id, [@championship, @group, @round, @game] %></li>
+    </ul>
+  </div>          
+  <div class="content">
+    <div class="inner">
+
+        <p>
+          <b><%= t("activerecord.attributes.game.home_type", :default => t("activerecord.labels.home_type", :default => "Home type")) %>:</b>
+          <%= @game.home.name if @game.home %>
+        </p>
+
+        <p>
+          <b><%= t("activerecord.attributes.game.visitant_type", :default => t("activerecord.labels.visitant_type", :default => "Visitant type")) %>:</b>
+          <%= @game.visitant.name if @game.visitant %>
+        </p>
+
+      <div class="wat-cf">
+        <%= link_to "#{image_tag("web-app-theme/application_edit.png", :alt => "#{t("web-app-theme.edit", :default=> "Edit")}")} #{t("web-app-theme.edit", :default=> "Edit")}", edit_championship_group_round_game_path(@championship, @group, @round, @game), :class => "button" %> 
+        <%= link_to "#{image_tag("web-app-theme/cross.png", :alt => "#{t("web-app-theme.delete", :default=> "Delete")}")} #{t("web-app-theme.delete", :default => "Delete")}", [@championship, @group, @round, @game], :method => "delete", :class => "button", :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}" %>
+      </div>      
+    </div>
+  </div>
+</div>
+
+<% content_for :sidebar, render(:partial => 'sidebar') -%>

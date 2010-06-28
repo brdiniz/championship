@@ -1,0 +1,56 @@
+Feature: Manage games
+  In order to manage games
+  As a admin operator
+  I want be able to create, update and delete games
+
+	Scenario: Create a new games
+		Given I have a new championship with name "Brasileirão 2010"
+		And I have a new group with name "Série A" in championship "Brasileirão 2010"
+		And I have a new round with name "1" in group "Série A"
+		And I have a new equipe with name "África do Sul"
+		And I have a new equipe with name "México"
+		And I am on the list of championship
+		And I follow "Brasileirão 2010"
+		And I follow "Visualizar"
+		And I follow "1"
+		When I follow "Criar Jogo"
+		And I should see "Campeonatos"
+		And I should see "Brasileirão 2010"
+		And I should see "Grupos"
+		And I should see "Série A"
+		And I should see "Rodadas"
+		And I should see "1"
+		And I should see "Novo"
+		And I should not see "Novo Game"
+		And I should not see "Ex: a simple text"
+		And I fill in "game_home_name" with "África do Sul"
+		And I fill in "game_visitant_name" with "México"
+		And I press "Salvar"
+		And I should see "Criação de Jogo realizada com sucesso"
+		And I should see "África do Sul"
+		And I should see "México"
+		
+	Scenario: Not Create a new games when equipe is not exiting
+		Given I have a new championship with name "Brasileirão 2010"
+		And I have a new group with name "Série A" in championship "Brasileirão 2010"
+		And I have a new round with name "1" in group "Série A"
+		And I have a new equipe with name "África do Sul"
+		And I have a new equipe with name "México"
+		And I am on the list of championship
+		And I follow "Brasileirão 2010"
+		And I follow "Visualizar"
+		And I follow "1"
+		When I follow "Criar Jogo"
+		And I should see "Campeonatos"
+		And I should see "Brasileirão 2010"
+		And I should see "Grupos"
+		And I should see "Série A"
+		And I should see "Rodadas"
+		And I should see "1"
+		And I should see "Novo"
+		And I should not see "Novo Game"
+		And I should not see "Ex: a simple text"
+		And I fill in "game_home_name" with "África do Sul"
+		And I fill in "game_visitant_name" with "Méxiko"
+		And I press "Salvar"
+		And I should see "Time Visitante não existe"
