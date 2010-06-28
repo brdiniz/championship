@@ -26,6 +26,9 @@ class Game < ActiveRecord::Base
     errors.add(:visitant_name, 'já possui jogo nessa rodada') if @visitant && (self.round.games.find_by_visitant_id(@visitant.id) || self.round.games.find_by_home_id(@visitant.id))
     errors.add(:home_name, 'já possui jogo nessa rodada') if @home && (self.round.games.find_by_visitant_id(@home.id) || self.round.games.find_by_home_id(@home.id))
     
+    errors.add(:visitant_name, 'não pertence ao grupo da rodada') if @visitant && !(self.round.group.equipes.include?(@visitant))
+    errors.add(:home_name, 'não pertence ao grupo da rodada') if @home && !(self.round.group.equipes.include?(@home))
+
     return errors.empty?
   end
 end
