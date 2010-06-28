@@ -18,10 +18,13 @@ class Game < ActiveRecord::Base
   
   def validate_equipe_game
     @home = Equipe.find_by_name(home_name)
-    errors.add(:home_name, 'não existe') unless @home
-    
     @visitant = Equipe.find_by_name(visitant_name)
+    
+    errors.add(:home_name, 'não existe') unless @home
     errors.add(:visitant_name, 'não existe') unless @visitant
+    
+    errors.add(:visitant_name, 'já possui jogo nessa rodada') if @visitant && (self.round.games.find_by_visitant_id(@visitant.id) || self.round.games.find_by_home_id(@visitant.id))
+    errors.add(:home_name, 'já possui jogo nessa rodada') if @home && (self.round.games.find_by_visitant_id(@home.id) || self.round.games.find_by_home_id(@home.id))
     
     return errors.empty?
   end

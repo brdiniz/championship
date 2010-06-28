@@ -21,4 +21,31 @@ describe Game do
     g.visitant.should == equipe_visitant
     g.home.should == equipe_home
   end
+  
+  it "nao posso criar um jogo caso o time ja possua um jogo existente na mesma rodada" do
+    r = Factory(:round)
+    equipe_home = Factory(:equipe)
+    equipe_visitant = Factory(:equipe)
+    equipe = Factory(:equipe)
+    equipe_champion = Factory(:equipe)
+
+    Game.create!(:round => r, :home_name => equipe_home.name, :visitant_name => equipe_visitant.name)
+    
+    g = Game.new(:round => r, :home_name => equipe.name, :visitant_name => equipe_visitant.name)
+    g.should_not be_valid
+    g.errors.on(:visitant_name).should_not be_blank
+    
+    g = Game.new(:round => r, :home_name => equipe.name, :visitant_name => equipe_home.name)
+    g.should_not be_valid
+    g.errors.on(:visitant_name).should_not be_blank
+    
+    
+    g = Game.new(:round => r, :home_name => equipe_visitant.name, :visitant_name => equipe.name)
+    g.should_not be_valid
+    g.errors.on(:home_name).should_not be_blank
+    
+    g = Game.new(:round => r, :home_name => equipe_home.name, :visitant_name => equipe.name)
+    g.should_not be_valid
+    g.errors.on(:home_name).should_not be_blank
+  end
 end

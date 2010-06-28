@@ -1,13 +1,12 @@
 <div class="block">
-  <h3>Simple Block</h3>
-  <div class="content">
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-  </div>
-</div>
-<div class="block">
-  <h3>Links</h3>
+  <h3>Ações para o Jogo</h3>
   <ul class="navigation">
-    <li><a href="#">Link 1</a></li>
-    <li><a href="#">Link 2</a></li>
+    <li><%= link_to "Voltar para o Campeonato", @championship %></li>
+		<li><%= link_to "Voltar para o Grupo", championship_groups_path %></li>
+		<li><%= link_to "Voltar", championship_group_rounds_path %></li>
+		<li><%= link_to "Criar Rodada", new_championship_group_round_path(@championship, @group) %></li>
+		<li><%= link_to "Criar Jogo", new_championship_group_round_game_path(@championship, @group, @round) %></li>
+		<% if @game && !@game.new_record? %>
+		<% end %>
   </ul>
 </div>
