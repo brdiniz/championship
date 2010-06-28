@@ -8,7 +8,9 @@ Feature: Manage games
 		And I have a new group with name "Série A" in championship "Brasileirão 2010"
 		And I have a new round with name "1" in group "Série A"
 		And I have a new equipe with name "África do Sul"
+		And I have an equipe named "África do Sul" associated with the group "Série A"
 		And I have a new equipe with name "México"
+		And I have an equipe named "México" associated with the group "Série A"
 		And I am on the list of championship
 		And I follow "Brasileirão 2010"
 		And I follow "Visualizar"

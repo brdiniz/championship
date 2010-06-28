@@ -13501,3 +13501,13 @@ Completed in 22ms (View: 11, DB: 0) | 200 OK [http://localhost/championships/3/g
   [4;36;1mGroup Load (0.3ms)[0m   [0;1mSELECT * FROM "groups" LIMIT 1[0m
   [4;35;1mEquipe Load (0.2ms)[0m   [0mSELECT * FROM "equipes" WHERE ("equipes"."id" = 2) [0m
   [4;36;1mEquipe Load (0.2ms)[0m   [0;1mSELECT "equipes".id FROM "equipes" INNER JOIN "equipes_groups" ON "equipes".id = "equipes_groups".equipe_id WHERE ("equipes"."id" = 2) AND ("equipes_groups".group_id = 1 ) LIMIT 1[0m
+
+
+Processing GroupsController#index (for 127.0.0.1 at 2010-06-28 19:39:54) [GET]
+  Parameters: {"championship_id"=>"3"}
+  [4;36;1mChampionship Load (0.2ms)[0m   [0;1mSELECT * FROM "championships" WHERE ("championships"."id" = 3) [0m
+  [4;35;1mGroup Load (1.1ms)[0m   [0mSELECT * FROM "groups" WHERE ("groups".championship_id = 3) [0m
+Rendering template within layouts/application
+Rendering groups/index
+Rendered groups/_sidebar (1.1ms)
+Completed in 193ms (View: 187, DB: 1) | 200 OK [http://localhost/championships/3/groups]
