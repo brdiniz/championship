@@ -16,6 +16,32 @@
         <%= link_to "#{image_tag("web-app-theme/application_edit.png", :alt => "#{t("web-app-theme.edit", :default=> "Edit")}")} #{t("web-app-theme.edit", :default=> "Edit")}", edit_equipe_path(@equipe), :class => "button" %> 
         <%= link_to "#{image_tag("web-app-theme/cross.png", :alt => "#{t("web-app-theme.delete", :default=> "Delete")}")} #{t("web-app-theme.delete", :default => "Delete")}", equipe_path(@equipe), :method => "delete", :class => "button", :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}" %>
       </div>      
+      <div class="clear"></div>
+      <p />
+			<hr>
+			<h1>Campeonatos</h1>  
+			<div class="clear"></div>
+      <p />
+			<table class="table">
+			  <tr>             
+			    <th>Campeonato</th>
+					<th>Grupo</th>
+			    <th class="last">&nbsp;</th>
+			  </tr>
+			  <% @equipe.groups.each do |group| -%>
+			  <tr class="<%= cycle("odd", "even") %>">
+			    <td>
+			      <%= link_to group.championship.name, group.championship %>
+			    </td>
+					<td>
+						<%= link_to group.name, [group.championship, group] %>
+					</td>
+			    <td class="last">
+			      
+			    </td>
+			  </tr>          
+			  <% end -%>
+			</table>
     </div>
   </div>
 </div>

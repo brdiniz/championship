@@ -1,15 +1,21 @@
 <div class="block">
   <div class="secondary-navigation">
     <ul class="wat-cf">
-      <li class="first"><%= link_to "#{t("web-app-theme.list", :default => "List")}", games_path  %></li>
-      <li><%= link_to "#{t("web-app-theme.new", :default => "New")}", new_game_path %></li>
-      <li class="active"><%= link_to "#{t("web-app-theme.edit", :default => "Edit")}", edit_game_path %></li>
+	    <li class="first"><%= link_to "Campeonatos", championships_path  %></li>
+      <li><%= link_to @championship.name, @championship %></li>
+      <li><%= link_to "Grupos", championship_groups_path %></li>
+      <li><%= link_to @group.name, [@championship, @group] %></li>
+			<li><%= link_to "Rodadas", championship_group_rounds_path %></li>
+			<li><%= link_to @round.name, [@championship, @group, @round] %></li>
+			<li><%= link_to "Jogos", championship_group_round_games_path %></li>
+			<li><%= link_to @game.id, [@championship, @group, @round, @game] %></li>
+      <li class="active"><%= link_to "#{t("web-app-theme.edit", :default => "Edit")}", "#" %></li>
     </ul>
   </div>          
   <div class="content">            
-    <h2 class="title"><%= t("web-app-theme.edit", :default => "Edit") %> Game</h2>
+    <h2 class="title"></h2>
     <div class="inner">
-      <% form_for @game, :url => game_path(@game), :html => { :class => :form } do |f| -%>
+      <% form_for @game, :url => championship_group_round_game_path(@championship, @group, @round, @game), :html => { :class => :form } do |f| -%>
         <%= render :partial => "form", :locals => {:f => f} %>
       <% end -%>
     </div>
