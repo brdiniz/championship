@@ -6,7 +6,9 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :championships do |championship|
     championship.resources :groups do |group|
       group.resources :rounds do |round|
-        round.resources :games
+        round.resources :games do |game|
+          game.resources :events
+        end
       end
       group.associate_equipes "equipes", :controller => "equipes", :action => "associate", :method => {:get, :post}
       group.desassociate_equipes "equipes/:equipe_id", :controller => "equipes", :action => "associate", :method => "delete"      

@@ -2,6 +2,7 @@ class Game < ActiveRecord::Base
   belongs_to :round
   belongs_to :home, :class_name => "Equipe", :foreign_key => "home_id"
   belongs_to :visitant, :class_name => "Equipe", :foreign_key => "visitant_id"
+  has_many :events
 
   validate :save_home_visitant
   

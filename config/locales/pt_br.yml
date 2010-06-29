@@ -53,6 +53,7 @@ pt_br:
       rounds: Rodadas
       game: Jogo
       games: Jogos
+      event: Evento
     attributes:
       player:
         name: Nome

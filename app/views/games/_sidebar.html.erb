@@ -7,6 +7,7 @@
 		<li><%= link_to "Criar Rodada", new_championship_group_round_path(@championship, @group) %></li>
 		<li><%= link_to "Criar Jogo", new_championship_group_round_game_path(@championship, @group, @round) %></li>
 		<% if @game && !@game.new_record? %>
+			<li><%= link_to "Criar Evento", new_championship_group_round_game_event_path(@championship, @group, @round, @game) %></li>
 		<% end %>
   </ul>
 </div>

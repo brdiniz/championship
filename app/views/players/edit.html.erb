@@ -1,15 +1,17 @@
 <div class="block">
   <div class="secondary-navigation">
     <ul class="wat-cf">
-      <li class="first"><%= link_to "#{t("web-app-theme.list", :default => "List")}", players_path  %></li>
-      <li><%= link_to "#{t("web-app-theme.new", :default => "New")}", new_player_path %></li>
-      <li class="active"><%= link_to "#{t("web-app-theme.edit", :default => "Edit")}", edit_player_path %></li>
+	    <li class="first"><%= link_to "Equipes", equipes_path  %></li>
+  		<li><%= link_to @equipe.name, @equipe %></li>
+  		<li><%= link_to "Jogadores", equipe_players_path(@equipe) %></li>
+      <li><%= link_to @player.name, [@equipe, @player] %></li>
+      <li class="active"><%= link_to "#{t("web-app-theme.edit", :default => "Edit")}", "#" %></li>
     </ul>
   </div>          
   <div class="content">            
-    <h2 class="title"><%= t("web-app-theme.edit", :default => "Edit") %> Player</h2>
+    <h2 class="title"></h2>
     <div class="inner">
-      <% form_for @player, :url => player_path(@player), :html => { :class => :form } do |f| -%>
+      <% form_for @player, :url => equipe_player_path(@equipe, @player), :html => { :class => :form } do |f| -%>
         <%= render :partial => "form", :locals => {:f => f} %>
       <% end -%>
     </div>

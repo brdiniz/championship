@@ -1,0 +1,20 @@
+<div class="block">
+  <div class="secondary-navigation">
+    <ul class="wat-cf">
+		<li class="first"><%= link_to "Jogos", championship_group_round_games_path %></li>
+		<li><%= link_to "#{@game.home.name} X #{@game.visitant.name}", [@championship, @group, @round, @game] %></li>
+    <li><%= link_to "Eventos", championship_group_round_game_events_path %></li>
+    <li class="active"><%= link_to "Novo", "#" %></li>
+    </ul>
+  </div>          
+  <div class="content">            
+    <h2 class="title"></h2>
+    <div class="inner">
+      <% form_for :event, :url => championship_group_round_game_events_path, :html => { :class => :form } do |f| -%>
+        <%= render :partial => "form", :locals => {:f => f} %>
+      <% end -%>
+    </div>
+  </div>
+</div>
+
+<% content_for :sidebar, render(:partial => 'sidebar') -%>

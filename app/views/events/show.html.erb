@@ -1,0 +1,40 @@
+<div class="block">
+  <div class="secondary-navigation">
+    <ul class="wat-cf">
+		<li class="first"><%= link_to "Jogos", championship_group_round_games_path %></li>
+		<li><%= link_to "#{@game.home.name} X #{@game.visitant.name}", [@championship, @group, @round, @game] %></li>
+    <li><%= link_to "Eventos", championship_group_round_game_events_path %></li>
+    <li class="active"><%= link_to @event.name, "#" %></li>
+    </ul>
+  </div>          
+  <div class="content">
+    <div class="inner">
+      
+        <p>
+          <b><%= t("activerecord.attributes.event.game_id", :default => t("activerecord.labels.game_id", :default => "Game")) %>:</b>
+          <%= @event.game_id %>
+        </p>
+
+        <p>
+          <b><%= t("activerecord.attributes.event.equipe_id", :default => t("activerecord.labels.equipe_id", :default => "Equipe")) %>:</b>
+          <%= @event.equipe.name if @event.equipe %>
+        </p>
+
+        <p>
+          <b><%= t("activerecord.attributes.event.kind", :default => t("activerecord.labels.kind", :default => "Kind")) %>:</b>
+          <%= @event.kind %>
+        </p>
+
+        <p>
+          <b><%= t("activerecord.attributes.event.linetime", :default => t("activerecord.labels.linetime", :default => "Linetime")) %>:</b>
+          <%= @event.linetime %>
+        </p>
+      <div class="wat-cf">
+        <%= link_to "#{image_tag("web-app-theme/application_edit.png", :alt => "#{t("web-app-theme.edit", :default=> "Edit")}")} #{t("web-app-theme.edit", :default=> "Edit")}", edit_championship_group_round_game_event_path(@championship, @group, @round, @game, @event), :class => "button" %> 
+        <%= link_to "#{image_tag("web-app-theme/cross.png", :alt => "#{t("web-app-theme.delete", :default=> "Delete")}")} #{t("web-app-theme.delete", :default => "Delete")}", championship_group_round_game_event_path(@championship, @group, @round, @game, @event), :method => "delete", :class => "button", :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}" %>
+      </div>      
+    </div>
+  </div>
+</div>
+
+<% content_for :sidebar, render(:partial => 'sidebar') -%>
