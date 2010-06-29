@@ -10,7 +10,7 @@ class Event < ActiveRecord::Base
   
   def associate_equipe
     return false unless validate_equipe
-    equipe = @e
+    self.equipe = @e
     return true
   end
   

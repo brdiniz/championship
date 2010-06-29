@@ -27,5 +27,9 @@ describe Event do
     
     e = Event.new(:game => g, :equipe_name => equipe_home.name, :name => "CARTAO AMARELO", :kind => "1 TEMPO", :linetime => "13")
     e.should be_valid
+    e.save
+    
+    e1 = Event.find(e)
+    e1.equipe.should == equipe_home
   end
 end
