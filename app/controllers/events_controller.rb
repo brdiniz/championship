@@ -3,4 +3,6 @@ class EventsController < InheritedResources::Base
   belongs_to :group
   belongs_to :round
   belongs_to :game
+  
+  respond_to :xml
 end

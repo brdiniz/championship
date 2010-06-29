@@ -63,6 +63,10 @@ pt_br:
       game:
         home_type: Time da Casa
         visitant_type: Time Visitante
+      event:
+        name: Ação
+        kind: Tipo
+        linetime: Tempo
     errors:
       template:
         body: "Os seguintes erros impediram esta operação:"
